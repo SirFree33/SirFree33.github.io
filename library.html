@@ -1,7 +1,1159 @@
-body {
-  padding: 25px;
-}
-.title {
-  color: #228b22;
-  font-family: Candara;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quantum Odyssey Infinite Library - Access free ancient wisdom, quantum physics papers, and philosophical texts. Contribute your own resources.">
+    <meta name="keywords" content="quantum physics, ancient texts, free books, philosophy, consciousness, PDF library, open access">
+    <meta name="author" content="SirFree33 | Quantum Odyssey Research Institute">
+    
+    <!-- Google AdSense (Same as main page) -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+    
+    <title>Infinite Library | Quantum Odyssey - Free Wisdom Repository</title>
+    
+    <!-- Google Fonts (Same as main page) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&family=Playfair+Display:wght@400;500;600&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Particle.js for quantum background -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <style>
+        /* ===== QUANTUM COSMOS VARIABLES (Same as main) ===== */
+        :root {
+            --quantum-abyss: #000510;
+            --starlight-gold: #FFD700;
+            --nebula-teal: #00F5FF;
+            --consciousness-purple: #9D4EDD;
+            --dark-matter: #0A0F1E;
+            --quantum-field: #1A2036;
+            --ancient-parchment: #F5E9D4;
+            --transcendence-white: #F0F8FF;
+            --quantum-glow: rgba(0, 245, 255, 0.2);
+            --gold-glow: rgba(255, 215, 0, 0.2);
+            --purple-glow: rgba(157, 78, 221, 0.2);
+            --cosmic-border: rgba(0, 245, 255, 0.4);
+            --quantum-gradient: linear-gradient(135deg, var(--quantum-abyss) 0%, var(--dark-matter) 50%, var(--quantum-field) 100%);
+            --cosmic-radial: radial-gradient(circle at 50% 50%, var(--quantum-field), transparent 70%);
+            --header-height: 80px;
+        }
+        
+        /* ===== BASE STYLES (Consistent with main) ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.8;
+            color: var(--ancient-parchment);
+            background: var(--quantum-gradient);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            font-size: 1.1rem;
+            padding-top: var(--header-height);
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                var(--cosmic-radial),
+                radial-gradient(circle at 20% 30%, rgba(0, 245, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(157, 78, 221, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -3;
+            animation: cosmicDrift 120s linear infinite;
+        }
+        
+        @keyframes cosmicDrift {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(2%, 1%) rotate(0.5deg); }
+            66% { transform: translate(-1%, 2%) rotate(-0.5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        
+        /* ===== QUANTUM COSMIC CANVAS ===== */
+        #quantum-cosmos {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -2;
+            opacity: 0.7;
+        }
+        
+        /* ===== NAVIGATION (Matching main page) ===== */
+        .celestial-navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background: rgba(10, 15, 30, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--cosmic-border);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+        }
+        
+        .navigation-container {
+            max-width: 1600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .quantum-signature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .quantum-logo {
+            font-family: 'Philosopher', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--nebula-teal), var(--starlight-gold), var(--consciousness-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: var(--nebula-teal);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            font-weight: 400;
+        }
+        
+        .nav-star {
+            position: relative;
+            padding: 0.6rem 1.4rem;
+            color: var(--ancient-parchment);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.8px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 25px;
+            overflow: hidden;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        .nav-star:hover {
+            color: var(--nebula-teal);
+            transform: translateY(-2px);
+            border-color: var(--cosmic-border);
+            box-shadow: 0 5px 15px rgba(0, 245, 255, 0.2);
+        }
+        
+        /* ===== LIBRARY HERO ===== */
+        .library-hero {
+            min-height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 1100px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .library-title {
+            font-family: 'Philosopher', serif;
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--nebula-teal), var(--starlight-gold), var(--consciousness-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 40px rgba(0, 245, 255, 0.4);
+            animation: cosmicBreathing 10s ease-in-out infinite;
+            line-height: 1.1;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--ancient-parchment);
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+            font-weight: 300;
+            letter-spacing: 0.7px;
+            line-height: 1.6;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* ===== AD CONTAINERS ===== */
+        .cosmic-ad-container {
+            background: linear-gradient(135deg, rgba(10, 15, 30, 0.9), rgba(26, 32, 54, 0.9));
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            margin: 2rem auto;
+            text-align: center;
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cosmic-ad-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 245, 255, 0.15);
+            border-color: var(--nebula-teal);
+        }
+        
+        .ad-label {
+            font-size: 0.9rem;
+            color: var(--starlight-gold);
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 600;
+            padding: 0.4rem 1rem;
+            background: rgba(0, 245, 255, 0.08);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 245, 255, 0.15);
+        }
+        
+        /* ===== LIBRARY SECTIONS ===== */
+        .library-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .cosmic-chapter {
+            background: rgba(10, 15, 30, 0.85);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 3.5rem;
+            margin-bottom: 4rem;
+            border: 1px solid var(--cosmic-border);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chapter-header {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .quantum-sigil {
+            font-size: 3rem;
+            min-width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--quantum-field), var(--dark-matter));
+            border: 2px solid var(--nebula-teal);
+            box-shadow: 0 0 30px var(--quantum-glow);
+            flex-shrink: 0;
+        }
+        
+        .chapter-title {
+            font-family: 'Philosopher', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--starlight-gold);
+            line-height: 1.2;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            margin-bottom: 0.5rem;
+        }
+        
+        .chapter-subtitle {
+            font-size: 1.2rem;
+            color: var(--nebula-teal);
+            font-weight: 400;
+            letter-spacing: 1.2px;
+            opacity: 0.9;
+            border-left: 2px solid var(--nebula-teal);
+            padding-left: 1.2rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* ===== RESOURCE GRID ===== */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .resource-card {
+            background: linear-gradient(135deg, rgba(26, 32, 54, 0.9), rgba(10, 15, 30, 0.9));
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid var(--cosmic-border);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .resource-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--starlight-gold);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .resource-category {
+            display: inline-block;
+            padding: 0.4rem 1.2rem;
+            background: rgba(0, 245, 255, 0.1);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--nebula-teal);
+            margin-bottom: 1.2rem;
+            border: 1px solid var(--cosmic-border);
+        }
+        
+        .resource-title {
+            font-size: 1.4rem;
+            color: var(--starlight-gold);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .resource-description {
+            color: var(--ancient-parchment);
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+        
+        .resource-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        
+        .resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(0, 245, 255, 0.12);
+            border-radius: 8px;
+            color: var(--nebula-teal);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .resource-link:hover {
+            background: rgba(0, 245, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 245, 255, 0.15);
+        }
+        
+        .license-badge {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(76, 175, 80, 0.1);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: #4CAF50;
+            margin-top: 1rem;
+            border: 1px solid rgba(76, 175, 80, 0.3);
+        }
+        
+        /* ===== SUBMISSION FORMS ===== */
+        .submission-form {
+            background: linear-gradient(135deg, rgba(26, 32, 54, 0.95), rgba(10, 15, 30, 0.95));
+            border-radius: 18px;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+        
+        .form-title {
+            font-size: 1.8rem;
+            color: var(--starlight-gold);
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.8rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.6rem;
+            color: var(--nebula-teal);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .form-input, .form-textarea, .form-select {
+            width: 100%;
+            padding: 1rem;
+            background: rgba(0, 245, 255, 0.08);
+            border: 1px solid var(--cosmic-border);
+            border-radius: 10px;
+            color: var(--ancient-parchment);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus, .form-textarea:focus, .form-select:focus {
+            outline: none;
+            border-color: var(--nebula-teal);
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
+            background: rgba(0, 245, 255, 0.12);
+        }
+        
+        .form-textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            padding: 1rem 2.5rem;
+            background: linear-gradient(45deg, var(--nebula-teal), var(--starlight-gold));
+            color: var(--quantum-abyss);
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            letter-spacing: 1px;
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px rgba(0, 245, 255, 0.3);
+        }
+        
+        .form-help {
+            margin-top: 1.5rem;
+            padding: 1.5rem;
+            background: rgba(255, 215, 0, 0.06);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            font-size: 0.95rem;
+            color: var(--ancient-parchment);
+            opacity: 0.9;
+        }
+        
+        /* ===== FOOTER ===== */
+        .quantum-footer {
+            background: rgba(10, 15, 30, 0.95);
+            padding: 4rem 2rem 2.5rem;
+            margin-top: 5rem;
+            border-top: 2px solid var(--cosmic-border);
+            position: relative;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .cosmic-copyright {
+            margin-top: 2.5rem;
+            color: var(--ancient-parchment);
+            font-size: 0.95rem;
+            opacity: 0.7;
+            letter-spacing: 1.2px;
+            line-height: 1.6;
+        }
+        
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 1024px) {
+            .library-title {
+                font-size: 3.8rem;
+            }
+            
+            .resource-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .library-title {
+                font-size: 3.2rem;
+            }
+            
+            .chapter-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.5rem;
+            }
+            
+            .quantum-sigil {
+                width: 70px;
+                height: 70px;
+                font-size: 2.5rem;
+                margin: 0 auto;
+            }
+            
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .submission-form {
+                padding: 2rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .library-title {
+                font-size: 2.6rem;
+            }
+            
+            .chapter-title {
+                font-size: 2.2rem;
+            }
+            
+            .navigation-container {
+                padding: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Quantum Cosmos Canvas -->
+    <div id="quantum-cosmos"></div>
+    
+    <!-- Celestial Navigation -->
+    <nav class="celestial-navigation">
+        <div class="navigation-container">
+            <div class="quantum-signature">
+                <a href="index.html" class="quantum-logo">Quantum Odyssey</a>
+                <div class="logo-subtitle">Infinite Library</div>
+            </div>
+            <div class="cosmic-compass">
+                <a href="index.html" class="nav-star"><i class="fas fa-home"></i> Main Portal</a>
+                <a href="#curated" class="nav-star"><i class="fas fa-star"></i> Curated Texts</a>
+                <a href="#submit" class="nav-star"><i class="fas fa-upload"></i> Contribute</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Library Hero -->
+    <section class="library-hero">
+        <div class="hero-content">
+            <h1 class="library-title">Infinite Library</h1>
+            <p class="hero-subtitle">
+                A quantum repository of wisdom spanning millennia. Access free texts, ancient scriptures, 
+                quantum physics papers, and philosophical works. All resources are copyright-safe and freely accessible.
+            </p>
+            
+            <!-- Ad Container 1 -->
+            <div class="cosmic-ad-container">
+                <div class="ad-label"><i class="fas fa-lightbulb"></i> Quantum Wisdom</div>
+                <div class="ad-content">
+                    <!-- AdSense Ad Unit -->
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-2958343227558642"
+                         data-ad-slot="YOUR_LIBRARY_AD_SLOT_1"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Curated Resources Section -->
+    <section id="curated" class="library-section">
+        <div class="cosmic-chapter">
+            <div class="chapter-header">
+                <div class="quantum-sigil">📚</div>
+                <div>
+                    <h2 class="chapter-title">Curated Wisdom Repository</h2>
+                    <p class="chapter-subtitle">Freely accessible texts, papers, and resources - All copyright-safe</p>
+                </div>
+            </div>
+            
+            <div class="resource-grid">
+                <!-- Ancient Wisdom -->
+                <div class="resource-card">
+                    <span class="resource-category">Ancient Wisdom</span>
+                    <h3 class="resource-title">Tao Te Ching</h3>
+                    <p class="resource-description">The fundamental text of Taoism, attributed to Lao Tzu. Explores the nature of reality, virtue, and wu wei (effortless action).</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/216" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF Download
+                        </a>
+                        <a href="https://www.gutenberg.org/ebooks/216" class="resource-link" target="_blank">
+                            <i class="fas fa-file-alt"></i> Plain Text
+                        </a>
+                    </div>
+                    <span class="license-badge">Public Domain</span>
+                </div>
+                
+                <div class="resource-card">
+                    <span class="resource-category">Ancient Wisdom</span>
+                    <h3 class="resource-title">The Rig Veda</h3>
+                    <p class="resource-description">Ancient Indian collection of Vedic Sanskrit hymns. One of the oldest known texts, exploring cosmology and philosophy.</p>
+                    <div class="resource-links">
+                        <a href="https://www.sacred-texts.com/hin/rigveda/" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read Online
+                        </a>
+                        <a href="https://www.sacred-texts.com/hin/rigveda/rv01000.zip" class="resource-link" target="_blank">
+                            <i class="fas fa-download"></i> Download ZIP
+                        </a>
+                    </div>
+                    <span class="license-badge">Public Domain</span>
+                </div>
+                
+                <!-- Quantum Physics -->
+                <div class="resource-card">
+                    <span class="resource-category">Quantum Physics</span>
+                    <h3 class="resource-title">The Feynman Lectures</h3>
+                    <p class="resource-description">Richard Feynman's legendary lectures on physics. Comprehensive introduction to quantum mechanics and fundamental physics.</p>
+                    <div class="resource-links">
+                        <a href="https://www.feynmanlectures.caltech.edu/" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read Online
+                        </a>
+                        <a href="https://www.feynmanlectures.caltech.edu/info/" class="resource-link" target="_blank">
+                            <i class="fas fa-info-circle"></i> Access Info
+                        </a>
+                    </div>
+                    <span class="license-badge">Free Access</span>
+                </div>
+                
+                <div class="resource-card">
+                    <span class="resource-category">Quantum Physics</span>
+                    <h3 class="resource-title">Quantum Mechanics Papers</h3>
+                    <p class="resource-description">Collection of foundational quantum mechanics papers from arXiv. Includes works by Einstein, Bohr, Schrödinger, and others.</p>
+                    <div class="resource-links">
+                        <a href="https://arxiv.org/archive/quant-ph" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Browse Archive
+                        </a>
+                        <a href="https://arxiv.org/help/bulk_data" class="resource-link" target="_blank">
+                            <i class="fas fa-database"></i> Bulk Data
+                        </a>
+                    </div>
+                    <span class="license-badge">Open Access</span>
+                </div>
+                
+                <!-- Philosophy -->
+                <div class="resource-card">
+                    <span class="resource-category">Philosophy</span>
+                    <h3 class="resource-title">Meditations by Marcus Aurelius</h3>
+                    <p class="resource-description">Personal writings of Roman Emperor Marcus Aurelius, outlining Stoic philosophy and principles for living virtuously.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/2680" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> PDF Download
+                        </a>
+                        <a href="https://www.gutenberg.org/ebooks/2680" class="resource-link" target="_blank">
+                            <i class="fas fa-file-alt"></i> Multiple Formats
+                        </a>
+                    </div>
+                    <span class="license-badge">Public Domain</span>
+                </div>
+                
+                <div class="resource-card">
+                    <span class="resource-category">Philosophy</span>
+                    <h3 class="resource-title">Thus Spoke Zarathustra</h3>
+                    <p class="resource-description">Friedrich Nietzsche's philosophical novel introducing concepts of the Übermensch, eternal recurrence, and the will to power.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/1998" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                        <a href="https://www.gutenberg.org/ebooks/1998" class="resource-link" target="_blank">
+                            <i class="fas fa-download"></i> Download EPUB
+                        </a>
+                    </div>
+                    <span class="license-badge">Public Domain</span>
+                </div>
+                
+                <!-- Consciousness Studies -->
+                <div class="resource-card">
+                    <span class="resource-category">Consciousness</span>
+                    <h3 class="resource-title">The Tibetan Book of the Dead</h3>
+                    <p class="resource-description">Guide to the experiences of consciousness after death, according to Tibetan Buddhist tradition.</p>
+                    <div class="resource-links">
+                        <a href="https://www.sacred-texts.com/bud/tib/" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read Online
+                        </a>
+                        <a href="https://www.sacred-texts.com/bud/tib/tib.zip" class="resource-link" target="_blank">
+                            <i class="fas fa-download"></i> Download ZIP
+                        </a>
+                    </div>
+                    <span class="license-badge">Public Domain</span>
+                </div>
+                
+                <div class="resource-card">
+                    <span class="resource-category">Consciousness</span>
+                    <h3 class="resource-title">Consciousness Research Papers</h3>
+                    <p class="resource-description">Collection of contemporary research papers on consciousness studies from open access journals.</p>
+                    <div class="resource-links">
+                        <a href="https://philpapers.org/browse/consciousness" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Browse Papers
+                        </a>
+                        <a href="https://philpapers.org/help/about_rss.html" class="resource-link" target="_blank">
+                            <i class="fas fa-rss"></i> RSS Feed
+                        </a>
+                    </div>
+                    <span class="license-badge">Open Access</span>
+                </div>
+            </div>
+            
+            <!-- Ad Container 2 -->
+            <div class="cosmic-ad-container" style="margin-top: 3rem;">
+                <div class="ad-label"><i class="fas fa-graduation-cap"></i> Quantum Learning</div>
+                <div class="ad-content">
+                    <!-- AdSense Ad Unit -->
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-2958343227558642"
+                         data-ad-slot="YOUR_LIBRARY_AD_SLOT_2"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Submission Section -->
+    <section id="submit" class="library-section">
+        <div class="cosmic-chapter">
+            <div class="chapter-header">
+                <div class="quantum-sigil">⚡</div>
+                <div>
+                    <h2 class="chapter-title">Contribute to the Library</h2>
+                    <p class="chapter-subtitle">Share your resources with the Quantum Odyssey community</p>
+                </div>
+            </div>
+            
+            <!-- GitHub Repository Submission -->
+            <div class="submission-form">
+                <h3 class="form-title"><i class="fab fa-github"></i> Submit GitHub Repository</h3>
+                <p style="color: var(--ancient-parchment); margin-bottom: 2rem; opacity: 0.9;">
+                    Share your GitHub repository containing text files, PDFs, or markdown files related to quantum physics, 
+                    ancient wisdom, philosophy, or consciousness studies.
+                </p>
+                
+                <form id="githubForm">
+                    <div class="form-group">
+                        <label class="form-label">GitHub Repository URL</label>
+                        <input type="url" class="form-input" placeholder="https://github.com/yourusername/your-repo" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Repository Description</label>
+                        <textarea class="form-textarea" placeholder="Describe what resources are in your repository..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Resource Type</label>
+                        <select class="form-select" required>
+                            <option value="">Select a category</option>
+                            <option value="ancient">Ancient Wisdom Texts</option>
+                            <option value="quantum">Quantum Physics Papers</option>
+                            <option value="philosophy">Philosophical Works</option>
+                            <option value="consciousness">Consciousness Studies</option>
+                            <option value="practical">Practical Manuals</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">License Type</label>
+                        <select class="form-select" required>
+                            <option value="">Select license</option>
+                            <option value="public">Public Domain</option>
+                            <option value="cc-by">Creative Commons Attribution</option>
+                            <option value="cc-by-sa">Creative Commons ShareAlike</option>
+                            <option value="mit">MIT License</option>
+                            <option value="other">Other Open License</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Your Email (Optional, for updates)</label>
+                        <input type="email" class="form-input" placeholder="email@example.com">
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Submit Repository</button>
+                </form>
+                
+                <div class="form-help">
+                    <strong><i class="fas fa-info-circle"></i> Important:</strong> 
+                    Only submit repositories containing copyright-free or openly licensed content. 
+                    The repository should contain actual resource files (PDFs, text files, etc.) not just code.
+                </div>
+            </div>
+            
+            <!-- Direct Link Submission -->
+            <div class="submission-form">
+                <h3 class="form-title"><i class="fas fa-link"></i> Submit Direct Resource Link</h3>
+                <p style="color: var(--ancient-parchment); margin-bottom: 2rem; opacity: 0.9;">
+                    Share links to individual PDFs, text files, or web pages containing free resources.
+                </p>
+                
+                <form id="directLinkForm">
+                    <div class="form-group">
+                        <label class="form-label">Resource Title</label>
+                        <input type="text" class="form-input" placeholder="e.g., 'Quantum Entanglement Explained'" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Resource URL</label>
+                        <input type="url" class="form-input" placeholder="https://example.com/resource.pdf" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Link Text (Display Name)</label>
+                        <input type="text" class="form-input" placeholder="e.g., 'Download PDF' or 'Read Online'" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Description</label>
+                        <textarea class="form-textarea" placeholder="Brief description of the resource..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Resource Type</label>
+                        <select class="form-select" required>
+                            <option value="">Select a category</option>
+                            <option value="pdf">PDF Document</option>
+                            <option value="text">Plain Text File</option>
+                            <option value="html">Web Page</option>
+                            <option value="epub">EPUB eBook</option>
+                            <option value="other">Other Format</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">License/Copyright Status</label>
+                        <select class="form-select" required>
+                            <option value="">Select license</option>
+                            <option value="public">Public Domain</option>
+                            <option value="cc">Creative Commons</option>
+                            <option value="open">Open Access</option>
+                            <option value="free">Free to Use</option>
+                            <option value="unknown">Unknown (Please verify)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Your Name or Alias (Optional)</label>
+                        <input type="text" class="form-input" placeholder="How you want to be credited">
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Submit Resource Link</button>
+                </form>
+                
+                <div class="form-help">
+                    <strong><i class="fas fa-exclamation-triangle"></i> Copyright Notice:</strong> 
+                    By submitting a link, you confirm that the resource is either in the public domain, 
+                    available under an open license, or you have permission to share it. Please verify 
+                    copyright status before submitting.
+                </div>
+            </div>
+            
+            <!-- Ad Container 3 -->
+            <div class="cosmic-ad-container">
+                <div class="ad-label"><i class="fas fa-share-alt"></i> Share Wisdom</div>
+                <div class="ad-content">
+                    <!-- AdSense Ad Unit -->
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-2958343227558642"
+                         data-ad-slot="YOUR_LIBRARY_AD_SLOT_3"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="quantum-footer">
+        <div class="footer-content">
+            <div class="cosmic-copyright">
+                © Quantum Odyssey Infinite Library | All resources are copyright-safe and freely accessible<br>
+                Return to <a href="index.html" style="color: var(--nebula-teal); text-decoration: none;">Quantum Odyssey Main Portal</a><br><br>
+                This library complies with copyright laws and only contains public domain or openly licensed materials.<br>
+                Last updated: 2026-01-13 | Version: 1.0.0 (Library Edition)
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Quantum JavaScript -->
+    <script>
+        const QuantumLibrary = {
+            
+            // Initialize quantum cosmos
+            initQuantumCosmos: function() {
+                particlesJS("quantum-cosmos", {
+                    particles: {
+                        number: { 
+                            value: window.innerWidth < 768 ? 80 : 120, 
+                            density: { enable: true, value_area: 800 } 
+                        },
+                        color: { 
+                            value: ["#00F5FF", "#FFD700", "#9D4EDD"],
+                        },
+                        shape: {
+                            type: "circle",
+                        },
+                        opacity: {
+                            value: 0.8,
+                            random: true,
+                            anim: { enable: true, speed: 1, opacity_min: 0.3, sync: false }
+                        },
+                        size: {
+                            value: 2,
+                            random: true,
+                            anim: { enable: true, speed: 2, size_min: 0.5, sync: false }
+                        },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: "#00F5FF",
+                            opacity: 0.2,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1,
+                            direction: "none",
+                            random: true,
+                            straight: false,
+                            out_mode: "out",
+                            bounce: false,
+                            attract: { enable: false, rotateX: 600, rotateY: 1200 }
+                        }
+                    },
+                    interactivity: {
+                        detect_on: "canvas",
+                        events: {
+                            onhover: { enable: true, mode: "grab" },
+                            onclick: { enable: true, mode: "push" },
+                            resize: true
+                        },
+                        modes: {
+                            grab: { distance: 200, line_linked: { opacity: 0.5 } },
+                            push: { particles_nb: 4 }
+                        }
+                    },
+                    retina_detect: true
+                });
+            },
+            
+            // Form submission handlers
+            initForms: function() {
+                const githubForm = document.getElementById('githubForm');
+                const directLinkForm = document.getElementById('directLinkForm');
+                
+                if (githubForm) {
+                    githubForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        QuantumLibrary.submitGitHubRepo(this);
+                    });
+                }
+                
+                if (directLinkForm) {
+                    directLinkForm.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        QuantumLibrary.submitDirectLink(this);
+                    });
+                }
+            },
+            
+            // GitHub repo submission
+            submitGitHubRepo: function(form) {
+                const formData = new FormData(form);
+                const repoUrl = formData.get('url') || form.querySelector('input[type="url"]').value;
+                
+                // Show submission feedback
+                QuantumLibrary.showNotification('🚀 Repository submitted for review! Thank you for contributing.');
+                
+                // Log submission (in a real implementation, this would send to a server)
+                console.log('GitHub Repository Submission:', {
+                    url: repoUrl,
+                    description: formData.get('description') || form.querySelector('textarea').value,
+                    timestamp: new Date().toISOString()
+                });
+                
+                // Reset form
+                form.reset();
+                
+                // Show success message
+                setTimeout(() => {
+                    QuantumLibrary.showNotification('📚 Your submission will be reviewed and added to the library soon.');
+                }, 2000);
+            },
+            
+            // Direct link submission
+            submitDirectLink: function(form) {
+                const formData = new FormData(form);
+                
+                // Show submission feedback
+                QuantumLibrary.showNotification('🔗 Resource link submitted! Thank you for sharing.');
+                
+                // Log submission
+                console.log('Direct Link Submission:', {
+                    title: formData.get('title') || form.querySelector('input[type="text"]').value,
+                    url: formData.get('url') || form.querySelector('input[type="url"]').value,
+                    timestamp: new Date().toISOString()
+                });
+                
+                // Reset form
+                form.reset();
+            },
+            
+            // Notification system
+            showNotification: function(message) {
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    background: linear-gradient(135deg, var(--quantum-field), var(--consciousness-purple));
+                    color: white;
+                    padding: 1rem 2rem;
+                    border-radius: 10px;
+                    border: 2px solid var(--cosmic-border);
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                    z-index: 10000;
+                    animation: slideIn 0.5s ease;
+                `;
+                notification.innerHTML = `<i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i> ${message}`;
+                
+                // Add animation style if not present
+                if (!document.querySelector('#notification-styles')) {
+                    const style = document.createElement('style');
+                    style.id = 'notification-styles';
+                    style.textContent = `
+                        @keyframes slideIn {
+                            from { transform: translateX(100%); opacity: 0; }
+                            to { transform: translateX(0); opacity: 1; }
+                        }
+                        @keyframes slideOut {
+                            from { transform: translateX(0); opacity: 1; }
+                            to { transform: translateX(100%); opacity: 0; }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+                
+                document.body.appendChild(notification);
+                
+                // Remove after 5 seconds
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.5s ease';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 500);
+                }, 5000);
+            },
+            
+            // Initialize AdSense
+            initAdSense: function() {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            },
+            
+            // Initialize everything
+            init: function() {
+                this.initQuantumCosmos();
+                this.initForms();
+                this.initAdSense();
+                
+                // Fade in page
+                document.body.style.opacity = '0';
+                document.body.style.transition = 'opacity 1s ease';
+                setTimeout(() => {
+                    document.body.style.opacity = '1';
+                }, 300);
+                
+                // Console welcome message
+                console.log('%c📚 INFINITE LIBRARY 📚', 'font-size: 24px; font-weight: bold; color: #00F5FF;');
+                console.log('%cA quantum repository of freely accessible wisdom', 'color: #FFD700;');
+                console.log('%cSubmit your resources to expand the collection', 'color: #9D4EDD;');
+            }
+        };
+        
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            QuantumLibrary.init();
+        });
+    </script>
+</body>
+</html>
