@@ -233,6 +233,46 @@
             padding: 0.5rem;
         }
         
+        /* ===== NEW: GOOGLE ADSENSE BANNER STYLES (From First Site) ===== */
+        .ad-container {
+            background: linear-gradient(135deg, rgba(10, 15, 30, 0.9), rgba(26, 32, 54, 0.9));
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 3rem auto;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border: 1px solid var(--cosmic-border);
+            position: relative;
+            overflow: hidden;
+            max-width: 800px;
+            transition: all 0.3s ease;
+        }
+        
+        .ad-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.15);
+            border-color: var(--nebula-teal);
+        }
+        
+        .ad-label {
+            font-size: 0.85rem;
+            color: var(--starlight-gold);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .ad-label i {
+            color: var(--nebula-teal);
+            font-size: 0.9rem;
+        }
+        
         /* ===== OPTIMIZED AD CONTAINERS ===== */
         .cosmic-ad-container {
             background: linear-gradient(135deg, rgba(10, 15, 30, 0.9), rgba(26, 32, 54, 0.9));
@@ -1403,7 +1443,7 @@
                 padding: 2rem;
             }
             
-            .cosmic-ad-container {
+            .cosmic-ad-container, .ad-container {
                 padding: 0.8rem 1.2rem;
                 margin: 1.5rem auto;
             }
@@ -1468,7 +1508,7 @@
                 padding: 1.2rem;
             }
             
-            .cosmic-ad-container {
+            .cosmic-ad-container, .ad-container {
                 margin: 1.5rem auto;
                 padding: 0.8rem 1rem;
             }
@@ -1511,7 +1551,7 @@
                 font-size: 1.1rem;
             }
             
-            .cosmic-ad-container {
+            .cosmic-ad-container, .ad-container {
                 padding: 0.6rem 0.8rem;
             }
             
@@ -1526,7 +1566,8 @@
         @media print {
             .celestial-navigation,
             .back-to-portal,
-            .cosmic-ad-container {
+            .cosmic-ad-container,
+            .ad-container {
                 display: none;
             }
             
@@ -1584,6 +1625,23 @@
                 many-worlds interpretation, and ancient creation myths find their scientific echoes 
                 in the quantum foam from which universes emerge.
             </p>
+            
+            <!-- AD CONTAINER 1: Top of Page -->
+            <div class="ad-container">
+                <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+                <!-- AdSense Ad Unit 1 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_FIRST_AD_SLOT_ID"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
             <div class="portal-stats" style="display: flex; justify-content: center; gap: 2.5rem; margin-top: 3.5rem; flex-wrap: wrap;">
                 <div style="text-align: center;">
                     <div style="font-size: 2.2rem; color: var(--starlight-gold); font-weight: 700;">15+</div>
@@ -1658,23 +1716,20 @@
         </div>
     </section>
     
-    <!-- Ad Container 1: Quantum Enlightenment -->
+    <!-- AD CONTAINER 2: Between Timeline and First Chapter -->
     <div class="quantum-scroll-section">
-        <div class="cosmic-ad-container">
-            <div class="ad-label"><i class="fas fa-lightbulb"></i> Quantum Enlightenment</div>
-            <div class="ad-content">
-                <!-- AdSense Ad Unit 1 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-2958343227558642"
-                     data-ad-slot="YOUR_FIRST_AD_SLOT_ID"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+        <div class="ad-container">
+            <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+            <!-- AdSense Ad Unit 2 -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="ca-pub-2958343227558642"
+                 data-ad-slot="YOUR_SECOND_AD_SLOT_ID"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </div>
     
@@ -1748,12 +1803,46 @@
                 </table>
             </div>
             
+            <!-- AD CONTAINER 3: Within Chapter 1 -->
+            <div class="ad-container">
+                <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+                <!-- AdSense Ad Unit 3 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_THIRD_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
             <div class="quantum-highlight">
                 <h3 class="highlight-title"><i class="fas fa-lightbulb"></i> Philosophical Synthesis</h3>
                 <p>The convergence of ancient wisdom and quantum physics suggests a profound truth: reality emerges from a state of infinite potential through a process of differentiation. Whether expressed as divine emanation or quantum fluctuation, the fundamental insight remains—existence arises from a unified field of possibilities. This understanding bridges the mystical experience of non-duality with the scientific observation of quantum entanglement, revealing consciousness itself as both the observer and the observed in this cosmic dance. The universe appears to be a self-observing system, with human consciousness serving as its means of self-reflection.</p>
             </div>
         </div>
     </section>
+    
+    <!-- AD CONTAINER 4: Between Chapter 1 and 2 -->
+    <div class="quantum-scroll-section">
+        <div class="ad-container">
+            <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+            <!-- AdSense Ad Unit 4 -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-2958343227558642"
+                 data-ad-slot="YOUR_FOURTH_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
     
     <!-- Chapter 2: Quantum Evolutionary Arc -->
     <section id="evolution" class="quantum-scroll-section">
@@ -1801,6 +1890,22 @@
                 <span class="citation-source">— Sir Roger Penrose, "The Emperor's New Mind"</span>
             </div>
             
+            <!-- AD CONTAINER 5: Within Chapter 2 -->
+            <div class="ad-container">
+                <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+                <!-- AdSense Ad Unit 5 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_FIFTH_AD_SLOT_ID"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
             <div class="quantum-code">
                 <div class="code-language">QUANTUM EVOLUTION</div>
                 // Evolution as quantum probability exploration<br>
@@ -1815,22 +1920,20 @@
         </div>
     </section>
     
-    <!-- Ad Container 2: Consciousness Research -->
+    <!-- AD CONTAINER 6: Between Chapter 2 and 3 -->
     <div class="quantum-scroll-section">
-        <div class="cosmic-ad-container">
-            <div class="ad-label"><i class="fas fa-brain"></i> Consciousness Research</div>
-            <div class="ad-content">
-                <!-- AdSense Ad Unit 2 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-format="autorelaxed"
-                     data-ad-client="ca-pub-2958343227558642"
-                     data-ad-slot="YOUR_SECOND_AD_SLOT_ID"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+        <div class="ad-container">
+            <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+            <!-- AdSense Ad Unit 6 -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="ca-pub-2958343227558642"
+                 data-ad-slot="YOUR_SIXTH_AD_SLOT_ID"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </div>
     
@@ -1885,6 +1988,22 @@
                 </div>
             </div>
             
+            <!-- AD CONTAINER 7: Within Chapter 3 -->
+            <div class="ad-container">
+                <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+                <!-- AdSense Ad Unit 7 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_SEVENTH_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
             <div class="mastery-manual">
                 <h3 class="manual-title"><i class="fas fa-meditation"></i> Quantum Consciousness Practice</h3>
                 
@@ -1914,6 +2033,24 @@
             </div>
         </div>
     </section>
+    
+    <!-- AD CONTAINER 8: Between Chapter 3 and 4 -->
+    <div class="quantum-scroll-section">
+        <div class="ad-container">
+            <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+            <!-- AdSense Ad Unit 8 -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-2958343227558642"
+                 data-ad-slot="YOUR_EIGHTH_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
     
     <!-- Chapter 4: Quantum Interpretations -->
     <section id="interpretations" class="quantum-scroll-section">
@@ -1958,6 +2095,22 @@
                         <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> <strong>Observer role:</strong> Measurement creates reality</li>
                     </ul>
                 </div>
+            </div>
+            
+            <!-- AD CONTAINER 9: Within Chapter 4 -->
+            <div class="ad-container">
+                <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+                <!-- AdSense Ad Unit 9 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_NINTH_AD_SLOT_ID"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
             
             <div class="ancient-table-container">
@@ -2006,23 +2159,20 @@
         </div>
     </section>
     
-    <!-- Ad Container 3: Practical Mastery -->
+    <!-- AD CONTAINER 10: Between Chapter 4 and 5 -->
     <div class="quantum-scroll-section">
-        <div class="cosmic-ad-container">
-            <div class="ad-label"><i class="fas fa-crown"></i> Quantum Mastery</div>
-            <div class="ad-content">
-                <!-- AdSense Ad Unit 3 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-2958343227558642"
-                     data-ad-slot="YOUR_THIRD_AD_SLOT_ID"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+        <div class="ad-container">
+            <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+            <!-- AdSense Ad Unit 10 -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-format="autorelaxed"
+                 data-ad-client="ca-pub-2958343227558642"
+                 data-ad-slot="YOUR_TENTH_AD_SLOT_ID"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </div>
     
@@ -2092,6 +2242,22 @@
                 </div>
             </div>
             
+            <!-- AD CONTAINER 11: Within Chapter 5 -->
+            <div class="ad-container">
+                <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+                <!-- AdSense Ad Unit 11 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_ELEVENTH_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+            
             <div class="mastery-manual">
                 <h3 class="manual-title"><i class="fas fa-clock"></i> Quantum Longevity Protocol</h3>
                 
@@ -2151,23 +2317,21 @@
         </div>
     </section>
     
-    <!-- Ad Container 4: Ancient Wisdom -->
+    <!-- AD CONTAINER 12: Before Library Section -->
     <div class="quantum-scroll-section">
-        <div class="cosmic-ad-container">
-            <div class="ad-label"><i class="fas fa-scroll"></i> Ancient Wisdom</div>
-            <div class="ad-content">
-                <!-- AdSense Ad Unit 4 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-client="ca-pub-2958343227558642"
-                     data-ad-slot="YOUR_FOURTH_AD_SLOT_ID"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+        <div class="ad-container">
+            <div class="ad-label"><i class="fas fa-ad"></i> Advertisement</div>
+            <!-- AdSense Ad Unit 12 -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-2958343227558642"
+                 data-ad-slot="YOUR_TWELFTH_AD_SLOT_ID"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
     </div>
     
@@ -2610,6 +2774,21 @@
                 });
             },
             
+            // ===== ADSENSE INITIALIZATION =====
+            initAdSense: function() {
+                // Initialize AdSense ads
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                
+                // Additional ad unit initialization
+                setTimeout(function() {
+                    try {
+                        (adsbygoogle = window.adsbygoogle || []).push({});
+                    } catch (e) {
+                        console.log('AdSense initialization completed');
+                    }
+                }, 1000);
+            },
+            
             // ===== INITIALIZE EVERYTHING =====
             init: function() {
                 // Initialize all systems
@@ -2618,9 +2797,7 @@
                 this.initInsightToggles();
                 this.initAnimations();
                 this.initEasterEgg();
-                
-                // Initialize AdSense
-                (adsbygoogle = window.adsbygoogle || []).push({});
+                this.initAdSense();
                 
                 // Quantum Console Message
                 console.log('%c⚛️ QUANTUM ODYSSEY ⚛️', 'font-size: 24px; font-weight: bold; color: #00F5FF; text-shadow: 0 0 10px #00F5FF');
