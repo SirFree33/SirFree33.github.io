@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -104,86 +103,6 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-        }
-       
-        /* ===== RESOURCE MANAGEMENT ===== */
-        .resource-manager {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-       
-        @media (max-width: 768px) {
-            .resource-manager {
-                grid-template-columns: 1fr;
-            }
-        }
-       
-        .add-resource-form {
-            background: linear-gradient(135deg, rgba(26, 32, 54, 0.95), rgba(10, 15, 30, 0.95));
-            padding: 2rem;
-            border-radius: 15px;
-            border: 2px solid rgba(255, 215, 0, 0.3);
-        }
-       
-        .form-title {
-            color: var(--starlight-gold);
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-        }
-       
-        .form-group {
-            margin-bottom: 1.2rem;
-        }
-       
-        .form-label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: var(--nebula-teal);
-            font-weight: 500;
-        }
-       
-        .form-input {
-            width: 100%;
-            padding: 0.8rem;
-            background: rgba(0, 245, 255, 0.08);
-            border: 1px solid var(--cosmic-border);
-            border-radius: 8px;
-            color: var(--ancient-parchment);
-            font-family: 'Inter', sans-serif;
-        }
-       
-        .form-input:focus {
-            outline: none;
-            border-color: var(--nebula-teal);
-            box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
-        }
-       
-        .form-buttons {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-       
-        .btn {
-            padding: 0.8rem 1.8rem;
-            border: none;
-            border-radius: 8px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-family: 'Inter', sans-serif;
-        }
-       
-        .btn-primary {
-            background: linear-gradient(45deg, var(--nebula-teal), var(--starlight-gold));
-            color: var(--quantum-abyss);
-        }
-       
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 245, 255, 0.3);
         }
        
         /* ===== RESOURCES GRID ===== */
@@ -301,48 +220,6 @@
             color: var(--dark-matter);
         }
        
-        /* ===== SEARCH AND FILTER ===== */
-        .library-controls {
-            display: flex;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-       
-        .search-box {
-            flex: 1;
-            min-width: 300px;
-            position: relative;
-        }
-       
-        .search-input {
-            width: 100%;
-            padding: 0.9rem 1.2rem 0.9rem 3rem;
-            background: rgba(0, 245, 255, 0.08);
-            border: 1px solid var(--cosmic-border);
-            border-radius: 10px;
-            color: var(--ancient-parchment);
-            font-family: 'Inter', sans-serif;
-        }
-       
-        .search-icon {
-            position: absolute;
-            left: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--nebula-teal);
-        }
-       
-        .filter-select {
-            padding: 0.9rem 1.2rem;
-            background: rgba(0, 245, 255, 0.08);
-            border: 1px solid var(--cosmic-border);
-            border-radius: 10px;
-            color: var(--ancient-parchment);
-            font-family: 'Inter', sans-serif;
-            min-width: 180px;
-        }
-       
         /* ===== AD CONTAINERS ===== */
         .cosmic-ad-container {
             background: linear-gradient(135deg, rgba(10, 15, 30, 0.9), rgba(26, 32, 54, 0.9));
@@ -390,14 +267,6 @@
             .resources-grid {
                 grid-template-columns: 1fr;
             }
-           
-            .library-controls {
-                flex-direction: column;
-            }
-           
-            .search-box {
-                min-width: 100%;
-            }
         }
     </style>
 </head>
@@ -406,7 +275,7 @@
         <!-- Header -->
         <header class="library-header">
             <h1 class="library-title">Quantum Odyssey Library</h1>
-            <p class="library-subtitle">Your personal repository of wisdom texts, curated resources, and growth literature</p>
+            <p class="library-subtitle">Your repository of wisdom texts, curated resources, and growth literature</p>
         </header>
        
         <!-- Ad Container 1 -->
@@ -417,124 +286,6 @@
                 <!-- Your AdSense ad unit here -->
             </div>
         </div>
-       
-        <!-- Resource Management Section -->
-        <section class="library-section">
-            <h2 class="section-title"><i class="fas fa-plus-circle"></i> Add Resources to Your Library</h2>
-           
-            <div class="resource-manager">
-                <!-- Form for adding resources -->
-                <div class="add-resource-form">
-                    <h3 class="form-title">Add New Resource</h3>
-                    <form id="addResourceForm">
-                        <div class="form-group">
-                            <label class="form-label">Resource Title *</label>
-                            <input type="text" class="form-input" id="resourceTitle" placeholder="e.g., Aristotle's Metaphysics" required>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label class="form-label">Author / Source</label>
-                            <input type="text" class="form-input" id="resourceAuthor" placeholder="e.g., Aristotle">
-                        </div>
-                       
-                        <div class="form-group">
-                            <label class="form-label">Description</label>
-                            <textarea class="form-input" id="resourceDescription" rows="3" placeholder="Brief description of the resource..."></textarea>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label class="form-label">Category *</label>
-                            <select class="form-input" id="resourceCategory" required>
-                                <option value="">Select category</option>
-                                <option value="ancient">Ancient Wisdom</option>
-                                <option value="quantum">Quantum Physics</option>
-                                <option value="philosophy">Philosophy</option>
-                                <option value="hermetic">Hermetic Philosophy</option>
-                                <option value="growth">Personal Growth</option>
-                                <option value="occult">Occult & Esoteric</option>
-                                <option value="science">Science</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label class="form-label">Direct Link to Text/PDF *</label>
-                            <input type="url" class="form-input" id="resourceUrl" placeholder="https://example.com/book.pdf" required>
-                        </div>
-                       
-                        <div class="form-group">
-                            <label class="form-label">Archive.org Link (Optional)</label>
-                            <input type="url" class="form-input" id="archiveUrl" placeholder="https://archive.org/details/...">
-                        </div>
-                       
-                        <div class="form-group">
-                            <label class="form-label">Link Display Text</label>
-                            <input type="text" class="form-input" id="linkText" placeholder="e.g., Read Online, Download PDF, etc.">
-                        </div>
-                       
-                        <div class="form-buttons">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-save"></i> Add to Library
-                            </button>
-                            <button type="button" class="btn" onclick="clearForm()" style="background: rgba(255,255,255,0.1); color: var(--ancient-parchment);">
-                                Clear Form
-                            </button>
-                        </div>
-                    </form>
-                </div>
-               
-                <!-- Instructions -->
-                <div style="padding: 2rem; background: rgba(0,245,255,0.05); border-radius: 15px; border: 1px solid var(--cosmic-border);">
-                    <h3 style="color: var(--starlight-gold); margin-bottom: 1.5rem; font-size: 1.3rem;">
-                        <i class="fas fa-info-circle"></i> How to Use This Library
-                    </h3>
-                    <div style="color: var(--ancient-parchment); line-height: 1.7;">
-                        <p><strong>1. Your Hosted Texts:</strong> First upload your text files (like aristoteles.txt) to your GitHub repository. Then add them here with the direct link.</p>
-                        <p><strong>2. Archive.org Resources:</strong> Find free books on archive.org and add them here. Example: The Kybalion at <code>https://archive.org/details/kybalionastudyh00unkngoog</code></p>
-                        <p><strong>3. Other Free Resources:</strong> Add any freely accessible PDFs, texts, or online books from Project Gutenberg, Sacred Texts Archive, etc.</p>
-                        <p><strong>4. Organization:</strong> Use categories to keep your library organized. All resources are saved in your browser's local storage.</p>
-                        <p><strong>Note:</strong> Always verify that resources are in the public domain or freely distributable before adding.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-       
-        <!-- Search and Filter -->
-        <div class="library-controls">
-            <div class="search-box">
-                <i class="fas fa-search search-icon"></i>
-                <input type="text" class="search-input" id="searchInput" placeholder="Search your library...">
-            </div>
-           
-            <select class="filter-select" id="categoryFilter">
-                <option value="">All Categories</option>
-                <option value="ancient">Ancient Wisdom</option>
-                <option value="quantum">Quantum Physics</option>
-                <option value="philosophy">Philosophy</option>
-                <option value="hermetic">Hermetic Philosophy</option>
-                <option value="growth">Personal Growth</option>
-                <option value="occult">Occult & Esoteric</option>
-                <option value="science">Science</option>
-                <option value="other">Other</option>
-            </select>
-           
-            <select class="filter-select" id="sortFilter">
-                <option value="newest">Newest First</option>
-                <option value="oldest">Oldest First</option>
-                <option value="title">Title A-Z</option>
-                <option value="category">By Category</option>
-            </select>
-        </div>
-       
-        <!-- Your Personal Repository Section -->
-        <section class="library-section">
-            <h2 class="section-title"><i class="fas fa-bookmark"></i> Your Personal Repository</h2>
-            <p style="color: var(--nebula-teal); margin-bottom: 1.5rem;">Texts you've added from your own collection</p>
-           
-            <div class="resources-grid" id="personalResources">
-                <!-- Dynamic content will be added here -->
-            </div>
-        </section>
        
         <!-- Ad Container 2 -->
         <div class="cosmic-ad-container">
@@ -1113,6 +864,247 @@
                     </div>
                 </div>
                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Occult & Esoteric</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Interpretation of Dreams</h3>
+                    <p class="resource-author">Sigmund Freud</p>
+                    <p class="resource-description">Seminal work in psychoanalysis that introduces Freud's theory of the unconscious and how dreams serve as wish fulfillment. It explores dream symbolism, distortion, and the distinction between manifest and latent content, revolutionizing our understanding of the human mind and influencing modern psychology. This book lays the foundation for psychoanalytic theory and dream analysis techniques.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/the-interpretation-of-dreams-1913" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/the-interpretation-of-dreams-1913/the-interpretation-of-dreams-1913.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Occult & Esoteric</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Civilization and Its Discontents</h3>
+                    <p class="resource-author">Sigmund Freud</p>
+                    <p class="resource-description">Freud's examination of the tension between individual desires and societal demands, exploring sources of human unhappiness. This work discusses the superego, aggression, and the death instinct, offering insights into cultural development and psychological conflict in civilization. It provides a psychoanalytic perspective on the costs of social progress.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/in.ernet.dli.2015.221667" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/in.ernet.dli.2015.221667/in.ernet.dli.2015.221667.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Nicomachean Ethics</h3>
+                    <p class="resource-author">Aristotle</p>
+                    <p class="resource-description">Aristotle's foundational text on ethics, exploring virtue, happiness, and the good life through the doctrine of the mean. This work analyzes moral virtues, intellectual virtues, and friendship, providing a framework for ethical decision-making that emphasizes practical wisdom and character development. It remains a cornerstone of virtue ethics in Western philosophy.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/nicomachean00aris" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/nicomachean00aris/nicomachean00aris.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The World as Will and Representation</h3>
+                    <p class="resource-author">Arthur Schopenhauer</p>
+                    <p class="resource-description">Schopenhauer's magnum opus presenting reality as driven by a blind, insatiable will, with representation as the phenomenal world. This work integrates Eastern philosophy with Western thought, discussing aesthetics, ethics, and the denial of the will, influencing thinkers like Nietzsche and Freud. It offers a pessimistic view of existence balanced by artistic and ascetic salvation.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/the-world-as-will-and-representation" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/the-world-as-will-and-representation/The-World-as-Will-and-Representation.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Ancient Wisdom</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Book of Five Rings</h3>
+                    <p class="resource-author">Miyamoto Musashi</p>
+                    <p class="resource-description">Classic Japanese text on strategy and swordsmanship, divided into five books representing elements. Musashi's philosophy emphasizes adaptability, timing, and psychological warfare in combat and life, offering tactical insights for success in conflicts and personal development. This work influences martial arts, business strategy, and self-discipline practices.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/english-collections-k-z" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://dn720006.ca.archive.org/0/items/english-collections-k-z/The%20Book%20of%20Five%20Rings%20-%20Miyamoto,%20Musashi.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Ancient Wisdom</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Art of War</h3>
+                    <p class="resource-author">Sun Tzu</p>
+                    <p class="resource-description">Timeless strategic treatise on warfare, emphasizing intelligence, deception, and efficient victory. Sun Tzu's principles apply to business, sports, and personal conflicts, promoting knowledge of self and enemy for success without battle. This ancient Chinese text continues to shape military and leadership thinking worldwide.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/TheArtOfWarBySunTzu" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://dn790006.ca.archive.org/0/items/TheArtOfWarBySunTzu/ArtOfWar.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Prince</h3>
+                    <p class="resource-author">Niccolò Machiavelli</p>
+                    <p class="resource-description">Pragmatic guide to political power and leadership, advocating realistic rather than idealistic approaches. Machiavelli's observations on human nature, fortune, and virtue provide tactical advice for rulers, influencing modern political science and realpolitik. This Renaissance text remains controversial for its amoral view of governance.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/MachiavelliNiccoloThePrinceEN1513239P" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://dn790003.ca.archive.org/0/items/MachiavelliNiccoloThePrinceEN1513239P./Machiavelli,%20Niccolo%20-%20The%20Prince%20(EN,%201513,%20239%20p.).pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Leviathan</h3>
+                    <p class="resource-author">Thomas Hobbes</p>
+                    <p class="resource-description">Foundational text in social contract theory, arguing for strong central authority to escape the brutal state of nature. Hobbes analyzes human psychology, rights, and the commonwealth, influencing modern political philosophy and concepts of sovereignty. This work provides a materialistic view of society and government.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/in.ernet.dli.2015.32247" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/in.ernet.dli.2015.32247/in.ernet.dli.2015.32247.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Critique of Pure Reason</h3>
+                    <p class="resource-author">Immanuel Kant</p>
+                    <p class="resource-description">Kant's revolutionary examination of the foundations of human knowledge and metaphysics. Distinguishing between a priori and a posteriori knowledge, it introduces transcendental idealism and critiques traditional metaphysics. This text profoundly influenced subsequent philosophy, science, and epistemology.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/0330Bk" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/0330Bk/0330_Bk.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Beyond Good and Evil</h3>
+                    <p class="resource-author">Friedrich Nietzsche</p>
+                    <p class="resource-description">Nietzsche's critique of traditional morality, calling for a revaluation of values beyond conventional good and evil. Exploring perspectivism, will to power, and the psychology of philosophers, it challenges dogmatism and advocates for free spirits. This work preludes Nietzsche's later philosophy and influences existentialism and postmodernism.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/beyond-good-and-evil_202105" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://ia803401.us.archive.org/23/items/beyond-good-and-evil_202105/Beyond%20good%20and%20evil.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Occult & Esoteric</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Psychological Types</h3>
+                    <p class="resource-author">Carl Gustav Jung</p>
+                    <p class="resource-description">Jung's comprehensive theory of personality types, distinguishing introversion/extroversion and four psychological functions. This work explores how individual differences in perception and judgment shape worldview and behavior. It forms the basis for modern personality assessments and deepens understanding of human psychology.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/collectedworksof92cgju" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/collectedworksof92cgju/collectedworksof92cgju.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
             </div>
            
             <div style="text-align: center; margin-top: 2.5rem;">
@@ -1134,444 +1126,5 @@
             </p>
         </footer>
     </div>
-   
-    <!-- JavaScript for Library Management -->
-    <script>
-        // Library Management System
-        const QuantumLibrary = {
-            resources: [],
-           
-            // Initialize library
-            init: function() {
-                this.loadResources();
-                this.setupEventListeners();
-                this.renderPersonalResources();
-               
-                // Initialize AdSense
-                (adsbygoogle = window.adsbygoogle || []).push({});
-            },
-           
-            // Load resources from localStorage
-            loadResources: function() {
-                const savedResources = localStorage.getItem('quantumLibraryResources');
-                if (savedResources) {
-                    this.resources = JSON.parse(savedResources);
-                }
-            },
-           
-            // Save resources to localStorage
-            saveResources: function() {
-                localStorage.setItem('quantumLibraryResources', JSON.stringify(this.resources));
-            },
-           
-            // Add a new resource
-            addResource: function(resource) {
-                resource.id = Date.now(); // Simple unique ID
-                resource.added = new Date().toISOString();
-                resource.type = 'personal';
-               
-                this.resources.push(resource);
-                this.saveResources();
-                this.renderPersonalResources();
-               
-                this.showNotification(`"${resource.title}" added to your library!`, 'success');
-            },
-           
-            // Remove a resource
-            removeResource: function(id) {
-                this.resources = this.resources.filter(r => r.id !== id);
-                this.saveResources();
-                this.renderPersonalResources();
-               
-                this.showNotification('Resource removed from library', 'info');
-            },
-           
-            // Clone a curated resource to personal library
-            cloneToPersonal: function(resource) {
-                const clonedResource = {
-                    ...resource,
-                    id: Date.now(),
-                    added: new Date().toISOString(),
-                    type: 'personal',
-                    cloned: true
-                };
-               
-                // Remove actions from cloned resource
-                delete clonedResource.actions;
-               
-                this.resources.push(clonedResource);
-                this.saveResources();
-                this.renderPersonalResources();
-               
-                this.showNotification(`"${resource.title}" added to your personal library!`, 'success');
-            },
-           
-            // Render personal resources
-            renderPersonalResources: function() {
-                const container = document.getElementById('personalResources');
-                if (!container) return;
-               
-                const personalResources = this.resources.filter(r => r.type === 'personal');
-               
-                if (personalResources.length === 0) {
-                    container.innerHTML = `
-                        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--nebula-teal);">
-                            <i class="fas fa-book" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-                            <h3 style="color: var(--starlight-gold); margin-bottom: 1rem;">Your library is empty</h3>
-                            <p>Add your first resource using the form above!</p>
-                            <p style="margin-top: 1rem; font-size: 0.9rem;">
-                                Start by adding your Aristotle text once it's uploaded to GitHub
-                            </p>
-                        </div>
-                    `;
-                    return;
-                }
-               
-                container.innerHTML = personalResources.map(resource => `
-                    <div class="resource-card">
-                        <div class="resource-header">
-                            <span class="resource-category">${this.getCategoryLabel(resource.category)}</span>
-                            <div class="resource-actions">
-                                <button class="action-btn" onclick="QuantumLibrary.removeResource(${resource.id})" title="Remove">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                                <button class="action-btn" onclick="QuantumLibrary.editResource(${resource.id})" title="Edit">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <h3 class="resource-title">${resource.title}</h3>
-                        ${resource.author ? `<p class="resource-author">${resource.author}</p>` : ''}
-                        ${resource.description ? `<p class="resource-description">${resource.description}</p>` : ''}
-                        <div class="resource-links">
-                            <a href="${resource.url}" class="resource-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> ${resource.linkText || 'Access Resource'}
-                            </a>
-                            ${resource.archiveUrl ? `
-                            <a href="${resource.archiveUrl}" class="resource-link" target="_blank">
-                                <i class="fas fa-archive"></i> Archive.org
-                            </a>
-                            ` : ''}
-                        </div>
-                        ${resource.cloned ? `<div style="margin-top: 1rem; font-size: 0.8rem; color: var(--nebula-teal);">
-                            <i class="fas fa-clone"></i> Cloned from curated archive
-                        </div>` : ''}
-                    </div>
-                `).join('');
-            },
-           
-            // Get category label
-            getCategoryLabel: function(category) {
-                const labels = {
-                    'ancient': 'Ancient Wisdom',
-                    'quantum': 'Quantum Physics',
-                    'philosophy': 'Philosophy',
-                    'hermetic': 'Hermetic Philosophy',
-                    'growth': 'Personal Growth',
-                    'occult': 'Occult & Esoteric',
-                    'science': 'Science',
-                    'other': 'Other'
-                };
-                return labels[category] || category;
-            },
-           
-            // Edit resource (simplified - in full version would open edit form)
-            editResource: function(id) {
-                const resource = this.resources.find(r => r.id === id);
-                if (resource) {
-                    // Populate form with resource data
-                    document.getElementById('resourceTitle').value = resource.title;
-                    document.getElementById('resourceAuthor').value = resource.author || '';
-                    document.getElementById('resourceDescription').value = resource.description || '';
-                    document.getElementById('resourceCategory').value = resource.category;
-                    document.getElementById('resourceUrl').value = resource.url;
-                    document.getElementById('archiveUrl').value = resource.archiveUrl || '';
-                    document.getElementById('linkText').value = resource.linkText || '';
-                   
-                    // Change form to edit mode
-                    const form = document.getElementById('addResourceForm');
-                    form.dataset.editingId = id;
-                    form.querySelector('button[type="submit"]').innerHTML = '<i class="fas fa-save"></i> Update Resource';
-                   
-                    this.showNotification(`Editing "${resource.title}"`, 'info');
-                }
-            },
-           
-            // Update resource
-            updateResource: function(id, updatedData) {
-                const index = this.resources.findIndex(r => r.id === id);
-                if (index !== -1) {
-                    this.resources[index] = { ...this.resources[index], ...updatedData };
-                    this.saveResources();
-                    this.renderPersonalResources();
-                   
-                    this.showNotification(`"${updatedData.title}" updated!`, 'success');
-                }
-            },
-           
-            // Setup event listeners
-            setupEventListeners: function() {
-                const form = document.getElementById('addResourceForm');
-                if (form) {
-                    form.addEventListener('submit', (e) => {
-                        e.preventDefault();
-                       
-                        const isEditing = form.dataset.editingId;
-                       
-                        const resourceData = {
-                            title: document.getElementById('resourceTitle').value,
-                            author: document.getElementById('resourceAuthor').value,
-                            description: document.getElementById('resourceDescription').value,
-                            category: document.getElementById('resourceCategory').value,
-                            url: document.getElementById('resourceUrl').value,
-                            archiveUrl: document.getElementById('archiveUrl').value || null,
-                            linkText: document.getElementById('linkText').value || null
-                        };
-                       
-                        if (isEditing) {
-                            this.updateResource(parseInt(isEditing), resourceData);
-                            delete form.dataset.editingId;
-                            form.querySelector('button[type="submit"]').innerHTML = '<i class="fas fa-save"></i> Add to Library';
-                        } else {
-                            this.addResource(resourceData);
-                        }
-                       
-                        form.reset();
-                    });
-                }
-               
-                // Search functionality
-                const searchInput = document.getElementById('searchInput');
-                if (searchInput) {
-                    searchInput.addEventListener('input', (e) => {
-                        this.filterResources();
-                    });
-                }
-               
-                // Category filter
-                const categoryFilter = document.getElementById('categoryFilter');
-                if (categoryFilter) {
-                    categoryFilter.addEventListener('change', () => {
-                        this.filterResources();
-                    });
-                }
-            },
-           
-            // Filter resources
-            filterResources: function() {
-                const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-                const category = document.getElementById('categoryFilter').value;
-               
-                const personalResources = this.resources.filter(r => r.type === 'personal');
-                const filteredResources = personalResources.filter(resource => {
-                    const matchesSearch = !searchTerm ||
-                        resource.title.toLowerCase().includes(searchTerm) ||
-                        (resource.author && resource.author.toLowerCase().includes(searchTerm)) ||
-                        (resource.description && resource.description.toLowerCase().includes(searchTerm));
-                   
-                    const matchesCategory = !category || resource.category === category;
-                   
-                    return matchesSearch && matchesCategory;
-                });
-               
-                this.renderFilteredResources(filteredResources);
-            },
-           
-            // Render filtered resources
-            renderFilteredResources: function(filteredResources) {
-                const container = document.getElementById('personalResources');
-                if (!container) return;
-               
-                if (filteredResources.length === 0) {
-                    container.innerHTML = `
-                        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--nebula-teal);">
-                            <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-                            <h3 style="color: var(--starlight-gold); margin-bottom: 1rem;">No resources found</h3>
-                            <p>Try different search terms or categories</p>
-                        </div>
-                    `;
-                    return;
-                }
-               
-                container.innerHTML = filteredResources.map(resource => `
-                    <div class="resource-card">
-                        <div class="resource-header">
-                            <span class="resource-category">${this.getCategoryLabel(resource.category)}</span>
-                            <div class="resource-actions">
-                                <button class="action-btn" onclick="QuantumLibrary.removeResource(${resource.id})" title="Remove">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                                <button class="action-btn" onclick="QuantumLibrary.editResource(${resource.id})" title="Edit">
-                                    <i class="fas fa-edit"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <h3 class="resource-title">${resource.title}</h3>
-                        ${resource.author ? `<p class="resource-author">${resource.author}</p>` : ''}
-                        ${resource.description ? `<p class="resource-description">${resource.description}</p>` : ''}
-                        <div class="resource-links">
-                            <a href="${resource.url}" class="resource-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> ${resource.linkText || 'Access Resource'}
-                            </a>
-                            ${resource.archiveUrl ? `
-                            <a href="${resource.archiveUrl}" class="resource-link" target="_blank">
-                                <i class="fas fa-archive"></i> Archive.org
-                            </a>
-                            ` : ''}
-                        </div>
-                    </div>
-                `).join('');
-            },
-           
-            // Show notification
-            showNotification: function(message, type = 'info') {
-                // Create notification element
-                const notification = document.createElement('div');
-                notification.style.cssText = `
-                    position: fixed;
-                    top: 100px;
-                    right: 20px;
-                    background: ${type === 'success' ? 'linear-gradient(135deg, #1A2036, #0A0F1E)' :
-                                  type === 'error' ? 'linear-gradient(135deg, #361a1a, #1e0a0a)' :
-                                  'linear-gradient(135deg, #1a2036, #0a0f1e)'};
-                    color: white;
-                    padding: 1rem 2rem;
-                    border-radius: 10px;
-                    border: 2px solid ${type === 'success' ? '#00F5FF' : type === 'error' ? '#FF6B6B' : '#FFD700'};
-                    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-                    z-index: 10000;
-                    animation: slideIn 0.5s ease;
-                `;
-                notification.innerHTML = `
-                    <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-triangle' : 'info-circle'}"
-                       style="margin-right: 0.5rem; color: ${type === 'success' ? '#00F5FF' : type === 'error' ? '#FF6B6B' : '#FFD700'};"></i>
-                    ${message}
-                `;
-               
-                // Add animation styles if not present
-                if (!document.querySelector('#notification-styles')) {
-                    const style = document.createElement('style');
-                    style.id = 'notification-styles';
-                    style.textContent = `
-                        @keyframes slideIn {
-                            from { transform: translateX(100%); opacity: 0; }
-                            to { transform: translateX(0); opacity: 1; }
-                        }
-                        @keyframes slideOut {
-                            from { transform: translateX(0); opacity: 1; }
-                            to { transform: translateX(100%); opacity: 0; }
-                        }
-                    `;
-                    document.head.appendChild(style);
-                }
-               
-                document.body.appendChild(notification);
-               
-                // Remove after 4 seconds
-                setTimeout(() => {
-                    notification.style.animation = 'slideOut 0.5s ease';
-                    setTimeout(() => {
-                        if (notification.parentNode) {
-                            document.body.removeChild(notification);
-                        }
-                    }, 500);
-                }, 4000);
-            },
-           
-            // Export library data
-            exportLibrary: function() {
-                const dataStr = JSON.stringify(this.resources.filter(r => r.type === 'personal'), null, 2);
-                const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
-               
-                const exportFileDefaultName = `quantum-library-${new Date().toISOString().split('T')[0]}.json`;
-               
-                const linkElement = document.createElement('a');
-                linkElement.setAttribute('href', dataUri);
-                linkElement.setAttribute('download', exportFileDefaultName);
-                linkElement.click();
-               
-                this.showNotification('Library exported successfully!', 'success');
-            },
-           
-            // Import library data
-            importLibrary: function(file) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    try {
-                        const importedResources = JSON.parse(e.target.result);
-                        importedResources.forEach(resource => {
-                            resource.id = Date.now() + Math.random();
-                            resource.type = 'personal';
-                            resource.added = new Date().toISOString();
-                            this.resources.push(resource);
-                        });
-                       
-                        this.saveResources();
-                        this.renderPersonalResources();
-                        this.showNotification(`${importedResources.length} resources imported successfully!`, 'success');
-                    } catch (error) {
-                        this.showNotification('Error importing library file', 'error');
-                    }
-                };
-                reader.readAsText(file);
-            }
-        };
-       
-        // Global functions for button clicks
-        function cloneResource(button) {
-            const card = button.closest('.resource-card');
-            const title = card.querySelector('.resource-title').textContent;
-            const author = card.querySelector('.resource-author') ? card.querySelector('.resource-author').textContent : '';
-            const categoryElement = card.querySelector('.resource-category');
-            const categoryText = categoryElement ? categoryElement.textContent.toLowerCase() : 'other';
-           
-            // Map category text to category value
-            const categoryMap = {
-                'hermetic philosophy': 'hermetic',
-                'occult & esoteric': 'occult',
-                'ancient wisdom': 'ancient',
-                'philosophy': 'philosophy',
-                'science': 'science',
-                'personal growth': 'growth'
-            };
-           
-            const category = categoryMap[categoryText.toLowerCase()] || 'other';
-           
-            const description = card.querySelector('.resource-description').textContent;
-            const links = card.querySelectorAll('.resource-link');
-            const url = links[0] ? links[0].href : '#';
-            const archiveUrl = links[1] ? links[1].href : null;
-           
-            const resource = {
-                title,
-                author,
-                category,
-                description,
-                url,
-                archiveUrl,
-                linkText: 'Access Resource'
-            };
-           
-            QuantumLibrary.cloneToPersonal(resource);
-        }
-       
-        function clearForm() {
-            document.getElementById('addResourceForm').reset();
-            delete document.getElementById('addResourceForm').dataset.editingId;
-            document.querySelector('#addResourceForm button[type="submit"]').innerHTML = '<i class="fas fa-save"></i> Add to Library';
-        }
-       
-        function addMoreResources() {
-            // In a real implementation, this would load more resources from a database
-            // For now, we'll just show a notification
-            QuantumLibrary.showNotification('More resources would be loaded from archive.org in a full implementation', 'info');
-        }
-       
-        // Initialize library when page loads
-        document.addEventListener('DOMContentLoaded', () => {
-            QuantumLibrary.init();
-        });
-    </script>
 </body>
 </html>
-```
