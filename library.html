@@ -1,33 +1,2647 @@
-
-
 <!DOCTYPE html>
-<!-- Build an Atom using Easel for the Scene Graph Library -->
-<!--[if lt IE 7]>
-<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>
-<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>
-<html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="">
-    <meta name="viewport"
-          content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="white">
-
-    <title>Simple Text Only Test Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quantum Odyssey: A unified theory connecting ancient wisdom, quantum physics, consciousness, and human transcendence. Explore the cosmic tapestry from primordial origins to practical mastery.">
+    <meta name="keywords" content="quantum physics, consciousness, many-worlds interpretation, Copenhagen interpretation, ancient wisdom, evolution, transcendence, universe, existence, philosophy, mysticism, science, meditation, mastery">
+    <meta name="author" content="SirFree33 | Quantum Odyssey Research Institute">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+    
+    <title>Quantum Odyssey: The Unified Theory of Existence | Ancient Wisdom Meets Quantum Science</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&family=Playfair+Display:wght@400;500;600&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Particle.js for quantum background -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <style>
+        /* ===== QUANTUM COSMOS VARIABLES ===== */
+        :root {
+            --quantum-abyss: #000510;
+            --starlight-gold: #FFD700;
+            --nebula-teal: #00F5FF;
+            --consciousness-purple: #9D4EDD;
+            --dark-matter: #0A0F1E;
+            --quantum-field: #1A2036;
+            --ancient-parchment: #F5E9D4;
+            --transcendence-white: #F0F8FF;
+            --quantum-glow: rgba(0, 245, 255, 0.2);
+            --gold-glow: rgba(255, 215, 0, 0.2);
+            --purple-glow: rgba(157, 78, 221, 0.2);
+            --cosmic-border: rgba(0, 245, 255, 0.4);
+            --quantum-gradient: linear-gradient(135deg, var(--quantum-abyss) 0%, var(--dark-matter) 50%, var(--quantum-field) 100%);
+            --cosmic-radial: radial-gradient(circle at 50% 50%, var(--quantum-field), transparent 70%);
+            --header-height: 80px;
+        }
+        
+        /* ===== COSMIC RESET & BASE ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        html {
+            scroll-padding-top: var(--header-height);
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.9;
+            color: var(--ancient-parchment);
+            background: var(--quantum-gradient);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+            font-size: 1.1rem;
+            padding-top: var(--header-height);
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                var(--cosmic-radial),
+                radial-gradient(circle at 20% 30%, rgba(0, 245, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(157, 78, 221, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -3;
+            animation: cosmicDrift 120s linear infinite;
+        }
+        
+        @keyframes cosmicDrift {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(2%, 1%) rotate(0.5deg); }
+            66% { transform: translate(-1%, 2%) rotate(-0.5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        
+        /* ===== QUANTUM COSMIC CANVAS ===== */
+        #quantum-cosmos {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -2;
+            opacity: 0.7;
+        }
+        
+        /* ===== ELEGANT CELESTIAL NAVIGATION (SMALLER HEADER) ===== */
+        .celestial-navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--header-height);
+            background: rgba(10, 15, 30, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--cosmic-border);
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+        }
+        
+        .celestial-navigation.scrolled {
+            height: 70px;
+            background: rgba(10, 15, 30, 0.98);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+        }
+        
+        .navigation-container {
+            max-width: 1600px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .quantum-signature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .quantum-logo {
+            font-family: 'Philosopher', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, var(--nebula-teal), var(--starlight-gold), var(--consciousness-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+        
+        .celestial-navigation.scrolled .quantum-logo {
+            font-size: 1.9rem;
+        }
+        
+        .logo-subtitle {
+            font-size: 0.75rem;
+            color: var(--nebula-teal);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            opacity: 0.8;
+            font-weight: 400;
+        }
+        
+        .cosmic-compass {
+            display: flex;
+            gap: 0.5rem;
+        }
+        
+        .nav-star {
+            position: relative;
+            padding: 0.6rem 1.4rem;
+            color: var(--ancient-parchment);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.8px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 25px;
+            overflow: hidden;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        
+        .nav-star::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, var(--quantum-glow), transparent);
+            transition: left 0.8s ease;
+        }
+        
+        .nav-star:hover::before {
+            left: 100%;
+        }
+        
+        .nav-star:hover {
+            color: var(--nebula-teal);
+            transform: translateY(-2px);
+            border-color: var(--cosmic-border);
+            box-shadow: 0 5px 15px rgba(0, 245, 255, 0.2);
+        }
+        
+        .nav-star.active {
+            background: linear-gradient(135deg, var(--quantum-field), rgba(157, 78, 221, 0.2));
+            color: var(--starlight-gold);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+        
+        .nav-star i {
+            font-size: 0.8rem;
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--nebula-teal);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        /* ===== OPTIMIZED AD CONTAINERS ===== */
+        .cosmic-ad-container {
+            background: linear-gradient(135deg, rgba(10, 15, 30, 0.9), rgba(26, 32, 54, 0.9));
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
+            margin: 2rem auto;
+            text-align: center;
+            border: 1px solid rgba(0, 245, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+            max-width: 800px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: auto;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cosmic-ad-container:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0, 245, 255, 0.15);
+            border-color: var(--nebula-teal);
+        }
+        
+        .ad-label {
+            font-size: 0.9rem;
+            color: var(--starlight-gold);
+            text-transform: uppercase;
+            letter-spacing: 2.5px;
+            margin-bottom: 0.5rem;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-weight: 600;
+            padding: 0.4rem 1rem;
+            background: rgba(0, 245, 255, 0.08);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 245, 255, 0.15);
+        }
+        
+        .ad-label i {
+            font-size: 1rem;
+            color: var(--nebula-teal);
+        }
+        
+        .ad-content {
+            width: 100%;
+            margin-top: 0.3rem;
+        }
+        
+        /* ===== GRAND COSMIC PORTAL ===== */
+        .grand-cosmic-portal {
+            min-height: calc(100vh - var(--header-height));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .portal-content {
+            max-width: 1100px;
+            position: relative;
+            z-index: 2;
+            margin-top: 2rem;
+        }
+        
+        .cosmic-manifesto {
+            font-family: 'Philosopher', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--nebula-teal), var(--starlight-gold), var(--consciousness-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 
+                0 0 40px rgba(0, 245, 255, 0.4),
+                0 0 80px rgba(157, 78, 221, 0.2);
+            animation: cosmicBreathing 10s ease-in-out infinite;
+            line-height: 1.1;
+        }
+        
+        @keyframes cosmicBreathing {
+            0%, 100% { 
+                text-shadow: 
+                    0 0 40px rgba(0, 245, 255, 0.4),
+                    0 0 80px rgba(157, 78, 221, 0.2);
+                transform: scale(1);
+            }
+            50% { 
+                text-shadow: 
+                    0 0 60px rgba(255, 215, 0, 0.6),
+                    0 0 100px rgba(255, 215, 0, 0.3);
+                transform: scale(1.02);
+            }
+        }
+        
+        .portal-subtitle {
+            font-size: 1.6rem;
+            color: var(--ancient-parchment);
+            margin-bottom: 2.5rem;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+            font-weight: 300;
+            letter-spacing: 0.7px;
+            line-height: 1.6;
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+        }
+        
+        .portal-divider {
+            width: 300px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--nebula-teal), var(--starlight-gold), var(--nebula-teal), transparent);
+            margin: 3rem auto;
+            border-radius: 2px;
+        }
+        
+        .cosmic-invitation {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--nebula-teal);
+            font-size: 0.9rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            animation: quantumPulse 4s infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        @keyframes quantumPulse {
+            0%, 100% { opacity: 0.4; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 1; transform: translateX(-50%) translateY(-8px); }
+        }
+        
+        .invitation-arrow {
+            font-size: 1.5rem;
+            animation: arrowBounce 2s infinite;
+        }
+        
+        @keyframes arrowBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-8px); }
+            60% { transform: translateY(-4px); }
+        }
+        
+        /* ===== INTERACTIVE QUANTUM TIMELINE ===== */
+        .quantum-timeline {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            position: relative;
+        }
+        
+        .timeline-container {
+            position: relative;
+            min-height: 800px;
+            margin: 3rem 0;
+        }
+        
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, transparent, var(--nebula-teal), var(--starlight-gold), var(--consciousness-purple), transparent);
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .timeline-event {
+            position: absolute;
+            width: 380px;
+            padding: 1.8rem;
+            background: rgba(10, 15, 30, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid var(--cosmic-border);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            transition: all 0.5s ease;
+            cursor: pointer;
+            z-index: 2;
+        }
+        
+        .timeline-event:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.25);
+            border-color: var(--starlight-gold);
+            background: rgba(10, 15, 30, 0.95);
+        }
+        
+        .timeline-event.left {
+            left: calc(50% - 430px);
+        }
+        
+        .timeline-event.right {
+            left: calc(50% + 50px);
+        }
+        
+        .event-year {
+            font-size: 1.1rem;
+            color: var(--starlight-gold);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .event-title {
+            font-size: 1.3rem;
+            color: var(--nebula-teal);
+            margin-bottom: 0.8rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* ===== ENHANCED QUANTUM SCROLL SECTIONS ===== */
+        .quantum-scroll-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        
+        .cosmic-chapter {
+            background: rgba(10, 15, 30, 0.85);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 4rem;
+            margin-bottom: 5rem;
+            border: 1px solid var(--cosmic-border);
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+        }
+        
+        .cosmic-chapter:hover {
+            transform: translateY(-6px);
+            box-shadow: 
+                0 25px 60px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+        
+        .cosmic-chapter::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, var(--quantum-glow) 0%, transparent 70%);
+            animation: quantumOrbit 60s linear infinite;
+            opacity: 0.1;
+        }
+        
+        @keyframes quantumOrbit {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.1); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        
+        .chapter-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .quantum-sigil {
+            font-size: 3.5rem;
+            min-width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--quantum-field), var(--dark-matter));
+            border: 2px solid var(--nebula-teal);
+            box-shadow: 
+                0 0 30px var(--quantum-glow),
+                inset 0 0 20px rgba(0, 245, 255, 0.1);
+            flex-shrink: 0;
+            animation: sigilPulse 6s infinite;
+        }
+        
+        @keyframes sigilPulse {
+            0%, 100% { 
+                box-shadow: 
+                    0 0 30px var(--quantum-glow),
+                    inset 0 0 20px rgba(0, 245, 255, 0.1);
+            }
+            50% { 
+                box-shadow: 
+                    0 0 40px var(--gold-glow),
+                    inset 0 0 25px rgba(255, 215, 0, 0.15);
+            }
+        }
+        
+        .chapter-title {
+            font-family: 'Philosopher', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--starlight-gold);
+            line-height: 1.2;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            margin-bottom: 0.8rem;
+        }
+        
+        .chapter-subtitle {
+            font-size: 1.3rem;
+            color: var(--nebula-teal);
+            font-weight: 400;
+            letter-spacing: 1.2px;
+            opacity: 0.9;
+            border-left: 2px solid var(--nebula-teal);
+            padding-left: 1.2rem;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* ===== INTERACTIVE QUANTUM INSIGHTS ===== */
+        .quantum-insight {
+            margin: 2.5rem 0;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, 
+                rgba(26, 32, 54, 0.9),
+                rgba(10, 15, 30, 0.9));
+            border-radius: 15px;
+            border-left: 5px solid var(--nebula-teal);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            cursor: pointer;
+        }
+        
+        .quantum-insight:hover {
+            transform: translateX(10px);
+            border-left-color: var(--starlight-gold);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .insight-toggle {
+            position: absolute;
+            top: 1.8rem;
+            right: 1.8rem;
+            width: 36px;
+            height: 36px;
+            background: var(--quantum-field);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--nebula-teal);
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid var(--cosmic-border);
+        }
+        
+        .insight-toggle:hover {
+            background: var(--nebula-teal);
+            color: var(--dark-matter);
+            transform: rotate(90deg);
+        }
+        
+        .insight-title {
+            font-size: 1.5rem;
+            color: var(--nebula-teal);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 600;
+        }
+        
+        .insight-content {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            color: var(--ancient-parchment);
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s ease;
+        }
+        
+        .insight-content.expanded {
+            max-height: 2000px;
+        }
+        
+        /* ===== INTERACTIVE ANCIENT WISDOM TABLES ===== */
+        .ancient-table-container {
+            overflow-x: auto;
+            margin: 4rem 0;
+            border-radius: 12px;
+            border: 2px solid var(--cosmic-border);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        
+        .ancient-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            background: rgba(10, 15, 30, 0.95);
+        }
+        
+        .ancient-table thead {
+            background: linear-gradient(135deg, var(--quantum-field), var(--consciousness-purple));
+            position: sticky;
+            top: 0;
+        }
+        
+        .ancient-table th {
+            padding: 1.5rem;
+            text-align: left;
+            font-weight: 600;
+            color: var(--starlight-gold);
+            font-size: 1.1rem;
+            border-bottom: 3px solid var(--nebula-teal);
+            letter-spacing: 0.8px;
+            position: relative;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        
+        .ancient-table th:hover {
+            background: rgba(157, 78, 221, 0.3);
+        }
+        
+        .ancient-table td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid rgba(0, 245, 255, 0.1);
+            color: var(--ancient-parchment);
+            transition: all 0.3s ease;
+        }
+        
+        .ancient-table tr {
+            transition: all 0.3s ease;
+        }
+        
+        .ancient-table tr:hover {
+            background: rgba(0, 245, 255, 0.06);
+            transform: translateX(3px);
+        }
+        
+        .table-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(0, 245, 255, 0.12);
+            border-radius: 6px;
+            color: var(--nebula-teal);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+        
+        .table-link:hover {
+            background: rgba(0, 245, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 245, 255, 0.15);
+        }
+        
+        /* ===== INTERACTIVE MASTERY MANUALS ===== */
+        .mastery-manual {
+            background: linear-gradient(135deg, 
+                rgba(26, 32, 54, 0.95),
+                rgba(10, 15, 30, 0.95));
+            border-radius: 18px;
+            padding: 3.5rem;
+            margin: 4rem 0;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 215, 0, 0.1);
+            position: relative;
+        }
+        
+        .manual-title {
+            font-size: 2.2rem;
+            color: var(--starlight-gold);
+            margin-bottom: 2.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            font-weight: 600;
+            font-family: 'Philosopher', serif;
+        }
+        
+        .manual-step {
+            margin: 1.8rem 0;
+            padding-left: 3rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .manual-step:hover {
+            transform: translateX(8px);
+        }
+        
+        .step-number {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 28px;
+            height: 28px;
+            background: var(--nebula-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--dark-matter);
+            font-weight: 700;
+            font-size: 1rem;
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+        }
+        
+        .step-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .step-completion {
+            display: inline-block;
+            margin-left: 1rem;
+            padding: 0.25rem 0.9rem;
+            background: rgba(0, 245, 255, 0.1);
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: var(--nebula-teal);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .step-completion:hover {
+            background: rgba(0, 245, 255, 0.2);
+            transform: scale(1.05);
+            border-color: var(--nebula-teal);
+        }
+        
+        .step-completion.completed {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+            border-color: #4CAF50;
+        }
+        
+        /* ===== INTERACTIVE QUANTUM INTERPRETATION COMPARISON ===== */
+        .interpretation-comparison {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2.5rem;
+            margin: 4rem 0;
+        }
+        
+        .interpretation-card {
+            background: rgba(10, 15, 30, 0.9);
+            border-radius: 15px;
+            padding: 2.5rem;
+            border: 2px solid var(--cosmic-border);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .interpretation-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--starlight-gold);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+        
+        .interpretation-card.selected {
+            border-color: var(--starlight-gold);
+            background: rgba(10, 15, 30, 0.95);
+            box-shadow: 0 0 30px rgba(255, 215, 0, 0.2);
+        }
+        
+        .interpretation-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1.8rem;
+        }
+        
+        .interpretation-icon {
+            font-size: 3rem;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--quantum-field), var(--consciousness-purple));
+            box-shadow: 0 0 25px rgba(157, 78, 221, 0.3);
+        }
+        
+        .interpretation-name {
+            font-size: 1.9rem;
+            color: var(--starlight-gold);
+            font-weight: 600;
+            font-family: 'Philosopher', serif;
+        }
+        
+        .interpretation-desc {
+            color: var(--ancient-parchment);
+            margin-bottom: 1.8rem;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .interpretation-select {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--nebula-teal);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .interpretation-card.selected .interpretation-select {
+            background: var(--starlight-gold);
+            border-color: var(--starlight-gold);
+        }
+        
+        .interpretation-card.selected .interpretation-select::after {
+            content: '✓';
+            color: var(--dark-matter);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        /* ===== GRAND INFINITE LIBRARY ===== */
+        .grand-infinite-library {
+            background: linear-gradient(135deg, 
+                rgba(26, 32, 54, 0.95),
+                rgba(10, 15, 30, 0.95));
+            border-radius: 22px;
+            padding: 5rem;
+            margin: 7rem auto;
+            text-align: center;
+            border: 2px solid rgba(255, 215, 0, 0.5);
+            box-shadow: 
+                0 25px 70px rgba(0, 0, 0, 0.5),
+                0 0 120px rgba(255, 215, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            max-width: 1100px;
+        }
+        
+        .library-glow {
+            position: absolute;
+            top: -150%;
+            left: -150%;
+            width: 400%;
+            height: 400%;
+            background: radial-gradient(circle, rgba(255,215,0,0.12) 0%, transparent 70%);
+            animation: librarySpin 80s linear infinite;
+        }
+        
+        @keyframes librarySpin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .library-title {
+            font-family: 'Philosopher', serif;
+            font-size: 3.8rem;
+            color: var(--starlight-gold);
+            margin-bottom: 1.8rem;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+        }
+        
+        .library-description {
+            color: var(--ancient-parchment);
+            max-width: 700px;
+            margin: 0 auto 3.5rem;
+            font-size: 1.3rem;
+            line-height: 1.8;
+            position: relative;
+            z-index: 2;
+            opacity: 0.9;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .library-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2.5rem 0;
+        }
+        
+        .feature-item {
+            padding: 1.5rem;
+            background: rgba(0, 245, 255, 0.08);
+            border-radius: 12px;
+            border: 1px solid var(--cosmic-border);
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 245, 255, 0.12);
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.15);
+        }
+        
+        .feature-title {
+            font-size: 1.2rem;
+            color: var(--starlight-gold);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .feature-title i {
+            color: var(--nebula-teal);
+        }
+        
+        .feature-desc {
+            font-size: 0.95rem;
+            color: var(--ancient-parchment);
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+        
+        .portal-button {
+            display: inline-block;
+            padding: 1.2rem 3.5rem;
+            background: linear-gradient(45deg, var(--nebula-teal), var(--starlight-gold));
+            color: var(--quantum-abyss);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-top: 1.8rem;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            z-index: 2;
+            letter-spacing: 1.2px;
+            box-shadow: 0 12px 35px rgba(0, 245, 255, 0.3);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .portal-button:hover {
+            transform: translateY(-6px) scale(1.05);
+            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.4);
+        }
+        
+        /* ===== ENHANCED QUANTUM FOOTER ===== */
+        .quantum-footer {
+            background: rgba(10, 15, 30, 0.95);
+            padding: 5rem 2rem 3rem;
+            margin-top: 7rem;
+            border-top: 2px solid var(--cosmic-border);
+            position: relative;
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .cosmic-epigraph {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: var(--starlight-gold);
+            margin-bottom: 3.5rem;
+            font-style: italic;
+            opacity: 0.9;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .quantum-divider {
+            width: 350px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--nebula-teal), var(--starlight-gold), var(--nebula-teal), transparent);
+            margin: 3.5rem auto;
+            border-radius: 2px;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin: 3.5rem 0;
+            text-align: left;
+        }
+        
+        .footer-column {
+            padding: 1.8rem;
+        }
+        
+        .column-title {
+            font-size: 1.3rem;
+            color: var(--starlight-gold);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--nebula-teal);
+            font-family: 'Philosopher', serif;
+        }
+        
+        .contact-info {
+            background: rgba(0, 245, 255, 0.06);
+            padding: 1.8rem;
+            border-radius: 12px;
+            border: 1px solid var(--cosmic-border);
+        }
+        
+        .contact-email {
+            font-size: 1.2rem;
+            color: var(--nebula-teal);
+            margin: 0.8rem 0;
+            display: block;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-email:hover {
+            color: var(--starlight-gold);
+            text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
+        }
+        
+        .disclaimer-box {
+            background: rgba(255, 215, 0, 0.06);
+            padding: 1.8rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            margin-top: 1.5rem;
+        }
+        
+        .disclaimer-title {
+            font-size: 1.1rem;
+            color: var(--starlight-gold);
+            margin-bottom: 0.8rem;
+        }
+        
+        .disclaimer-text {
+            font-size: 0.9rem;
+            color: var(--ancient-parchment);
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .footer-link {
+            color: var(--nebula-teal);
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.4rem 0;
+            width: fit-content;
+        }
+        
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--starlight-gold);
+            transition: width 0.3s ease;
+        }
+        
+        .footer-link:hover::after {
+            width: 100%;
+        }
+        
+        .footer-link:hover {
+            color: var(--starlight-gold);
+            transform: translateX(5px);
+        }
+        
+        .cosmic-copyright {
+            margin-top: 3.5rem;
+            color: var(--ancient-parchment);
+            font-size: 0.95rem;
+            opacity: 0.7;
+            letter-spacing: 1.2px;
+            line-height: 1.6;
+        }
+        
+        .copyright-by {
+            color: var(--starlight-gold);
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        
+        /* ===== QUANTUM TYPOGRAPHY ENHANCEMENTS ===== */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Philosopher', serif;
+            font-weight: 600;
+            line-height: 1.3;
+            margin-bottom: 1.2rem;
+        }
+        
+        p {
+            margin-bottom: 1.8rem;
+            color: var(--ancient-parchment);
+            font-size: 1.1rem;
+            line-height: 1.9;
+        }
+        
+        strong {
+            color: var(--starlight-gold);
+            font-weight: 700;
+        }
+        
+        em {
+            color: var(--nebula-teal);
+            font-style: italic;
+        }
+        
+        /* ===== QUANTUM HIGHLIGHTS ===== */
+        .quantum-highlight {
+            background: linear-gradient(90deg, 
+                rgba(0, 245, 255, 0.12), 
+                rgba(255, 215, 0, 0.12), 
+                rgba(0, 245, 255, 0.12));
+            padding: 2.5rem;
+            border-radius: 12px;
+            margin: 3.5rem 0;
+            border-left: 5px solid var(--nebula-teal);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .highlight-title {
+            font-size: 1.9rem;
+            color: var(--starlight-gold);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        
+        /* ===== QUANTUM CITATIONS ===== */
+        .quantum-citation {
+            background: rgba(26, 32, 54, 0.7);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--ancient-parchment);
+            border-left: 4px solid rgba(255, 215, 0, 0.5);
+            position: relative;
+        }
+        
+        .citation-source {
+            display: block;
+            text-align: right;
+            font-style: normal;
+            color: var(--nebula-teal);
+            font-size: 0.95rem;
+            margin-top: 1.2rem;
+        }
+        
+        /* ===== QUANTUM CODE BLOCKS ===== */
+        .quantum-code {
+            font-family: 'JetBrains Mono', monospace;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 1.8rem;
+            border-radius: 8px;
+            margin: 1.8rem 0;
+            border-left: 4px solid var(--nebula-teal);
+            color: var(--ancient-parchment);
+            font-size: 0.95rem;
+            overflow-x: auto;
+            position: relative;
+        }
+        
+        .code-language {
+            position: absolute;
+            top: 0.8rem;
+            right: 0.8rem;
+            background: var(--quantum-field);
+            padding: 0.25rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            color: var(--nebula-teal);
+        }
+        
+        /* ===== SCROLL PROGRESS ENHANCEMENT ===== */
+        .scroll-progress {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--nebula-teal), var(--starlight-gold), var(--consciousness-purple));
+            z-index: 1001;
+            transition: width 0.1s ease;
+            box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
+        }
+        
+        /* ===== BACK TO PORTAL BUTTON ===== */
+        .back-to-portal {
+            position: fixed;
+            bottom: 2.5rem;
+            right: 2.5rem;
+            width: 55px;
+            height: 55px;
+            background: var(--quantum-field);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--starlight-gold);
+            text-decoration: none;
+            font-size: 1.6rem;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 999;
+            opacity: 0;
+            transform: translateY(30px);
+            border: 1px solid var(--cosmic-border);
+        }
+        
+        .back-to-portal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .back-to-portal:hover {
+            background: var(--nebula-teal);
+            color: var(--dark-matter);
+            transform: translateY(-8px) rotate(360deg);
+            box-shadow: 0 12px 35px rgba(0, 245, 255, 0.5);
+        }
+        
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* ===== RESPONSIVE DESIGN ENHANCEMENTS ===== */
+        @media (max-width: 1400px) {
+            .quantum-scroll-section {
+                padding: 5rem 2rem;
+            }
+            
+            .cosmic-chapter {
+                padding: 3.5rem;
+            }
+        }
+        
+        @media (max-width: 1200px) {
+            .navigation-container {
+                padding: 0 1.5rem;
+            }
+            
+            .cosmic-manifesto {
+                font-size: 4.2rem;
+            }
+            
+            .portal-subtitle {
+                font-size: 1.4rem;
+            }
+        }
+        
+        @media (max-width: 1024px) {
+            .cosmic-compass {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .cosmic-compass.mobile-active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background: rgba(10, 15, 30, 0.98);
+                backdrop-filter: blur(20px);
+                padding: 1.5rem;
+                border-bottom: 1px solid var(--cosmic-border);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+            }
+            
+            .cosmic-manifesto {
+                font-size: 3.8rem;
+            }
+            
+            .portal-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .cosmic-chapter {
+                padding: 3rem 1.8rem;
+                margin-bottom: 3.5rem;
+            }
+            
+            .chapter-header {
+                flex-direction: column;
+                gap: 1.8rem;
+                text-align: center;
+            }
+            
+            .chapter-title {
+                font-size: 2.8rem;
+            }
+            
+            .quantum-sigil {
+                width: 85px;
+                height: 85px;
+                font-size: 3rem;
+                margin: 0 auto;
+            }
+            
+            .interpretation-comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            .grand-infinite-library {
+                padding: 4rem 2rem;
+                margin: 5rem 1.5rem;
+            }
+            
+            .library-title {
+                font-size: 3.2rem;
+            }
+            
+            .library-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .quantum-insight {
+                padding: 2rem;
+            }
+            
+            .cosmic-ad-container {
+                padding: 0.8rem 1.2rem;
+                margin: 1.5rem auto;
+            }
+            
+            .ad-label {
+                font-size: 0.85rem;
+                padding: 0.3rem 0.8rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .quantum-logo {
+                font-size: 1.9rem;
+            }
+            
+            .celestial-navigation.scrolled .quantum-logo {
+                font-size: 1.7rem;
+            }
+            
+            .cosmic-manifesto {
+                font-size: 3.2rem;
+            }
+            
+            .chapter-title {
+                font-size: 2.3rem;
+            }
+            
+            .manual-title {
+                font-size: 1.9rem;
+            }
+            
+            .library-title {
+                font-size: 2.7rem;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .timeline-container {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 2.5rem;
+            }
+            
+            .timeline-line {
+                display: none;
+            }
+            
+            .timeline-event {
+                position: relative;
+                width: 100%;
+                left: 0 !important;
+            }
+            
+            .library-features {
+                gap: 1rem;
+            }
+            
+            .feature-item {
+                padding: 1.2rem;
+            }
+            
+            .cosmic-ad-container {
+                margin: 1.5rem auto;
+                padding: 0.8rem 1rem;
+            }
+            
+            .ad-label {
+                font-size: 0.8rem;
+                letter-spacing: 2px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .quantum-logo {
+                font-size: 1.7rem;
+            }
+            
+            .cosmic-manifesto {
+                font-size: 2.6rem;
+            }
+            
+            .portal-subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .chapter-title {
+                font-size: 2rem;
+            }
+            
+            .quantum-sigil {
+                width: 75px;
+                height: 75px;
+                font-size: 2.5rem;
+            }
+            
+            .library-title {
+                font-size: 2.3rem;
+            }
+            
+            .portal-button {
+                padding: 1rem 2.5rem;
+                font-size: 1.1rem;
+            }
+            
+            .cosmic-ad-container {
+                padding: 0.6rem 0.8rem;
+            }
+            
+            .ad-label {
+                font-size: 0.75rem;
+                letter-spacing: 1.5px;
+                padding: 0.2rem 0.6rem;
+            }
+        }
+        
+        /* ===== PRINT STYLES ===== */
+        @media print {
+            .celestial-navigation,
+            .back-to-portal,
+            .cosmic-ad-container {
+                display: none;
+            }
+            
+            body {
+                color: #000;
+                background: #fff;
+                padding-top: 0;
+            }
+        }
+    </style>
 </head>
-
 <body>
-
-<h1>Simple Test Page</h1>
-
-<p>This page tests that simple text can be rendered using the basic HTML5 boiler plate outline.</p>
-
+    <!-- Quantum Cosmos Canvas -->
+    <div id="quantum-cosmos"></div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+    
+    <!-- Enhanced Celestial Navigation -->
+    <nav class="celestial-navigation">
+        <div class="navigation-container">
+            <div class="quantum-signature">
+                <div>
+                    <div class="quantum-logo">Quantum Odyssey</div>
+                    <div class="logo-subtitle">The Unified Theory of Existence</div>
+                </div>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="cosmic-compass" id="navCompass">
+                <a href="#portal" class="nav-star active"><i class="fas fa-home"></i> Portal</a>
+                <a href="#primordial" class="nav-star"><i class="fas fa-atom"></i> Primordial</a>
+                <a href="#evolution" class="nav-star"><i class="fas fa-dna"></i> Evolution</a>
+                <a href="#consciousness" class="nav-star"><i class="fas fa-brain"></i> Consciousness</a>
+                <a href="#interpretations" class="nav-star"><i class="fas fa-cogs"></i> Interpretations</a>
+                <a href="#mastery" class="nav-star"><i class="fas fa-crown"></i> Mastery</a>
+                <a href="#library" class="nav-star"><i class="fas fa-book"></i> Library</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Grand Cosmic Portal -->
+    <section id="portal" class="grand-cosmic-portal">
+        <div class="portal-content">
+            <h1 class="cosmic-manifesto">Quantum Odyssey</h1>
+            <p class="portal-subtitle">
+                Where Ancient Wisdom Converges with Quantum Physics, Revealing the Unified Fabric 
+                of Consciousness, Existence, and Transcendence. A Journey Through the Cosmic Tapestry.
+            </p>
+            <div class="portal-divider"></div>
+            <p style="font-size: 1.3rem; max-width: 850px; margin: 0 auto 2.5rem; font-family: 'Cormorant Garamond', serif;">
+                This is not merely a theory—it is an experiential map of reality's deepest layers. 
+                Here, the Vedantic non-duality dances with quantum superposition, Stoic mastery meets 
+                many-worlds interpretation, and ancient creation myths find their scientific echoes 
+                in the quantum foam from which universes emerge.
+            </p>
+            <div class="portal-stats" style="display: flex; justify-content: center; gap: 2.5rem; margin-top: 3.5rem; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <div style="font-size: 2.2rem; color: var(--starlight-gold); font-weight: 700;">15+</div>
+                    <div style="color: var(--nebula-teal); font-size: 0.9rem; letter-spacing: 1.5px;">Wisdom Traditions</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.2rem; color: var(--starlight-gold); font-weight: 700;">500+</div>
+                    <div style="color: var(--nebula-teal); font-size: 0.9rem; letter-spacing: 1.5px;">Primary Sources</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.2rem; color: var(--starlight-gold); font-weight: 700;">7</div>
+                    <div style="color: var(--nebula-teal); font-size: 0.9rem; letter-spacing: 1.5px;">Dimensions Explored</div>
+                </div>
+            </div>
+        </div>
+        <div class="cosmic-invitation">
+            <div>Begin Your Quantum Journey</div>
+            <div class="invitation-arrow">↓</div>
+        </div>
+    </section>
+    
+    <!-- Interactive Quantum Timeline -->
+    <section class="quantum-timeline">
+        <div class="cosmic-chapter">
+            <div class="chapter-header">
+                <div class="quantum-sigil">⏳</div>
+                <div>
+                    <h2 class="chapter-title">Quantum Timeline of Wisdom</h2>
+                    <p class="chapter-subtitle">The Convergence of Ancient Insight and Modern Science</p>
+                </div>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                
+                <div class="timeline-event left" style="top: 8%;">
+                    <div class="event-year">1500 BCE</div>
+                    <div class="event-title">Rig Veda's Nasadiya Sukta</div>
+                    <p>"There was neither non-existence nor existence then..." - Ancient intuition of quantum superposition and potentiality, describing the universe before manifestation.</p>
+                </div>
+                
+                <div class="timeline-event right" style="top: 22%;">
+                    <div class="event-year">500 BCE</div>
+                    <div class="event-title">Lao Tzu's Tao Te Ching</div>
+                    <p>"The Tao that can be spoken is not the eternal Tao" - Complementarity principle in ancient form, acknowledging the limitations of language in describing ultimate reality.</p>
+                </div>
+                
+                <div class="timeline-event left" style="top: 36%;">
+                    <div class="event-year">1900 CE</div>
+                    <div class="event-title">Quantum Mechanics Born</div>
+                    <p>Planck, Einstein, Bohr lay foundation for quantum theory, unknowingly echoing ancient insights about the probabilistic nature of reality.</p>
+                </div>
+                
+                <div class="timeline-event right" style="top: 50%;">
+                    <div class="event-year">1927 CE</div>
+                    <div class="event-title">Copenhagen Interpretation</div>
+                    <p>Bohr and Heisenberg formalize the observer effect and complementarity principle, establishing consciousness as integral to quantum reality.</p>
+                </div>
+                
+                <div class="timeline-event left" style="top: 64%;">
+                    <div class="event-year">1957 CE</div>
+                    <div class="event-title">Many-Worlds Interpretation</div>
+                    <p>Hugh Everett proposes parallel universes, mirroring Hindu concept of infinite Līlā and Buddhist realms of existence.</p>
+                </div>
+                
+                <div class="timeline-event right" style="top: 78%;">
+                    <div class="event-year">2024 CE</div>
+                    <div class="event-title">Quantum Odyssey Synthesis</div>
+                    <p>This work unifies ancient wisdom traditions with modern quantum understanding, creating a comprehensive map of consciousness evolution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ad Container 1: Quantum Enlightenment -->
+    <div class="quantum-scroll-section">
+        <div class="cosmic-ad-container">
+            <div class="ad-label"><i class="fas fa-lightbulb"></i> Quantum Enlightenment</div>
+            <div class="ad-content">
+                <!-- AdSense Ad Unit 1 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_FIRST_AD_SLOT_ID"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chapter 1: Primordial Quantum Symphony -->
+    <section id="primordial" class="quantum-scroll-section">
+        <div class="cosmic-chapter">
+            <div class="chapter-header">
+                <div class="quantum-sigil">🌌</div>
+                <div>
+                    <h2 class="chapter-title">The Primordial Quantum Symphony</h2>
+                    <p class="chapter-subtitle">From Mythical Chaos to Quantum Foam</p>
+                </div>
+            </div>
+            
+            <p>Across civilizations and epochs, creation myths whisper the same truth: order emerges from chaos. The Sumerian Nammu's abyssal waters, the Egyptian Nun's primordial ocean, the Taoist Wuji from which Yin and Yang dance forth—all point to a fundamental reality: existence arises from infinite potential. Quantum cosmology now confirms this ancient wisdom: the universe itself emerged from a state of infinite potentiality—the quantum vacuum where virtual particles flicker in and out of existence, where spacetime itself is born from probabilistic foam.</p>
+            
+            <div class="quantum-insight">
+                <div class="insight-toggle">+</div>
+                <h3 class="insight-title"><i class="fas fa-brain"></i> Quantum-Mythical Resonance</h3>
+                <div class="insight-content">
+                    <p>The Rig Veda's Nasadiya Sukta contemplates: "There was neither non-existence nor existence then... That One breathed, windless, by its own impulse. Other than that, there was nothing beyond." This profound intuition of 3,500 years ago perfectly mirrors quantum superposition—the state where all possibilities coexist until observation collapses them into actuality. Similarly, the Buddhist concept of Śūnyatā (emptiness) finds its scientific echo in the quantum vacuum, not as nothingness, but as infinite potential from which all phenomena arise.</p>
+                    <p>Modern physics suggests that approximately 13.8 billion years ago, quantum fluctuations in the primordial singularity gave rise to cosmic inflation—the exponential expansion that birthed our observable universe. This scientific narrative beautifully parallels the Enuma Elish's depiction of order emerging from watery chaos through divine intelligence—a poetic parallel to the spontaneous symmetry breaking that generated the four fundamental forces and the cosmic structure we observe today.</p>
+                    <div class="quantum-citation">
+                        "The universe began not with a bang, but with a quantum fluctuation in the void. This is the modern scientific creation story, and it bears striking resemblance to ancient creation myths from cultures worldwide."
+                        <span class="citation-source">— Lawrence Krauss, "A Universe from Nothing"</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="ancient-table-container">
+                <table class="ancient-table">
+                    <thead>
+                        <tr>
+                            <th>Wisdom Tradition</th>
+                            <th>Primordial State</th>
+                            <th>Creation Mechanism</th>
+                            <th>Quantum Analogy</th>
+                            <th>Primary Source</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Vedanta Philosophy</strong></td>
+                            <td>Brahman (Absolute Reality)</td>
+                            <td>Līlā (Divine Play) through Māyā (Illusion)</td>
+                            <td>Wave function collapse through observation</td>
+                            <td><a href="https://www.sacred-texts.com/hin/rigveda/" class="table-link" target="_blank"><i class="fas fa-download"></i> Rig Veda</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Taoist Cosmology</strong></td>
+                            <td>Wuji (Limitless Void)</td>
+                            <td>Spontaneous emergence of Taiji (Supreme Ultimate)</td>
+                            <td>Quantum vacuum fluctuation symmetry breaking</td>
+                            <td><a href="https://www.gutenberg.org/ebooks/216" class="table-link" target="_blank"><i class="fas fa-download"></i> Tao Te Ching</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kabbalistic Mysticism</strong></td>
+                            <td>Ein Sof (Without End)</td>
+                            <td>Tzimtzum (Divine Contraction) & Sefirot emanation</td>
+                            <td>Cosmic inflation and dimensional unfolding</td>
+                            <td><a href="https://www.sacred-texts.com/jud/zdm/" class="table-link" target="_blank"><i class="fas fa-download"></i> Zohar</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Quantum Cosmology</strong></td>
+                            <td>Quantum vacuum/Singularity</td>
+                            <td>Inflation from quantum fluctuation</td>
+                            <td>Spontaneous creation from zero-point energy</td>
+                            <td><a href="https://arxiv.org/abs/quant-ph/0101003" class="table-link" target="_blank"><i class="fas fa-external-link-alt"></i> Research Paper</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="quantum-highlight">
+                <h3 class="highlight-title"><i class="fas fa-lightbulb"></i> Philosophical Synthesis</h3>
+                <p>The convergence of ancient wisdom and quantum physics suggests a profound truth: reality emerges from a state of infinite potential through a process of differentiation. Whether expressed as divine emanation or quantum fluctuation, the fundamental insight remains—existence arises from a unified field of possibilities. This understanding bridges the mystical experience of non-duality with the scientific observation of quantum entanglement, revealing consciousness itself as both the observer and the observed in this cosmic dance. The universe appears to be a self-observing system, with human consciousness serving as its means of self-reflection.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Chapter 2: Quantum Evolutionary Arc -->
+    <section id="evolution" class="quantum-scroll-section">
+        <div class="cosmic-chapter">
+            <div class="chapter-header">
+                <div class="quantum-sigil">🧬</div>
+                <div>
+                    <h2 class="chapter-title">The Quantum Evolutionary Arc</h2>
+                    <p class="chapter-subtitle">From Primordial Soup to Conscious Observers</p>
+                </div>
+            </div>
+            
+            <p>Evolution is not merely a biological process—it is the universe's elegant method of exploring possibilities through time. The majestic transition from simple molecules to complex lifeforms, culminating in self-aware consciousness, suggests an inherent directionality in cosmic evolution, what Teilhard de Chardin beautifully termed the "Omega Point"—the universe becoming conscious of itself.</p>
+            
+            <div class="mastery-manual">
+                <h3 class="manual-title"><i class="fas fa-microscope"></i> Quantum Evolutionary Principles</h3>
+                
+                <div class="manual-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Quantum Coherence in Biological Systems:</strong> Cutting-edge research reveals quantum effects in photosynthesis, bird navigation, and enzyme catalysis. These biological systems appear to harness quantum superposition and entanglement for enhanced efficiency—a biological quantum advantage that challenges classical Darwinian explanations.
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
+                    </div>
+                </div>
+                
+                <div class="manual-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>Consciousness-Driven Evolution:</strong> The observer effect in quantum mechanics suggests consciousness may play an active role in evolutionary outcomes. This aligns with Henri Bergson's élan vital and Sri Aurobindo's concept of "Supermind" guiding evolution toward higher complexity and awareness.
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
+                    </div>
+                </div>
+                
+                <div class="manual-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>The Noosphere Emergence:</strong> As Teilhard de Chardin predicted, human consciousness creates a thinking layer around the planet—the noosphere. This collective consciousness now evolves through quantum information networks, potentially accelerating our transition to a new evolutionary stage of planetary consciousness.
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quantum-citation">
+                "The universe appears to have been pregnant with life and consciousness from its very inception. The laws of physics seem curiously fine-tuned to allow for the emergence of complexity, suggesting either an extraordinary coincidence or a deeper purpose to cosmic evolution."
+                <span class="citation-source">— Sir Roger Penrose, "The Emperor's New Mind"</span>
+            </div>
+            
+            <div class="quantum-code">
+                <div class="code-language">QUANTUM EVOLUTION</div>
+                // Evolution as quantum probability exploration<br>
+                initial_state = quantum_vacuum();<br>
+                possibilities = superposition(all_life_forms);<br>
+                observation = consciousness_focus();<br>
+                manifestation = collapse(possibilities, observation);<br>
+                <br>
+                // Life explores quantum possibilities<br>
+                // Consciousness selects evolutionary paths
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ad Container 2: Consciousness Research -->
+    <div class="quantum-scroll-section">
+        <div class="cosmic-ad-container">
+            <div class="ad-label"><i class="fas fa-brain"></i> Consciousness Research</div>
+            <div class="ad-content">
+                <!-- AdSense Ad Unit 2 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-format="autorelaxed"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_SECOND_AD_SLOT_ID"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chapter 3: Quantum Consciousness -->
+    <section id="consciousness" class="quantum-scroll-section">
+        <div class="cosmic-chapter">
+            <div class="chapter-header">
+                <div class="quantum-sigil">🧠</div>
+                <div>
+                    <h2 class="chapter-title">The Quantum Inner Cosmos</h2>
+                    <p class="chapter-subtitle">Where Neuroscience Meets Quantum Mysticism</p>
+                </div>
+            </div>
+            
+            <p>Consciousness remains science's greatest mystery—the "hard problem" as David Chalmers famously termed it. While materialist approaches struggle to explain subjective experience, quantum theories of consciousness offer a promising bridge between objective measurement and subjective reality. The brain may not merely compute consciousness—it may transduce it from the quantum realm.</p>
+            
+            <div class="interpretation-comparison">
+                <div class="interpretation-card" onclick="QuantumOdyssey.selectInterpretation(this)">
+                    <div class="interpretation-select"></div>
+                    <div class="interpretation-header">
+                        <div class="interpretation-icon">⚛️</div>
+                        <h3 class="interpretation-name">Orch-OR Theory</h3>
+                    </div>
+                    <p class="interpretation-desc">Proposed by Nobel laureate Sir Roger Penrose and anesthesiologist Stuart Hameroff, this groundbreaking theory suggests consciousness arises from quantum gravity effects in microtubules within brain neurons. Each quantum collapse creates a moment of awareness—approximately 40 per second, corresponding to gamma wave synchronization.</p>
+                    <ul class="interpretation-list" style="list-style: none; margin: 1.2rem 0;">
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> Quantum superposition in microtubules</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> Gravity-induced wave function collapse</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> Connects to Platonic mathematical truth</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> Explains non-computable aspects of consciousness</li>
+                    </ul>
+                    <div class="quantum-citation" style="margin-top: 1.2rem; font-size: 0.9rem;">
+                        <a href="https://pubmed.ncbi.nlm.nih.gov/24070914/" target="_blank"><i class="fas fa-external-link-alt"></i> View Research Paper →</a>
+                    </div>
+                </div>
+                
+                <div class="interpretation-card" onclick="QuantumOdyssey.selectInterpretation(this)">
+                    <div class="interpretation-select"></div>
+                    <div class="interpretation-header">
+                        <div class="interpretation-icon">🎯</div>
+                        <h3 class="interpretation-name">Conscious Realism</h3>
+                    </div>
+                    <p class="interpretation-desc">Donald Hoffman's revolutionary theory posits that consciousness is fundamental, and spacetime itself emerges from deeper conscious processes. What we perceive as physical reality is an interface—a "dashboard" hiding the true complexity beneath, much like a computer desktop hides complex code.</p>
+                    <ul class="interpretation-list" style="list-style: none; margin: 1.2rem 0;">
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> Consciousness precedes physical reality</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> Evolution shaped perception for fitness, not truth</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> Reality as a conscious-user interface</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> Connects to Advaita Vedanta and idealism</li>
+                    </ul>
+                    <div class="quantum-citation" style="margin-top: 1.2rem; font-size: 0.9rem;">
+                        <a href="https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/interface-theory-of-perception/6D7B1A6C5E0F8D9D8B1F3C3D5E6F7A8B" target="_blank"><i class="fas fa-external-link-alt"></i> View Theoretical Paper →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mastery-manual">
+                <h3 class="manual-title"><i class="fas fa-meditation"></i> Quantum Consciousness Practice</h3>
+                
+                <div class="manual-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Observer State Training:</strong> Sit in meditation and practice shifting your awareness from being the content of consciousness to being the observer of consciousness. Notice how this shift changes your relationship to thoughts and sensations. Practice 10 minutes daily.
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
+                    </div>
+                </div>
+                
+                <div class="manual-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>Quantum Coherence Breathing:</strong> Practice rhythmic breathing (4-7-8 pattern: inhale 4, hold 7, exhale 8) while visualizing quantum coherence spreading through your neural networks. This enhances microtubule resonance potential and gamma wave synchronization.
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
+                    </div>
+                </div>
+                
+                <div class="manual-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>Non-Local Awareness Meditation:</strong> Sit in stillness and expand your awareness beyond your physical body. Visualize connecting with the quantum field itself—the substrate of all reality. Practice this for 20 minutes daily to develop non-local consciousness.
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Chapter 4: Quantum Interpretations -->
+    <section id="interpretations" class="quantum-scroll-section">
+        <div class="cosmic-chapter">
+            <div class="chapter-header">
+                <div class="quantum-sigil">🌐</div>
+                <div>
+                    <h2 class="chapter-title">Quantum Interpretations</h2>
+                    <p class="chapter-subtitle">Many-Worlds vs Copenhagen - A Philosophical Synthesis</p>
+                </div>
+            </div>
+            
+            <p>The interpretation of quantum mechanics represents the ultimate frontier where physics meets philosophy. The debate between the Many-Worlds Interpretation (MWI) and the Copenhagen interpretation is not merely about mathematics—it's about the nature of reality itself, consciousness, and our place in the cosmos.</p>
+            
+            <div class="interpretation-comparison">
+                <div class="interpretation-card selected" onclick="QuantumOdyssey.selectInterpretation(this)">
+                    <div class="interpretation-select"></div>
+                    <div class="interpretation-header">
+                        <div class="interpretation-icon">🌳</div>
+                        <h3 class="interpretation-name">Many-Worlds Interpretation</h3>
+                    </div>
+                    <p class="interpretation-desc">Proposed by Hugh Everett in 1957, MWI suggests all quantum possibilities are realized in parallel universes. The wave function never collapses—instead, the universe continually branches, creating infinite realities where every possibility manifests. This interpretation eliminates the need for wave function collapse and maintains unitarity.</p>
+                    <ul class="interpretation-list" style="list-style: none; margin: 1.2rem 0;">
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> <strong>Deterministic:</strong> No randomness, only branching</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> <strong>No collapse:</strong> Wave function evolves unitarily</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> <strong>Parallel realities:</strong> All possibilities exist</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> <strong>Quantum immortality:</strong> Consciousness follows surviving branches</li>
+                    </ul>
+                </div>
+                
+                <div class="interpretation-card" onclick="QuantumOdyssey.selectInterpretation(this)">
+                    <div class="interpretation-select"></div>
+                    <div class="interpretation-header">
+                        <div class="interpretation-icon">🎭</div>
+                        <h3 class="interpretation-name">Copenhagen Interpretation</h3>
+                    </div>
+                    <p class="interpretation-desc">Developed by Niels Bohr and Werner Heisenberg in the 1920s, this orthodox view holds that quantum mechanics describes probabilities, not certainties. Measurement collapses the wave function into definite states. It emphasizes complementarity—the wave-particle duality—and the fundamental role of the observer.</p>
+                    <ul class="interpretation-list" style="list-style: none; margin: 1.2rem 0;">
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> <strong>Probabilistic:</strong> Inherent randomness at quantum level</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> <strong>Wave function collapse:</strong> Upon measurement</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> <strong>Complementarity:</strong> Wave-particle duality</li>
+                        <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> <strong>Observer role:</strong> Measurement creates reality</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="ancient-table-container">
+                <table class="ancient-table">
+                    <thead>
+                        <tr>
+                            <th>Philosophical Aspect</th>
+                            <th>Many-Worlds Interpretation</th>
+                            <th>Copenhagen Interpretation</th>
+                            <th>Unified Quantum Synthesis</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Nature of Reality</strong></td>
+                            <td>Multiverse of parallel worlds</td>
+                            <td>Single universe with probabilistic outcomes</td>
+                            <td>Consciousness selects branches from multiverse</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Role of Observer</strong></td>
+                            <td>Observer becomes entangled with all outcomes</td>
+                            <td>Observer causes collapse to one outcome</td>
+                            <td>Consciousness navigates probability waves</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Ancient Parallel</strong></td>
+                            <td>Hindu concept of Līlā (divine play)</td>
+                            <td>Taoist principle of Wu Wei (non-action)</td>
+                            <td>Buddhist Middle Way between extremes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Practical Implication</strong></td>
+                            <td>All possibilities exist—choose your reality</td>
+                            <td>Focus creates reality—mind shapes matter</td>
+                            <td>Conscious intention manifests from quantum field</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="quantum-highlight">
+                <h3 class="highlight-title"><i class="fas fa-sync-alt"></i> Transcendent Synthesis</h3>
+                <p>The apparent conflict between MWI and Copenhagen dissolves when we recognize they describe different perspectives of the same reality. MWI describes the objective quantum realm—all possibilities existing simultaneously in the multiverse. Copenhagen describes our subjective experience—consciousness collapsing probability waves into definite experiences. Together, they form a complete picture: the multiverse exists, and our consciousness navigates it through observation and intention. This synthesis aligns with the Vedantic concept of Brahman (absolute reality containing all possibilities) and Māyā (the illusion of separation through which consciousness experiences specific realities), where both the unity and diversity are equally real from different perspectives.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ad Container 3: Practical Mastery -->
+    <div class="quantum-scroll-section">
+        <div class="cosmic-ad-container">
+            <div class="ad-label"><i class="fas fa-crown"></i> Quantum Mastery</div>
+            <div class="ad-content">
+                <!-- AdSense Ad Unit 3 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_THIRD_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Chapter 5: Quantum Mastery -->
+    <section id="mastery" class="quantum-scroll-section">
+        <div class="cosmic-chapter">
+            <div class="chapter-header">
+                <div class="quantum-sigil">⚡</div>
+                <div>
+                    <h2 class="chapter-title">Quantum Mastery</h2>
+                    <p class="chapter-subtitle">Practical Application of Quantum Principles for Human Excellence</p>
+                </div>
+            </div>
+            
+            <p>The true value of quantum wisdom lies in its practical application. By integrating quantum principles with ancient spiritual practices, modern psychological techniques, and strategic philosophy, we can cultivate extraordinary human capabilities across all dimensions of existence.</p>
+            
+            <div class="interpretation-comparison">
+                <div class="interpretation-card">
+                    <h3 class="manual-title"><i class="fas fa-chess-king"></i> Power & Influence</h3>
+                    <div class="manual-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Quantum State Leadership:</strong> Lead from superposition—hold multiple perspectives simultaneously before collapsing into decisive action.
+                        </div>
+                    </div>
+                    <div class="manual-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Entangled Networks:</strong> Build relationships that create quantum entanglement—deep connections where influence flows non-locally.
+                        </div>
+                    </div>
+                    <a href="https://www.gutenberg.org/ebooks/1232" class="table-link" style="margin-top: 1.2rem; display: inline-block;"><i class="fas fa-book"></i> Machiavelli's The Prince →</a>
+                </div>
+                
+                <div class="interpretation-card">
+                    <h3 class="manual-title"><i class="fas fa-coins"></i> Wealth Creation</h3>
+                    <div class="manual-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Probability Wave Investing:</strong> See financial markets as quantum probability waves rather than deterministic systems.
+                        </div>
+                    </div>
+                    <div class="manual-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Observer Effect Wealth:</strong> Your attention collapses economic possibilities—focus creates financial reality.
+                        </div>
+                    </div>
+                    <a href="https://www.gutenberg.org/ebooks/2680" class="table-link" style="margin-top: 1.2rem; display: inline-block;"><i class="fas fa-book"></i> Marcus Aurelius' Meditations →</a>
+                </div>
+                
+                <div class="interpretation-card">
+                    <h3 class="manual-title"><i class="fas fa-heart"></i> Love & Connection</h3>
+                    <div class="manual-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <strong>Quantum Entanglement Love:</strong> Cultivate relationships where separation is illusion—true connection transcends distance.
+                        </div>
+                    </div>
+                    <div class="manual-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <strong>Superposition Compassion:</strong> Hold loving-kindness for all beings simultaneously, collapsing judgment into understanding.
+                        </div>
+                    </div>
+                    <a href="https://www.hooponopono.org/" class="table-link" style="margin-top: 1.2rem; display: inline-block;"><i class="fas fa-external-link-alt"></i> Ho'oponopono Practice →</a>
+                </div>
+            </div>
+            
+            <div class="mastery-manual">
+                <h3 class="manual-title"><i class="fas fa-clock"></i> Quantum Longevity Protocol</h3>
+                
+                <div class="quantum-insight" style="margin: 1.8rem 0;">
+                    <h4 class="insight-title"><i class="fas fa-dna"></i> The Quantum Biology of Aging</h4>
+                    <p>Recent research in quantum biology suggests aging may involve the loss of quantum coherence in cellular processes. By maintaining quantum coherence through specific practices, we may significantly extend healthy lifespan and potentially reverse aging markers.</p>
+                </div>
+                
+                <div class="manual-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <strong>Coherent Breathing (5 AM):</strong> Practice resonant breathing at 5-6 breaths per minute to entrain heart-brain coherence. This enhances quantum coherence in cellular processes and mitochondrial function.
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
+                    </div>
+                </div>
+                
+                <div class="manual-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <strong>Quantum Nutrition Fasting:</strong> Implement time-restricted eating (16:8) with quantum hydration—structured water with intentional coherence patterns to enhance cellular quantum coherence.
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
+                    </div>
+                </div>
+                
+                <div class="manual-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <strong>Microtubule Resonance Training:</strong> Daily meditation focusing on microtubule networks, visualizing quantum coherence spreading through cellular structures and maintaining telomere integrity.
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
+                    </div>
+                </div>
+                
+                <div class="manual-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <strong>Telomere Intention Practice:</strong> Use focused intention and visualization to influence telomere length through quantum observer effects and epigenetic modulation.
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
+                    </div>
+                </div>
+                
+                <div class="quantum-citation" style="margin-top: 2.5rem;">
+                    <strong>Target:</strong> 120+ years of optimal function through quantum coherence maintenance, consciousness-based cellular repair, and epigenetic optimization.
+                </div>
+            </div>
+            
+            <div class="quantum-code">
+                <div class="code-language">QUANTUM MASTERY ALGORITHM</div>
+                intention = clarify_desired_state();<br>
+                coherence = align_consciousness(intention);<br>
+                observation = focus_attention(coherence);<br>
+                manifestation = collapse_probability_waves(observation);<br>
+                integration = embody_new_reality(manifestation);<br>
+                <br>
+                // Reality responds to coherent observation<br>
+                // Mastery is quantum coherence consciously applied
+            </div>
+        </div>
+    </section>
+    
+    <!-- Ad Container 4: Ancient Wisdom -->
+    <div class="quantum-scroll-section">
+        <div class="cosmic-ad-container">
+            <div class="ad-label"><i class="fas fa-scroll"></i> Ancient Wisdom</div>
+            <div class="ad-content">
+                <!-- AdSense Ad Unit 4 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_FOURTH_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Grand Infinite Library Portal -->
+    <section id="library" class="quantum-scroll-section">
+        <div class="grand-infinite-library">
+            <div class="library-glow"></div>
+            <h2 class="library-title">The Infinite Library</h2>
+            <p class="library-description">
+                Enter the quantum repository containing a growing collection of curated texts spanning 5,000 years of wisdom. 
+                From the Vedas to modern quantum physics papers, from Stoic philosophy to contemporary consciousness 
+                research—all interconnected through quantum hyperlinks of meaning and insight.
+            </p>
+            
+            <div class="library-features">
+                <div class="feature-item">
+                    <div class="feature-title"><i class="fas fa-scroll"></i> Ancient Wisdom</div>
+                    <p class="feature-desc">Complete texts from Eastern and Western traditions, including the Vedas, Tao Te Ching, Plato's dialogues, and Kabbalistic works.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-title"><i class="fas fa-microscope"></i> Scientific Papers</div>
+                    <p class="feature-desc">Peer-reviewed research on quantum mechanics, consciousness studies, quantum biology, and cutting-edge physics.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-title"><i class="fas fa-brain"></i> Philosophy & Psychology</div>
+                    <p class="feature-desc">Works on consciousness, mysticism, epistemology, and the nature of reality from ancient to contemporary thinkers.</p>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-title"><i class="fas fa-crown"></i> Practical Mastery</div>
+                    <p class="feature-desc">Manuals on meditation, quantum coherence practices, consciousness development, and personal transformation.</p>
+                </div>
+            </div>
+            
+            <p style="color: var(--nebula-teal); margin: 2.5rem 0; font-size: 1.1rem; font-style: italic; font-family: 'Cormorant Garamond', serif;">
+                "The Library is a sphere whose exact center is any one of its hexagons and whose circumference is inaccessible."<br>
+                — Jorge Luis Borges, "The Library of Babel"
+            </p>
+            
+            <a href="https://sirfree33.github.io/library.html" target="_blank" class="portal-button">Enter Quantum Library</a>
+            
+            <p style="color: var(--ancient-parchment); margin-top: 2.5rem; font-size: 0.95rem; opacity: 0.7;">
+                <i class="fas fa-info-circle" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i>
+                Library contains interactive annotations, cross-references, and quantum connection maps
+            </p>
+        </div>
+    </section>
+    
+    <!-- Back to Portal Button -->
+    <a href="#" class="back-to-portal"><i class="fas fa-arrow-up"></i></a>
+    
+    <!-- Enhanced Quantum Footer -->
+    <footer class="quantum-footer">
+        <div class="footer-content">
+            <div class="cosmic-epigraph">
+                "We are not human beings having a spiritual experience. We are spiritual beings having a human experience."<br>
+                — Pierre Teilhard de Chardin
+            </div>
+            
+            <div class="quantum-divider"></div>
+            
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="column-title">Quantum Odyssey</h3>
+                    <p>A unified synthesis of ancient wisdom and quantum physics, exploring consciousness, existence, and human potential through the lens of quantum reality.</p>
+                    <div class="contact-info">
+                        <h4>Contact & Research Inquiries</h4>
+                        <p>For scholarly discussions, research collaboration, or philosophical discourse:</p>
+                        <a href="mailto:hyping.mrt@tutamail.com" class="contact-email">
+                            <i class="fas fa-envelope"></i> hyping.mrt@tutamail.com
+                        </a>
+                        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                            Response time: 24-72 hours for substantive inquiries
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="column-title">Navigation</h3>
+                    <div class="footer-links">
+                        <a href="#portal" class="footer-link">Portal</a>
+                        <a href="#primordial" class="footer-link">Primordial Origins</a>
+                        <a href="#evolution" class="footer-link">Quantum Evolution</a>
+                        <a href="#consciousness" class="footer-link">Consciousness</a>
+                        <a href="#interpretations" class="footer-link">Interpretations</a>
+                        <a href="#mastery" class="footer-link">Mastery</a>
+                        <a href="#library" class="footer-link">Infinite Library</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="column-title">Important Information</h3>
+                    <div class="disclaimer-box">
+                        <h4 class="disclaimer-title"><i class="fas fa-exclamation-triangle"></i> Disclaimer</h4>
+                        <p class="disclaimer-text">
+                            Links to external websites are provided for convenience only. We are not responsible for the content, accuracy, or practices of any third-party sites linked from our website. The inclusion of any link does not imply endorsement by Quantum Odyssey Research Institute.
+                        </p>
+                    </div>
+                    
+                    <div style="margin-top: 2rem;">
+                        <h4>Research Integrity</h4>
+                        <p style="font-size: 0.95rem;">All content is based on primary sources and peer-reviewed research. Philosophical syntheses represent original work integrating multiple traditions.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quantum-divider"></div>
+            
+            <div class="cosmic-copyright">
+                © Quantum Odyssey Research Institute | All wisdom synthesized from primary sources with academic integrity<br>
+                Original synthesis, philosophical architecture, and interactive design by <span class="copyright-by">SirFree33</span><br><br>
+                This site complies with Google AdSense policies with original, high-quality philosophical and scientific content.<br>
+                Last updated: Quantum Now | Version: 3.14.159 (Quantum Pi Edition)
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Enhanced Quantum JavaScript -->
+    <script>
+        // ===== QUANTUM ODYSSEY MAIN OBJECT =====
+        const QuantumOdyssey = {
+            
+            // ===== QUANTUM COSMOS SIMULATION =====
+            initQuantumCosmos: function() {
+                particlesJS("quantum-cosmos", {
+                    particles: {
+                        number: { 
+                            value: window.innerWidth < 768 ? 80 : 150, 
+                            density: { enable: true, value_area: 800 } 
+                        },
+                        color: { 
+                            value: ["#00F5FF", "#FFD700", "#9D4EDD"],
+                        },
+                        shape: {
+                            type: "circle",
+                        },
+                        opacity: {
+                            value: 0.8,
+                            random: true,
+                            anim: { enable: true, speed: 1, opacity_min: 0.3, sync: false }
+                        },
+                        size: {
+                            value: 2,
+                            random: true,
+                            anim: { enable: true, speed: 2, size_min: 0.5, sync: false }
+                        },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: "#00F5FF",
+                            opacity: 0.2,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1,
+                            direction: "none",
+                            random: true,
+                            straight: false,
+                            out_mode: "out",
+                            bounce: false,
+                            attract: { enable: false, rotateX: 600, rotateY: 1200 }
+                        }
+                    },
+                    interactivity: {
+                        detect_on: "canvas",
+                        events: {
+                            onhover: { enable: true, mode: "grab" },
+                            onclick: { enable: true, mode: "push" },
+                            resize: true
+                        },
+                        modes: {
+                            grab: { distance: 200, line_linked: { opacity: 0.5 } },
+                            push: { particles_nb: 4 }
+                        }
+                    },
+                    retina_detect: true
+                });
+            },
+            
+            // ===== INTERACTIVE NAVIGATION =====
+            initNavigation: function() {
+                const nav = document.querySelector('.celestial-navigation');
+                const navStars = document.querySelectorAll('.nav-star');
+                const sections = document.querySelectorAll('.cosmic-chapter, .grand-cosmic-portal, .quantum-timeline');
+                const backToTop = document.querySelector('.back-to-portal');
+                const scrollProgress = document.querySelector('.scroll-progress');
+                const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+                const navCompass = document.getElementById('navCompass');
+                
+                // Scroll listener
+                let ticking = false;
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        requestAnimationFrame(() => {
+                            // Update header state
+                            if (window.scrollY > 50) {
+                                nav.classList.add('scrolled');
+                            } else {
+                                nav.classList.remove('scrolled');
+                            }
+                            
+                            // Update active section
+                            let current = '';
+                            const scrollPosition = window.scrollY + 150;
+                            
+                            sections.forEach(section => {
+                                const sectionTop = section.offsetTop;
+                                const sectionHeight = section.clientHeight;
+                                
+                                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                                    current = section.getAttribute('id') || 'portal';
+                                }
+                            });
+                            
+                            navStars.forEach(star => {
+                                star.classList.remove('active');
+                                if (star.getAttribute('href') === `#${current}` || 
+                                    (current === 'portal' && star.getAttribute('href') === '#portal')) {
+                                    star.classList.add('active');
+                                }
+                            });
+                            
+                            // Update back to top button
+                            if (window.scrollY > 600) {
+                                backToTop.classList.add('visible');
+                            } else {
+                                backToTop.classList.remove('visible');
+                            }
+                            
+                            // Update scroll progress
+                            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                            const scrolled = (winScroll / height) * 100;
+                            scrollProgress.style.width = scrolled + '%';
+                            
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+                
+                // Navigation click handlers
+                navStars.forEach(star => {
+                    star.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = star.getAttribute('href');
+                        
+                        if (targetId === '#portal') {
+                            window.scrollTo({ top: 0, behavior: 'smooth' });
+                        } else {
+                            const targetElement = document.querySelector(targetId);
+                            if (targetElement) {
+                                const yOffset = -80;
+                                const y = targetElement.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                                window.scrollTo({ top: y, behavior: 'smooth' });
+                            }
+                        }
+                        
+                        // Close mobile menu if open
+                        if (navCompass.classList.contains('mobile-active')) {
+                            navCompass.classList.remove('mobile-active');
+                        }
+                    });
+                });
+                
+                // Back to top handler
+                backToTop.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+                
+                // Mobile menu handler
+                mobileMenuToggle.addEventListener('click', () => {
+                    navCompass.classList.toggle('mobile-active');
+                });
+                
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (!nav.contains(e.target) && navCompass.classList.contains('mobile-active')) {
+                        navCompass.classList.remove('mobile-active');
+                    }
+                });
+            },
+            
+            // ===== INTERACTIVE FUNCTIONS =====
+            selectInterpretation: function(card) {
+                document.querySelectorAll('.interpretation-card').forEach(c => {
+                    c.classList.remove('selected');
+                });
+                card.classList.add('selected');
+            },
+            
+            toggleCompletion: function(element) {
+                element.classList.toggle('completed');
+                element.textContent = element.classList.contains('completed') ? '✓ Completed' : 'Mark Complete';
+                
+                // Update progress
+                const totalSteps = document.querySelectorAll('.step-completion').length;
+                const completedSteps = document.querySelectorAll('.step-completion.completed').length;
+                const progress = Math.round((completedSteps / totalSteps) * 100);
+                
+                // Optional: Show progress notification
+                if (progress === 100) {
+                    QuantumOdyssey.showNotification('🎉 Quantum Mastery Achieved! All steps completed.');
+                }
+            },
+            
+            // ===== NOTIFICATION SYSTEM =====
+            showNotification: function(message) {
+                // Create notification element
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    background: linear-gradient(135deg, var(--quantum-field), var(--consciousness-purple));
+                    color: white;
+                    padding: 1rem 2rem;
+                    border-radius: 10px;
+                    border: 2px solid var(--cosmic-border);
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                    z-index: 10000;
+                    animation: slideIn 0.5s ease;
+                `;
+                notification.innerHTML = `<i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i> ${message}`;
+                
+                document.body.appendChild(notification);
+                
+                // Remove after 5 seconds
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.5s ease';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 500);
+                }, 5000);
+            },
+            
+            // ===== INSIGHT TOGGLES =====
+            initInsightToggles: function() {
+                document.querySelectorAll('.insight-toggle').forEach(toggle => {
+                    toggle.addEventListener('click', function() {
+                        const insight = this.closest('.quantum-insight');
+                        const content = insight.querySelector('.insight-content');
+                        
+                        content.classList.toggle('expanded');
+                        this.textContent = content.classList.contains('expanded') ? '−' : '+';
+                    });
+                });
+            },
+            
+            // ===== QUANTUM ANIMATIONS =====
+            initAnimations: function() {
+                const chapters = document.querySelectorAll('.cosmic-chapter');
+                const timelineEvents = document.querySelectorAll('.timeline-event');
+                const manualSteps = document.querySelectorAll('.manual-step');
+                
+                // Chapter animations
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.style.opacity = '1';
+                            entry.target.style.transform = 'translateY(0)';
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -100px 0px'
+                });
+                
+                chapters.forEach(chapter => {
+                    chapter.style.opacity = '0';
+                    chapter.style.transform = 'translateY(50px)';
+                    chapter.style.transition = 'opacity 1s ease, transform 1s ease';
+                    observer.observe(chapter);
+                });
+                
+                // Timeline events animation
+                timelineEvents.forEach((event, index) => {
+                    event.style.opacity = '0';
+                    event.style.transform = 'translateX(' + (event.classList.contains('left') ? '-40px' : '40px') + ')';
+                    
+                    setTimeout(() => {
+                        event.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+                        event.style.opacity = '1';
+                        event.style.transform = 'translateX(0)';
+                    }, 300 + index * 150);
+                });
+                
+                // Manual steps animation
+                manualSteps.forEach((step, index) => {
+                    step.style.opacity = '0';
+                    step.style.transform = 'translateX(-15px)';
+                    
+                    setTimeout(() => {
+                        step.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        step.style.opacity = '1';
+                        step.style.transform = 'translateX(0)';
+                    }, 400 + index * 80);
+                });
+            },
+            
+            // ===== QUANTUM EASTER EGG =====
+            initEasterEgg: function() {
+                let konamiCode = '';
+                const konamiSequence = '38384040373937396665'; // Arrow keys + Enter
+                
+                document.addEventListener('keydown', (e) => {
+                    konamiCode += e.keyCode;
+                    if (konamiCode.length > 20) {
+                        konamiCode = konamiCode.substring(konamiCode.length - 20);
+                    }
+                    
+                    if (konamiCode.includes(konamiSequence)) {
+                        QuantumOdyssey.showNotification('🎮 Quantum Easter Egg Activated! You have unlocked hidden insight.');
+                        konamiCode = '';
+                        
+                        // Show hidden quantum insight
+                        const hiddenInsight = document.createElement('div');
+                        hiddenInsight.innerHTML = `
+                            <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                                background: rgba(10, 15, 30, 0.95); padding: 2.5rem; border-radius: 18px;
+                                border: 3px solid var(--starlight-gold); z-index: 10001; max-width: 550px;
+                                box-shadow: 0 0 40px rgba(255, 215, 0, 0.4); text-align: center;">
+                                <h3 style="color: var(--starlight-gold); margin-bottom: 1rem;">🧠 Hidden Quantum Insight</h3>
+                                <p>The observer doesn't just observe reality—the observer <em>chooses</em> which reality to observe from the quantum multiverse. Your consciousness is the selection mechanism.</p>
+                                <button onclick="this.parentElement.remove()" style="margin-top: 1.5rem; padding: 0.7rem 1.8rem;
+                                    background: var(--nebula-teal); color: var(--dark-matter); border: none;
+                                    border-radius: 25px; cursor: pointer; font-weight: bold; font-size: 0.95rem;">
+                                    Close Insight
+                                </button>
+                            </div>
+                        `;
+                        document.body.appendChild(hiddenInsight);
+                    }
+                });
+            },
+            
+            // ===== INITIALIZE EVERYTHING =====
+            init: function() {
+                // Initialize all systems
+                this.initQuantumCosmos();
+                this.initNavigation();
+                this.initInsightToggles();
+                this.initAnimations();
+                this.initEasterEgg();
+                
+                // Initialize AdSense
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                
+                // Quantum Console Message
+                console.log('%c⚛️ QUANTUM ODYSSEY ⚛️', 'font-size: 24px; font-weight: bold; color: #00F5FF; text-shadow: 0 0 10px #00F5FF');
+                console.log('%c"Consciousness is the universe experiencing itself."', 'font-size: 14px; font-style: italic; color: #FFD700;');
+                console.log('%cA unified synthesis of ancient wisdom and quantum physics', 'color: #9D4EDD;');
+                console.log('%cOriginal work by SirFree33 | Quantum Odyssey Research Institute', 'color: #00F5FF;');
+                console.log('%cContact: hyping.mrt@tutamail.com', 'color: #FFD700;');
+                
+                // Fade in the entire page
+                document.body.style.opacity = '0';
+                document.body.style.transition = 'opacity 1s ease';
+                setTimeout(() => {
+                    document.body.style.opacity = '1';
+                }, 300);
+            }
+        };
+        
+        // ===== INITIALIZE QUANTUM UNIVERSE =====
+        document.addEventListener('DOMContentLoaded', () => {
+            QuantumOdyssey.init();
+        });
+    </script>
 </body>
 </html>
-
