@@ -1,21 +1,22 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Odyssey Library | Personal Wisdom Repository</title>
-    
+   
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-    
+   
     <!-- Same fonts as main page -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
-    
+   
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+   
     <style>
         /* ===== MAIN STYLES FROM QUANTUM ODYSSEY ===== */
         :root {
@@ -28,13 +29,13 @@
             --ancient-parchment: #F5E9D4;
             --cosmic-border: rgba(0, 245, 255, 0.4);
         }
-        
+       
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+       
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.8;
@@ -43,14 +44,14 @@
             min-height: 100vh;
             padding: 20px;
         }
-        
+       
         /* ===== LIBRARY CONTAINER ===== */
         .library-container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
         }
-        
+       
         /* ===== HEADER ===== */
         .library-header {
             text-align: center;
@@ -62,7 +63,7 @@
             border: 1px solid var(--cosmic-border);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
         }
-        
+       
         .library-title {
             font-family: 'Philosopher', serif;
             font-size: 3.5rem;
@@ -73,7 +74,7 @@
             background-clip: text;
             color: transparent;
         }
-        
+       
         .library-subtitle {
             font-size: 1.3rem;
             color: var(--nebula-teal);
@@ -82,7 +83,7 @@
             max-width: 800px;
             margin: 0 auto;
         }
-        
+       
         /* ===== SECTIONS ===== */
         .library-section {
             background: rgba(10, 15, 30, 0.85);
@@ -92,7 +93,7 @@
             margin-bottom: 2.5rem;
             border: 1px solid var(--cosmic-border);
         }
-        
+       
         .section-title {
             font-family: 'Philosopher', serif;
             font-size: 2.2rem;
@@ -104,7 +105,7 @@
             align-items: center;
             gap: 1rem;
         }
-        
+       
         /* ===== RESOURCE MANAGEMENT ===== */
         .resource-manager {
             display: grid;
@@ -112,37 +113,37 @@
             gap: 2rem;
             margin-bottom: 3rem;
         }
-        
+       
         @media (max-width: 768px) {
             .resource-manager {
                 grid-template-columns: 1fr;
             }
         }
-        
+       
         .add-resource-form {
             background: linear-gradient(135deg, rgba(26, 32, 54, 0.95), rgba(10, 15, 30, 0.95));
             padding: 2rem;
             border-radius: 15px;
             border: 2px solid rgba(255, 215, 0, 0.3);
         }
-        
+       
         .form-title {
             color: var(--starlight-gold);
             margin-bottom: 1.5rem;
             font-size: 1.5rem;
         }
-        
+       
         .form-group {
             margin-bottom: 1.2rem;
         }
-        
+       
         .form-label {
             display: block;
             margin-bottom: 0.5rem;
             color: var(--nebula-teal);
             font-weight: 500;
         }
-        
+       
         .form-input {
             width: 100%;
             padding: 0.8rem;
@@ -152,19 +153,19 @@
             color: var(--ancient-parchment);
             font-family: 'Inter', sans-serif;
         }
-        
+       
         .form-input:focus {
             outline: none;
             border-color: var(--nebula-teal);
             box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
         }
-        
+       
         .form-buttons {
             display: flex;
             gap: 1rem;
             margin-top: 1.5rem;
         }
-        
+       
         .btn {
             padding: 0.8rem 1.8rem;
             border: none;
@@ -174,17 +175,17 @@
             transition: all 0.3s ease;
             font-family: 'Inter', sans-serif;
         }
-        
+       
         .btn-primary {
             background: linear-gradient(45deg, var(--nebula-teal), var(--starlight-gold));
             color: var(--quantum-abyss);
         }
-        
+       
         .btn-primary:hover {
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 245, 255, 0.3);
         }
-        
+       
         /* ===== RESOURCES GRID ===== */
         .resources-grid {
             display: grid;
@@ -192,7 +193,7 @@
             gap: 1.8rem;
             margin-top: 1.5rem;
         }
-        
+       
         .resource-card {
             background: linear-gradient(135deg, rgba(26, 32, 54, 0.9), rgba(10, 15, 30, 0.9));
             border-radius: 12px;
@@ -201,20 +202,20 @@
             transition: all 0.3s ease;
             position: relative;
         }
-        
+       
         .resource-card:hover {
             transform: translateY(-5px);
             border-color: var(--starlight-gold);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
-        
+       
         .resource-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 1rem;
         }
-        
+       
         .resource-category {
             display: inline-block;
             padding: 0.3rem 0.8rem;
@@ -224,7 +225,7 @@
             color: var(--nebula-teal);
             border: 1px solid var(--cosmic-border);
         }
-        
+       
         .resource-title {
             font-size: 1.3rem;
             color: var(--starlight-gold);
@@ -232,14 +233,14 @@
             font-weight: 600;
             line-height: 1.3;
         }
-        
+       
         .resource-author {
             color: var(--nebula-teal);
             font-size: 0.95rem;
             margin-bottom: 1rem;
             font-style: italic;
         }
-        
+       
         .resource-description {
             color: var(--ancient-parchment);
             font-size: 0.95rem;
@@ -247,13 +248,13 @@
             margin-bottom: 1.5rem;
             opacity: 0.9;
         }
-        
+       
         .resource-links {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
-        
+       
         .resource-link {
             display: inline-flex;
             align-items: center;
@@ -266,13 +267,13 @@
             font-size: 0.9rem;
             transition: all 0.3s ease;
         }
-        
+       
         .resource-link:hover {
             background: rgba(0, 245, 255, 0.2);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 245, 255, 0.15);
         }
-        
+       
         .resource-actions {
             position: absolute;
             top: 1rem;
@@ -280,7 +281,7 @@
             display: flex;
             gap: 0.5rem;
         }
-        
+       
         .action-btn {
             background: rgba(10, 15, 30, 0.7);
             border: 1px solid var(--cosmic-border);
@@ -294,12 +295,12 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-        
+       
         .action-btn:hover {
             background: var(--nebula-teal);
             color: var(--dark-matter);
         }
-        
+       
         /* ===== SEARCH AND FILTER ===== */
         .library-controls {
             display: flex;
@@ -307,13 +308,13 @@
             margin-bottom: 2rem;
             flex-wrap: wrap;
         }
-        
+       
         .search-box {
             flex: 1;
             min-width: 300px;
             position: relative;
         }
-        
+       
         .search-input {
             width: 100%;
             padding: 0.9rem 1.2rem 0.9rem 3rem;
@@ -323,7 +324,7 @@
             color: var(--ancient-parchment);
             font-family: 'Inter', sans-serif;
         }
-        
+       
         .search-icon {
             position: absolute;
             left: 1rem;
@@ -331,7 +332,7 @@
             transform: translateY(-50%);
             color: var(--nebula-teal);
         }
-        
+       
         .filter-select {
             padding: 0.9rem 1.2rem;
             background: rgba(0, 245, 255, 0.08);
@@ -341,7 +342,7 @@
             font-family: 'Inter', sans-serif;
             min-width: 180px;
         }
-        
+       
         /* ===== AD CONTAINERS ===== */
         .cosmic-ad-container {
             background: linear-gradient(135deg, rgba(10, 15, 30, 0.9), rgba(26, 32, 54, 0.9));
@@ -352,7 +353,7 @@
             border: 1px solid rgba(0, 245, 255, 0.2);
             max-width: 800px;
         }
-        
+       
         .ad-label {
             font-size: 0.9rem;
             color: var(--starlight-gold);
@@ -364,7 +365,7 @@
             justify-content: center;
             gap: 0.6rem;
         }
-        
+       
         /* ===== FOOTER ===== */
         .library-footer {
             text-align: center;
@@ -375,25 +376,25 @@
             opacity: 0.7;
             font-size: 0.9rem;
         }
-        
+       
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .library-container {
                 padding: 1rem;
             }
-            
+           
             .library-title {
                 font-size: 2.5rem;
             }
-            
+           
             .resources-grid {
                 grid-template-columns: 1fr;
             }
-            
+           
             .library-controls {
                 flex-direction: column;
             }
-            
+           
             .search-box {
                 min-width: 100%;
             }
@@ -407,7 +408,7 @@
             <h1 class="library-title">Quantum Odyssey Library</h1>
             <p class="library-subtitle">Your personal repository of wisdom texts, curated resources, and growth literature</p>
         </header>
-        
+       
         <!-- Ad Container 1 -->
         <div class="cosmic-ad-container">
             <div class="ad-label"><i class="fas fa-brain"></i> Quantum Wisdom Collection</div>
@@ -416,11 +417,11 @@
                 <!-- Your AdSense ad unit here -->
             </div>
         </div>
-        
+       
         <!-- Resource Management Section -->
         <section class="library-section">
             <h2 class="section-title"><i class="fas fa-plus-circle"></i> Add Resources to Your Library</h2>
-            
+           
             <div class="resource-manager">
                 <!-- Form for adding resources -->
                 <div class="add-resource-form">
@@ -430,17 +431,17 @@
                             <label class="form-label">Resource Title *</label>
                             <input type="text" class="form-input" id="resourceTitle" placeholder="e.g., Aristotle's Metaphysics" required>
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label class="form-label">Author / Source</label>
                             <input type="text" class="form-input" id="resourceAuthor" placeholder="e.g., Aristotle">
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label class="form-label">Description</label>
                             <textarea class="form-input" id="resourceDescription" rows="3" placeholder="Brief description of the resource..."></textarea>
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label class="form-label">Category *</label>
                             <select class="form-input" id="resourceCategory" required>
@@ -455,22 +456,22 @@
                                 <option value="other">Other</option>
                             </select>
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label class="form-label">Direct Link to Text/PDF *</label>
                             <input type="url" class="form-input" id="resourceUrl" placeholder="https://example.com/book.pdf" required>
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label class="form-label">Archive.org Link (Optional)</label>
                             <input type="url" class="form-input" id="archiveUrl" placeholder="https://archive.org/details/...">
                         </div>
-                        
+                       
                         <div class="form-group">
                             <label class="form-label">Link Display Text</label>
                             <input type="text" class="form-input" id="linkText" placeholder="e.g., Read Online, Download PDF, etc.">
                         </div>
-                        
+                       
                         <div class="form-buttons">
                             <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-save"></i> Add to Library
@@ -481,7 +482,7 @@
                         </div>
                     </form>
                 </div>
-                
+               
                 <!-- Instructions -->
                 <div style="padding: 2rem; background: rgba(0,245,255,0.05); border-radius: 15px; border: 1px solid var(--cosmic-border);">
                     <h3 style="color: var(--starlight-gold); margin-bottom: 1.5rem; font-size: 1.3rem;">
@@ -497,14 +498,14 @@
                 </div>
             </div>
         </section>
-        
+       
         <!-- Search and Filter -->
         <div class="library-controls">
             <div class="search-box">
                 <i class="fas fa-search search-icon"></i>
                 <input type="text" class="search-input" id="searchInput" placeholder="Search your library...">
             </div>
-            
+           
             <select class="filter-select" id="categoryFilter">
                 <option value="">All Categories</option>
                 <option value="ancient">Ancient Wisdom</option>
@@ -516,7 +517,7 @@
                 <option value="science">Science</option>
                 <option value="other">Other</option>
             </select>
-            
+           
             <select class="filter-select" id="sortFilter">
                 <option value="newest">Newest First</option>
                 <option value="oldest">Oldest First</option>
@@ -524,17 +525,17 @@
                 <option value="category">By Category</option>
             </select>
         </div>
-        
+       
         <!-- Your Personal Repository Section -->
         <section class="library-section">
             <h2 class="section-title"><i class="fas fa-bookmark"></i> Your Personal Repository</h2>
             <p style="color: var(--nebula-teal); margin-bottom: 1.5rem;">Texts you've added from your own collection</p>
-            
+           
             <div class="resources-grid" id="personalResources">
                 <!-- Dynamic content will be added here -->
             </div>
         </section>
-        
+       
         <!-- Ad Container 2 -->
         <div class="cosmic-ad-container">
             <div class="ad-label"><i class="fas fa-scroll"></i> Ancient Wisdom Archive</div>
@@ -543,12 +544,12 @@
                 <!-- Your AdSense ad unit here -->
             </div>
         </div>
-        
+       
         <!-- Curated Wisdom Archive Section -->
         <section class="library-section">
             <h2 class="section-title"><i class="fas fa-star"></i> Curated Wisdom Archive</h2>
             <p style="color: var(--nebula-teal); margin-bottom: 1.5rem;">Free resources from archives and public domains</p>
-            
+           
             <div class="resources-grid" id="curatedResources">
                 <!-- Pre-populated with some examples -->
                 <div class="resource-card">
@@ -562,7 +563,7 @@
                     </div>
                     <h3 class="resource-title">The Kybalion</h3>
                     <p class="resource-author">Three Initiates</p>
-                    <p class="resource-description">A study of the Hermetic philosophy of ancient Egypt and Greece. Presents seven Hermetic principles for understanding reality.</p>
+                    <p class="resource-description">A study of the Hermetic philosophy of ancient Egypt and Greece. Presents seven Hermetic principles for understanding reality, including mentalism, correspondence, vibration, polarity, rhythm, cause and effect, and gender. This foundational text bridges ancient wisdom with modern esoteric thought, offering practical insights for personal transformation and universal comprehension.</p>
                     <div class="resource-links">
                         <a href="https://archive.org/details/kybalionastudyh00unkngoog" class="resource-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Read on Archive.org
@@ -572,7 +573,7 @@
                         </a>
                     </div>
                 </div>
-                
+               
                 <div class="resource-card">
                     <div class="resource-header">
                         <span class="resource-category">Occult & Esoteric</span>
@@ -584,14 +585,14 @@
                     </div>
                     <h3 class="resource-title">The Thirty Axioms of Magick</h3>
                     <p class="resource-author">Three Initiates</p>
-                    <p class="resource-description">Principles and axioms of magical practice and hermetic philosophy.</p>
+                    <p class="resource-description">Principles and axioms of magical practice and hermetic philosophy, expanding on esoteric traditions with detailed explanations of magical laws, energy manipulation, and spiritual development techniques for practitioners seeking deeper understanding of occult sciences.</p>
                     <div class="resource-links">
                         <a href="https://archive.org/details/the-thirty-xxx-axioms-of-magick-by-the-three-initiates" class="resource-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> View on Archive.org
                         </a>
                     </div>
                 </div>
-                
+               
                 <div class="resource-card">
                     <div class="resource-header">
                         <span class="resource-category">Ancient Wisdom</span>
@@ -603,7 +604,7 @@
                     </div>
                     <h3 class="resource-title">Tao Te Ching</h3>
                     <p class="resource-author">Lao Tzu</p>
-                    <p class="resource-description">Fundamental text of Taoism exploring the nature of reality, virtue, and wu wei (effortless action).</p>
+                    <p class="resource-description">Fundamental text of Taoism exploring the nature of reality, virtue, and wu wei (effortless action). This ancient Chinese classic provides profound insights into harmony with the universe, simplicity, and the balance of opposites, serving as a guide for ethical living and spiritual enlightenment across centuries.</p>
                     <div class="resource-links">
                         <a href="https://www.gutenberg.org/ebooks/216" class="resource-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Project Gutenberg
@@ -613,7 +614,7 @@
                         </a>
                     </div>
                 </div>
-                
+               
                 <div class="resource-card">
                     <div class="resource-header">
                         <span class="resource-category">Philosophy</span>
@@ -625,7 +626,7 @@
                     </div>
                     <h3 class="resource-title">Meditations</h3>
                     <p class="resource-author">Marcus Aurelius</p>
-                    <p class="resource-description">Personal writings of Roman Emperor Marcus Aurelius outlining Stoic philosophy and principles for living virtuously.</p>
+                    <p class="resource-description">Personal writings of Roman Emperor Marcus Aurelius outlining Stoic philosophy and principles for living virtuously. This timeless work offers reflections on resilience, self-discipline, and acceptance of fate, providing practical wisdom for navigating life's challenges with equanimity and moral integrity.</p>
                     <div class="resource-links">
                         <a href="https://www.gutenberg.org/ebooks/2680" class="resource-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Project Gutenberg
@@ -635,7 +636,7 @@
                         </a>
                     </div>
                 </div>
-                
+               
                 <div class="resource-card">
                     <div class="resource-header">
                         <span class="resource-category">Science</span>
@@ -647,7 +648,7 @@
                     </div>
                     <h3 class="resource-title">The Feynman Lectures on Physics</h3>
                     <p class="resource-author">Richard Feynman</p>
-                    <p class="resource-description">Comprehensive introduction to physics including quantum mechanics, delivered by Nobel laureate Richard Feynman.</p>
+                    <p class="resource-description">Comprehensive introduction to physics including quantum mechanics, delivered by Nobel laureate Richard Feynman. These lectures cover fundamental principles with clarity and wit, making complex concepts accessible while emphasizing the beauty and wonder of scientific discovery in areas like mechanics, electromagnetism, and quantum theory.</p>
                     <div class="resource-links">
                         <a href="https://www.feynmanlectures.caltech.edu/" class="resource-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Read Online
@@ -657,7 +658,7 @@
                         </a>
                     </div>
                 </div>
-                
+               
                 <div class="resource-card">
                     <div class="resource-header">
                         <span class="resource-category">Personal Growth</span>
@@ -669,7 +670,7 @@
                     </div>
                     <h3 class="resource-title">As a Man Thinketh</h3>
                     <p class="resource-author">James Allen</p>
-                    <p class="resource-description">Classic personal development book exploring the power of thought in shaping one's life and circumstances.</p>
+                    <p class="resource-description">Classic personal development book exploring the power of thought in shaping one's life and circumstances. This influential work emphasizes mental discipline, positive thinking, and character building as keys to success, offering timeless advice for self-improvement and achieving personal fulfillment through mindful living.</p>
                     <div class="resource-links">
                         <a href="https://www.gutenberg.org/ebooks/4507" class="resource-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Project Gutenberg
@@ -679,15 +680,448 @@
                         </a>
                     </div>
                 </div>
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Ancient Wisdom</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Art of War</h3>
+                    <p class="resource-author">Sun Tzu</p>
+                    <p class="resource-description">Ancient Chinese military treatise attributed to Sun Tzu, offering strategic wisdom applicable to warfare, business, and personal conflicts. This classic explores tactics, intelligence gathering, and psychological warfare, emphasizing adaptability, deception, and understanding one's enemy for achieving victory without direct confrontation.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/artofwaroldestmi00suntuoft" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/artofwaroldestmi00suntuoft/artofwaroldestmi00suntuoft.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                        <a href="https://www.gutenberg.org/files/132/132-0.txt" class="resource-link" target="_blank">
+                            <i class="fas fa-file-alt"></i> Read TXT
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Prince</h3>
+                    <p class="resource-author">Niccolò Machiavelli</p>
+                    <p class="resource-description">Renaissance political treatise on acquiring and maintaining power, known for its pragmatic and often controversial advice on leadership. This work examines statecraft, military tactics, and human nature, providing insights into political intelligence and strategic maneuvering that remain relevant in modern governance and business.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/prince00machgoog" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/prince00machgoog/prince00machgoog.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                        <a href="https://www.gutenberg.org/files/1232/1232-h/1232-h.htm" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Personal Growth</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Self-Help</h3>
+                    <p class="resource-author">Samuel Smiles</p>
+                    <p class="resource-description">Victorian-era guide to personal development emphasizing perseverance, industry, and self-reliance. This pioneering self-improvement book draws from historical examples to illustrate how character building and diligent effort lead to success, intelligence growth, and moral elevation in all aspects of life.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/selfhelpconductp00smiliala" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/selfhelpconductp00smiliala/selfhelpconductp00smiliala.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                        <a href="https://www.gutenberg.org/files/935/935-h/935-h.htm" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Personal Growth</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Power of Concentration</h3>
+                    <p class="resource-author">Theron Q. Dumont</p>
+                    <p class="resource-description">Practical guide to developing mental focus and harnessing the power of concentrated thought for personal achievement. This work provides exercises and techniques for improving intelligence, willpower, and success in business and life through disciplined mental training and tactical mind management.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/powerofconcentra00dumo" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/powerofconcentra00dumo/powerofconcentra00dumo.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Personal Growth</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">How to Live on 24 Hours a Day</h3>
+                    <p class="resource-author">Arnold Bennett</p>
+                    <p class="resource-description">Concise manual on time management and personal efficiency, teaching how to maximize daily hours for intellectual growth and fulfillment. This tactical guide offers practical strategies for balancing work, leisure, and self-improvement, emphasizing intelligent use of time as key to a richer, more purposeful life.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/2274" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                        <a href="https://www.gutenberg.org/files/2274/2274-h/2274-h.htm" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                        <a href="https://archive.org/details/howtoliveontwenty00benniala" class="resource-link" target="_blank">
+                            <i class="fas fa-archive"></i> Archive.org
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Republic</h3>
+                    <p class="resource-author">Plato</p>
+                    <p class="resource-description">Foundational philosophical dialogue exploring justice, ideal society, and human nature through Socratic method. This ancient text delves into political theory, education, and intellectual growth, offering tactical insights into governance, ethics, and the pursuit of wisdom that have influenced Western thought for millennia.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/republicplato00platgoog" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/republicplato00platgoog/republicplato00platgoog.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                        <a href="https://www.gutenberg.org/files/1497/1497-h/1497-h.htm" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Beyond Good and Evil</h3>
+                    <p class="resource-author">Friedrich Nietzsche</p>
+                    <p class="resource-description">A profound critique of traditional morality and philosophy, exploring concepts of master-slave morality, the will to power, and the revaluation of values. This work challenges conventional thinking, advocating for a more nuanced understanding of human nature and society through Nietzsche's unique perspectivism and genealogical method.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/4363" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                        <a href="https://www.gutenberg.org/files/4363/4363-h/4363-h.htm" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Thus Spake Zarathustra</h3>
+                    <p class="resource-author">Friedrich Nietzsche</p>
+                    <p class="resource-description">A philosophical novel presenting Nietzsche's ideas on the Übermensch, eternal recurrence, and the death of God through poetic prose and parables. This work explores human evolution, self-overcoming, and the creation of new values, serving as a cornerstone for existential thought and individual empowerment.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/1998" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                        <a href="https://www.gutenberg.org/files/1998/1998-h/1998-h.htm" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">On the Genealogy of Morals</h3>
+                    <p class="resource-author">Friedrich Nietzsche</p>
+                    <p class="resource-description">A polemical work tracing the origins of moral concepts, distinguishing between master and slave moralities, and critiquing ressentiment. This text provides a genealogical analysis of values, guilt, and ascetic ideals, offering insights into the psychological underpinnings of ethical systems and cultural development.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/52319" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                        <a href="https://www.gutenberg.org/files/52319/52319-h/52319-h.htm" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Divine Comedy</h3>
+                    <p class="resource-author">Dante Alighieri</p>
+                    <p class="resource-description">Epic poem chronicling a journey through Hell, Purgatory, and Paradise, exploring themes of sin, redemption, and divine justice. This medieval masterpiece combines theological theory, political commentary, and personal allegory, offering profound insights into human nature, morality, and the afterlife in Western literature.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/divinecomedyofda00dantiala" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/divinecomedyofda00dantiala/divinecomedyofda00dantiala.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">On War</h3>
+                    <p class="resource-author">Carl von Clausewitz</p>
+                    <p class="resource-description">Seminal treatise on military strategy and the nature of war, famous for concepts like "war as politics by other means" and the fog of war. This work analyzes the psychological, political, and tactical dimensions of conflict, providing theoretical frameworks for understanding warfare that influence modern strategic thinking.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/onwar00clau_0" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/onwar00clau_0/onwar00clau_0.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Occult & Esoteric</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Psychology of the Unconscious</h3>
+                    <p class="resource-author">Carl Gustav Jung</p>
+                    <p class="resource-description">Exploration of the unconscious mind, libido theory, and mythological symbolism, marking Jung's break from Freudian psychoanalysis. This work introduces concepts of collective unconscious and archetypes, providing intelligent analysis of psychological transformation through ancient myths and modern cases.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/psychologyuncon00junggoog" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/psychologyuncon00junggoog/psychologyuncon00junggoog.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Occult & Esoteric</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Collected Papers on Analytical Psychology</h3>
+                    <p class="resource-author">Carl Gustav Jung</p>
+                    <p class="resource-description">Compilation of early essays on analytical psychology, including word association experiments, complex theory, and dream analysis. This foundational text lays out Jung's innovative approaches to the psyche, emphasizing the role of unconscious processes in personality development and mental health.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/collectedpaperson00junguoft" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://archive.org/download/collectedpaperson00junguoft/collectedpaperson00junguoft.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Symposium</h3>
+                    <p class="resource-author">Plato</p>
+                    <p class="resource-description">Dialogue on the nature of love, featuring speeches by Socrates and others at a banquet. This classical work explores eros as a path to philosophical wisdom, discussing beauty, desire, and spiritual ascent, while providing insights into ancient Greek thought on relationships and virtue.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/1600" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                        <a href="https://www.gutenberg.org/files/1600/1600-h/1600-h.htm" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Critique of Pure Reason</h3>
+                    <p class="resource-author">Immanuel Kant</p>
+                    <p class="resource-description">Groundbreaking work in epistemology and metaphysics, distinguishing between phenomena and noumena while synthesizing rationalism and empiricism. This text examines the limits of human knowledge, a priori concepts, and transcendental idealism, revolutionizing philosophical inquiry into space, time, and causality.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/4280" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                        <a href="https://www.gutenberg.org/files/4280/4280-h/4280-h.htm" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Leviathan</h3>
+                    <p class="resource-author">Thomas Hobbes</p>
+                    <p class="resource-description">Influential political philosophy arguing for absolute sovereignty to avoid the "state of nature" where life is "solitary, poor, nasty, brutish, and short." This work develops social contract theory, examining human nature, commonwealth formation, and the role of power in maintaining social order.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/3207" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                        <a href="https://www.gutenberg.org/files/3207/3207-h/3207-h.htm" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Politics</h3>
+                    <p class="resource-author">Aristotle</p>
+                    <p class="resource-description">Comprehensive analysis of political systems, constitutions, and the ideal state, building on empirical observation of Greek city-states. This classical text discusses citizenship, justice, and the best forms of government, influencing political theory with ideas on the mean, ethics in governance, and human flourishing.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/6762" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                        <a href="https://www.gutenberg.org/files/6762/6762-h/6762-h.htm" class="resource-link" target="_blank">
+                            <i class="fas fa-book-open"></i> Read Online
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Science</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Neuroscience of Intelligence</h3>
+                    <p class="resource-author">Richard J. Haier</p>
+                    <p class="resource-description">Exploration of brain mechanisms underlying intelligence, drawing from neuroimaging studies and genetic research. This work synthesizes findings on neural efficiency, parietal-frontal integration theory, and individual differences, offering insights into cognitive abilities and potential enhancements.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/TheNeuroscienceOfIntelligence" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://dn720006.ca.archive.org/0/items/betty-friedan-la-mistica-de-la-feminidad/The-Neuroscience-of-Intelligence.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+               
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Science</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">A Thousand Brains: A New Theory of Intelligence</h3>
+                    <p class="resource-author">Jeff Hawkins</p>
+                    <p class="resource-description">Proposal of the Thousand Brains Theory, positing that intelligence arises from thousands of cortical columns voting on perceptions and actions. This work bridges neuroscience and AI, exploring implications for machine intelligence, consciousness, and human cognition in an accessible manner.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/a-thousand-brains" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                        <a href="https://dn790007.ca.archive.org/0/items/artificial-intelligence/2021_a_thousand_brains-a_new_theory_of_intelligence-Jeff%20Hawkins%20%282021%29.pdf" class="resource-link" target="_blank">
+                            <i class="fas fa-file-pdf"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+               
             </div>
-            
+           
             <div style="text-align: center; margin-top: 2.5rem;">
                 <button class="btn btn-primary" onclick="addMoreResources()">
                     <i class="fas fa-plus"></i> Load More Resources
                 </button>
             </div>
         </section>
-        
+       
         <!-- Footer -->
         <footer class="library-footer">
             <p>Quantum Odyssey Library v1.0 | Your personal wisdom repository</p>
@@ -695,25 +1129,28 @@
             <p style="margin-top: 1rem; font-size: 0.8rem;">
                 <i class="fas fa-info-circle"></i> Resources are stored in your browser's local storage
             </p>
+            <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.8;">
+                Disclaimer<br>Links to external websites are provided for convenience only. We are not responsible for the content, accuracy, or practices of any third-party sites linked from our website. The inclusion of any link does not imply endorsement by Quantum Odyssey Research Institute.
+            </p>
         </footer>
     </div>
-    
+   
     <!-- JavaScript for Library Management -->
     <script>
         // Library Management System
         const QuantumLibrary = {
             resources: [],
-            
+           
             // Initialize library
             init: function() {
                 this.loadResources();
                 this.setupEventListeners();
                 this.renderPersonalResources();
-                
+               
                 // Initialize AdSense
                 (adsbygoogle = window.adsbygoogle || []).push({});
             },
-            
+           
             // Load resources from localStorage
             loadResources: function() {
                 const savedResources = localStorage.getItem('quantumLibraryResources');
@@ -721,34 +1158,34 @@
                     this.resources = JSON.parse(savedResources);
                 }
             },
-            
+           
             // Save resources to localStorage
             saveResources: function() {
                 localStorage.setItem('quantumLibraryResources', JSON.stringify(this.resources));
             },
-            
+           
             // Add a new resource
             addResource: function(resource) {
                 resource.id = Date.now(); // Simple unique ID
                 resource.added = new Date().toISOString();
                 resource.type = 'personal';
-                
+               
                 this.resources.push(resource);
                 this.saveResources();
                 this.renderPersonalResources();
-                
+               
                 this.showNotification(`"${resource.title}" added to your library!`, 'success');
             },
-            
+           
             // Remove a resource
             removeResource: function(id) {
                 this.resources = this.resources.filter(r => r.id !== id);
                 this.saveResources();
                 this.renderPersonalResources();
-                
+               
                 this.showNotification('Resource removed from library', 'info');
             },
-            
+           
             // Clone a curated resource to personal library
             cloneToPersonal: function(resource) {
                 const clonedResource = {
@@ -758,24 +1195,24 @@
                     type: 'personal',
                     cloned: true
                 };
-                
+               
                 // Remove actions from cloned resource
                 delete clonedResource.actions;
-                
+               
                 this.resources.push(clonedResource);
                 this.saveResources();
                 this.renderPersonalResources();
-                
+               
                 this.showNotification(`"${resource.title}" added to your personal library!`, 'success');
             },
-            
+           
             // Render personal resources
             renderPersonalResources: function() {
                 const container = document.getElementById('personalResources');
                 if (!container) return;
-                
+               
                 const personalResources = this.resources.filter(r => r.type === 'personal');
-                
+               
                 if (personalResources.length === 0) {
                     container.innerHTML = `
                         <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--nebula-teal);">
@@ -789,7 +1226,7 @@
                     `;
                     return;
                 }
-                
+               
                 container.innerHTML = personalResources.map(resource => `
                     <div class="resource-card">
                         <div class="resource-header">
@@ -822,7 +1259,7 @@
                     </div>
                 `).join('');
             },
-            
+           
             // Get category label
             getCategoryLabel: function(category) {
                 const labels = {
@@ -837,7 +1274,7 @@
                 };
                 return labels[category] || category;
             },
-            
+           
             // Edit resource (simplified - in full version would open edit form)
             editResource: function(id) {
                 const resource = this.resources.find(r => r.id === id);
@@ -850,16 +1287,16 @@
                     document.getElementById('resourceUrl').value = resource.url;
                     document.getElementById('archiveUrl').value = resource.archiveUrl || '';
                     document.getElementById('linkText').value = resource.linkText || '';
-                    
+                   
                     // Change form to edit mode
                     const form = document.getElementById('addResourceForm');
                     form.dataset.editingId = id;
                     form.querySelector('button[type="submit"]').innerHTML = '<i class="fas fa-save"></i> Update Resource';
-                    
+                   
                     this.showNotification(`Editing "${resource.title}"`, 'info');
                 }
             },
-            
+           
             // Update resource
             updateResource: function(id, updatedData) {
                 const index = this.resources.findIndex(r => r.id === id);
@@ -867,20 +1304,20 @@
                     this.resources[index] = { ...this.resources[index], ...updatedData };
                     this.saveResources();
                     this.renderPersonalResources();
-                    
+                   
                     this.showNotification(`"${updatedData.title}" updated!`, 'success');
                 }
             },
-            
+           
             // Setup event listeners
             setupEventListeners: function() {
                 const form = document.getElementById('addResourceForm');
                 if (form) {
                     form.addEventListener('submit', (e) => {
                         e.preventDefault();
-                        
+                       
                         const isEditing = form.dataset.editingId;
-                        
+                       
                         const resourceData = {
                             title: document.getElementById('resourceTitle').value,
                             author: document.getElementById('resourceAuthor').value,
@@ -890,7 +1327,7 @@
                             archiveUrl: document.getElementById('archiveUrl').value || null,
                             linkText: document.getElementById('linkText').value || null
                         };
-                        
+                       
                         if (isEditing) {
                             this.updateResource(parseInt(isEditing), resourceData);
                             delete form.dataset.editingId;
@@ -898,11 +1335,11 @@
                         } else {
                             this.addResource(resourceData);
                         }
-                        
+                       
                         form.reset();
                     });
                 }
-                
+               
                 // Search functionality
                 const searchInput = document.getElementById('searchInput');
                 if (searchInput) {
@@ -910,7 +1347,7 @@
                         this.filterResources();
                     });
                 }
-                
+               
                 // Category filter
                 const categoryFilter = document.getElementById('categoryFilter');
                 if (categoryFilter) {
@@ -919,32 +1356,32 @@
                     });
                 }
             },
-            
+           
             // Filter resources
             filterResources: function() {
                 const searchTerm = document.getElementById('searchInput').value.toLowerCase();
                 const category = document.getElementById('categoryFilter').value;
-                
+               
                 const personalResources = this.resources.filter(r => r.type === 'personal');
                 const filteredResources = personalResources.filter(resource => {
-                    const matchesSearch = !searchTerm || 
+                    const matchesSearch = !searchTerm ||
                         resource.title.toLowerCase().includes(searchTerm) ||
                         (resource.author && resource.author.toLowerCase().includes(searchTerm)) ||
                         (resource.description && resource.description.toLowerCase().includes(searchTerm));
-                    
+                   
                     const matchesCategory = !category || resource.category === category;
-                    
+                   
                     return matchesSearch && matchesCategory;
                 });
-                
+               
                 this.renderFilteredResources(filteredResources);
             },
-            
+           
             // Render filtered resources
             renderFilteredResources: function(filteredResources) {
                 const container = document.getElementById('personalResources');
                 if (!container) return;
-                
+               
                 if (filteredResources.length === 0) {
                     container.innerHTML = `
                         <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--nebula-teal);">
@@ -955,7 +1392,7 @@
                     `;
                     return;
                 }
-                
+               
                 container.innerHTML = filteredResources.map(resource => `
                     <div class="resource-card">
                         <div class="resource-header">
@@ -985,7 +1422,7 @@
                     </div>
                 `).join('');
             },
-            
+           
             // Show notification
             showNotification: function(message, type = 'info') {
                 // Create notification element
@@ -994,8 +1431,8 @@
                     position: fixed;
                     top: 100px;
                     right: 20px;
-                    background: ${type === 'success' ? 'linear-gradient(135deg, #1A2036, #0A0F1E)' : 
-                                  type === 'error' ? 'linear-gradient(135deg, #361a1a, #1e0a0a)' : 
+                    background: ${type === 'success' ? 'linear-gradient(135deg, #1A2036, #0A0F1E)' :
+                                  type === 'error' ? 'linear-gradient(135deg, #361a1a, #1e0a0a)' :
                                   'linear-gradient(135deg, #1a2036, #0a0f1e)'};
                     color: white;
                     padding: 1rem 2rem;
@@ -1006,11 +1443,11 @@
                     animation: slideIn 0.5s ease;
                 `;
                 notification.innerHTML = `
-                    <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-triangle' : 'info-circle'}" 
-                       style="margin-right: 0.5rem; color: ${type === 'success' ? '#00F5FF' : type === 'error' ? '#FF6B6B' : '#FFD700'};"></i> 
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-triangle' : 'info-circle'}"
+                       style="margin-right: 0.5rem; color: ${type === 'success' ? '#00F5FF' : type === 'error' ? '#FF6B6B' : '#FFD700'};"></i>
                     ${message}
                 `;
-                
+               
                 // Add animation styles if not present
                 if (!document.querySelector('#notification-styles')) {
                     const style = document.createElement('style');
@@ -1027,9 +1464,9 @@
                     `;
                     document.head.appendChild(style);
                 }
-                
+               
                 document.body.appendChild(notification);
-                
+               
                 // Remove after 4 seconds
                 setTimeout(() => {
                     notification.style.animation = 'slideOut 0.5s ease';
@@ -1040,22 +1477,22 @@
                     }, 500);
                 }, 4000);
             },
-            
+           
             // Export library data
             exportLibrary: function() {
                 const dataStr = JSON.stringify(this.resources.filter(r => r.type === 'personal'), null, 2);
                 const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
-                
+               
                 const exportFileDefaultName = `quantum-library-${new Date().toISOString().split('T')[0]}.json`;
-                
+               
                 const linkElement = document.createElement('a');
                 linkElement.setAttribute('href', dataUri);
                 linkElement.setAttribute('download', exportFileDefaultName);
                 linkElement.click();
-                
+               
                 this.showNotification('Library exported successfully!', 'success');
             },
-            
+           
             // Import library data
             importLibrary: function(file) {
                 const reader = new FileReader();
@@ -1068,7 +1505,7 @@
                             resource.added = new Date().toISOString();
                             this.resources.push(resource);
                         });
-                        
+                       
                         this.saveResources();
                         this.renderPersonalResources();
                         this.showNotification(`${importedResources.length} resources imported successfully!`, 'success');
@@ -1079,7 +1516,7 @@
                 reader.readAsText(file);
             }
         };
-        
+       
         // Global functions for button clicks
         function cloneResource(button) {
             const card = button.closest('.resource-card');
@@ -1087,7 +1524,7 @@
             const author = card.querySelector('.resource-author') ? card.querySelector('.resource-author').textContent : '';
             const categoryElement = card.querySelector('.resource-category');
             const categoryText = categoryElement ? categoryElement.textContent.toLowerCase() : 'other';
-            
+           
             // Map category text to category value
             const categoryMap = {
                 'hermetic philosophy': 'hermetic',
@@ -1097,14 +1534,14 @@
                 'science': 'science',
                 'personal growth': 'growth'
             };
-            
+           
             const category = categoryMap[categoryText.toLowerCase()] || 'other';
-            
+           
             const description = card.querySelector('.resource-description').textContent;
             const links = card.querySelectorAll('.resource-link');
             const url = links[0] ? links[0].href : '#';
             const archiveUrl = links[1] ? links[1].href : null;
-            
+           
             const resource = {
                 title,
                 author,
@@ -1114,22 +1551,22 @@
                 archiveUrl,
                 linkText: 'Access Resource'
             };
-            
+           
             QuantumLibrary.cloneToPersonal(resource);
         }
-        
+       
         function clearForm() {
             document.getElementById('addResourceForm').reset();
             delete document.getElementById('addResourceForm').dataset.editingId;
             document.querySelector('#addResourceForm button[type="submit"]').innerHTML = '<i class="fas fa-save"></i> Add to Library';
         }
-        
+       
         function addMoreResources() {
             // In a real implementation, this would load more resources from a database
             // For now, we'll just show a notification
             QuantumLibrary.showNotification('More resources would be loaded from archive.org in a full implementation', 'info');
         }
-        
+       
         // Initialize library when page loads
         document.addEventListener('DOMContentLoaded', () => {
             QuantumLibrary.init();
@@ -1137,3 +1574,4 @@
     </script>
 </body>
 </html>
+```
