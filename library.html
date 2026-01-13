@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Odyssey Library | Personal Wisdom Repository</title>
-   
+    
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-   
+    
     <!-- Same fonts as main page -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
-   
+    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-   
+    
     <style>
         /* ===== MAIN STYLES FROM QUANTUM ODYSSEY ===== */
         :root {
@@ -28,13 +28,13 @@
             --ancient-parchment: #F5E9D4;
             --cosmic-border: rgba(0, 245, 255, 0.4);
         }
-       
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-       
+        
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.8;
@@ -43,14 +43,14 @@
             min-height: 100vh;
             padding: 20px;
         }
-       
+        
         /* ===== LIBRARY CONTAINER ===== */
         .library-container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 2rem;
         }
-       
+        
         /* ===== HEADER ===== */
         .library-header {
             text-align: center;
@@ -62,7 +62,7 @@
             border: 1px solid var(--cosmic-border);
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
         }
-       
+        
         .library-title {
             font-family: 'Philosopher', serif;
             font-size: 3.5rem;
@@ -73,7 +73,7 @@
             background-clip: text;
             color: transparent;
         }
-       
+        
         .library-subtitle {
             font-size: 1.3rem;
             color: var(--nebula-teal);
@@ -82,7 +82,7 @@
             max-width: 800px;
             margin: 0 auto;
         }
-       
+        
         /* ===== SECTIONS ===== */
         .library-section {
             background: rgba(10, 15, 30, 0.85);
@@ -92,7 +92,7 @@
             margin-bottom: 2.5rem;
             border: 1px solid var(--cosmic-border);
         }
-       
+        
         .section-title {
             font-family: 'Philosopher', serif;
             font-size: 2.2rem;
@@ -104,7 +104,87 @@
             align-items: center;
             gap: 1rem;
         }
-       
+        
+        /* ===== RESOURCE MANAGEMENT ===== */
+        .resource-manager {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (max-width: 768px) {
+            .resource-manager {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .add-resource-form {
+            background: linear-gradient(135deg, rgba(26, 32, 54, 0.95), rgba(10, 15, 30, 0.95));
+            padding: 2rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .form-title {
+            color: var(--starlight-gold);
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--nebula-teal);
+            font-weight: 500;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 0.8rem;
+            background: rgba(0, 245, 255, 0.08);
+            border: 1px solid var(--cosmic-border);
+            border-radius: 8px;
+            color: var(--ancient-parchment);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: var(--nebula-teal);
+            box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
+        }
+        
+        .form-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .btn {
+            padding: 0.8rem 1.8rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(45deg, var(--nebula-teal), var(--starlight-gold));
+            color: var(--quantum-abyss);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 245, 255, 0.3);
+        }
+        
         /* ===== RESOURCES GRID ===== */
         .resources-grid {
             display: grid;
@@ -112,7 +192,7 @@
             gap: 1.8rem;
             margin-top: 1.5rem;
         }
-       
+        
         .resource-card {
             background: linear-gradient(135deg, rgba(26, 32, 54, 0.9), rgba(10, 15, 30, 0.9));
             border-radius: 12px;
@@ -121,20 +201,20 @@
             transition: all 0.3s ease;
             position: relative;
         }
-       
+        
         .resource-card:hover {
             transform: translateY(-5px);
             border-color: var(--starlight-gold);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
         }
-       
+        
         .resource-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 1rem;
         }
-       
+        
         .resource-category {
             display: inline-block;
             padding: 0.3rem 0.8rem;
@@ -144,7 +224,7 @@
             color: var(--nebula-teal);
             border: 1px solid var(--cosmic-border);
         }
-       
+        
         .resource-title {
             font-size: 1.3rem;
             color: var(--starlight-gold);
@@ -152,14 +232,14 @@
             font-weight: 600;
             line-height: 1.3;
         }
-       
+        
         .resource-author {
             color: var(--nebula-teal);
             font-size: 0.95rem;
             margin-bottom: 1rem;
             font-style: italic;
         }
-       
+        
         .resource-description {
             color: var(--ancient-parchment);
             font-size: 0.95rem;
@@ -167,13 +247,13 @@
             margin-bottom: 1.5rem;
             opacity: 0.9;
         }
-       
+        
         .resource-links {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
-       
+        
         .resource-link {
             display: inline-flex;
             align-items: center;
@@ -186,13 +266,13 @@
             font-size: 0.9rem;
             transition: all 0.3s ease;
         }
-       
+        
         .resource-link:hover {
             background: rgba(0, 245, 255, 0.2);
             transform: translateY(-2px);
             box-shadow: 0 4px 8px rgba(0, 245, 255, 0.15);
         }
-       
+        
         .resource-actions {
             position: absolute;
             top: 1rem;
@@ -200,7 +280,7 @@
             display: flex;
             gap: 0.5rem;
         }
-       
+        
         .action-btn {
             background: rgba(10, 15, 30, 0.7);
             border: 1px solid var(--cosmic-border);
@@ -214,12 +294,54 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-       
+        
         .action-btn:hover {
             background: var(--nebula-teal);
             color: var(--dark-matter);
         }
-       
+        
+        /* ===== SEARCH AND FILTER ===== */
+        .library-controls {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .search-box {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 0.9rem 1.2rem 0.9rem 3rem;
+            background: rgba(0, 245, 255, 0.08);
+            border: 1px solid var(--cosmic-border);
+            border-radius: 10px;
+            color: var(--ancient-parchment);
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--nebula-teal);
+        }
+        
+        .filter-select {
+            padding: 0.9rem 1.2rem;
+            background: rgba(0, 245, 255, 0.08);
+            border: 1px solid var(--cosmic-border);
+            border-radius: 10px;
+            color: var(--ancient-parchment);
+            font-family: 'Inter', sans-serif;
+            min-width: 180px;
+        }
+        
         /* ===== AD CONTAINERS ===== */
         .cosmic-ad-container {
             background: linear-gradient(135deg, rgba(10, 15, 30, 0.9), rgba(26, 32, 54, 0.9));
@@ -230,7 +352,7 @@
             border: 1px solid rgba(0, 245, 255, 0.2);
             max-width: 800px;
         }
-       
+        
         .ad-label {
             font-size: 0.9rem;
             color: var(--starlight-gold);
@@ -242,7 +364,33 @@
             justify-content: center;
             gap: 0.6rem;
         }
-       
+        
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, var(--nebula-teal), var(--consciousness-purple));
+            border-radius: 50%;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            z-index: 1000;
+            border: 2px solid var(--starlight-gold);
+            box-shadow: 0 5px 20px rgba(0, 245, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 245, 255, 0.4);
+        }
+        
         /* ===== FOOTER ===== */
         .library-footer {
             text-align: center;
@@ -253,31 +401,52 @@
             opacity: 0.7;
             font-size: 0.9rem;
         }
-       
+        
         /* ===== RESPONSIVE ===== */
         @media (max-width: 768px) {
             .library-container {
                 padding: 1rem;
             }
-           
+            
             .library-title {
                 font-size: 2.5rem;
             }
-           
+            
             .resources-grid {
                 grid-template-columns: 1fr;
+            }
+            
+            .library-controls {
+                flex-direction: column;
+            }
+            
+            .search-box {
+                min-width: 100%;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+                font-size: 1.3rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
     <div class="library-container">
         <!-- Header -->
         <header class="library-header">
             <h1 class="library-title">Quantum Odyssey Library</h1>
-            <p class="library-subtitle">Your repository of wisdom texts, curated resources, and growth literature</p>
+            <p class="library-subtitle">Your personal repository of wisdom texts, curated resources, and growth literature</p>
         </header>
-       
+        
         <!-- Ad Container 1 -->
         <div class="cosmic-ad-container">
             <div class="ad-label"><i class="fas fa-brain"></i> Quantum Wisdom Collection</div>
@@ -286,7 +455,131 @@
                 <!-- Your AdSense ad unit here -->
             </div>
         </div>
-       
+        
+        <!-- Resource Management Section -->
+        <section class="library-section">
+            <h2 class="section-title"><i class="fas fa-plus-circle"></i> Add Resources to Your Library</h2>
+            
+            <div class="resource-manager">
+                <!-- Form for adding resources -->
+                <div class="add-resource-form">
+                    <h3 class="form-title">Add New Resource</h3>
+                    <form id="addResourceForm">
+                        <div class="form-group">
+                            <label class="form-label">Resource Title *</label>
+                            <input type="text" class="form-input" id="resourceTitle" placeholder="e.g., Aristotle's Metaphysics" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Author / Source</label>
+                            <input type="text" class="form-input" id="resourceAuthor" placeholder="e.g., Aristotle">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Description</label>
+                            <textarea class="form-input" id="resourceDescription" rows="3" placeholder="Brief description of the resource..."></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Category *</label>
+                            <select class="form-input" id="resourceCategory" required>
+                                <option value="">Select category</option>
+                                <option value="ancient">Ancient Wisdom</option>
+                                <option value="quantum">Quantum Physics</option>
+                                <option value="philosophy">Philosophy</option>
+                                <option value="hermetic">Hermetic Philosophy</option>
+                                <option value="growth">Personal Growth</option>
+                                <option value="occult">Occult & Esoteric</option>
+                                <option value="science">Science</option>
+                                <option value="mythology">Mythology</option>
+                                <option value="literature">Literature</option>
+                                <option value="psychology">Psychology</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Direct Link to Text/PDF *</label>
+                            <input type="url" class="form-input" id="resourceUrl" placeholder="https://example.com/book.pdf" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Archive.org Link (Optional)</label>
+                            <input type="url" class="form-input" id="archiveUrl" placeholder="https://archive.org/details/...">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Link Display Text</label>
+                            <input type="text" class="form-input" id="linkText" placeholder="e.g., Read Online, Download PDF, etc.">
+                        </div>
+                        
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-save"></i> Add to Library
+                            </button>
+                            <button type="button" class="btn" onclick="clearForm()" style="background: rgba(255,255,255,0.1); color: var(--ancient-parchment);">
+                                Clear Form
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Instructions -->
+                <div style="padding: 2rem; background: rgba(0,245,255,0.05); border-radius: 15px; border: 1px solid var(--cosmic-border);">
+                    <h3 style="color: var(--starlight-gold); margin-bottom: 1.5rem; font-size: 1.3rem;">
+                        <i class="fas fa-info-circle"></i> How to Use This Library
+                    </h3>
+                    <div style="color: var(--ancient-parchment); line-height: 1.7;">
+                        <p><strong>1. Your Hosted Texts:</strong> First upload your text files (like aristoteles.txt) to your GitHub repository. Then add them here with the direct link.</p>
+                        <p><strong>2. Archive.org Resources:</strong> Find free books on archive.org and add them here. Example: The Kybalion at <code>https://archive.org/details/kybalionastudyh00unkngoog</code></p>
+                        <p><strong>3. Other Free Resources:</strong> Add any freely accessible PDFs, texts, or online books from Project Gutenberg, Sacred Texts Archive, etc.</p>
+                        <p><strong>4. Organization:</strong> Use categories to keep your library organized. All resources are saved in your browser's local storage.</p>
+                        <p><strong>Note:</strong> Always verify that resources are in the public domain or freely distributable before adding.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Search and Filter -->
+        <div class="library-controls">
+            <div class="search-box">
+                <i class="fas fa-search search-icon"></i>
+                <input type="text" class="search-input" id="searchInput" placeholder="Search your library...">
+            </div>
+            
+            <select class="filter-select" id="categoryFilter">
+                <option value="">All Categories</option>
+                <option value="ancient">Ancient Wisdom</option>
+                <option value="quantum">Quantum Physics</option>
+                <option value="philosophy">Philosophy</option>
+                <option value="hermetic">Hermetic Philosophy</option>
+                <option value="growth">Personal Growth</option>
+                <option value="occult">Occult & Esoteric</option>
+                <option value="science">Science</option>
+                <option value="mythology">Mythology</option>
+                <option value="literature">Literature</option>
+                <option value="psychology">Psychology</option>
+                <option value="other">Other</option>
+            </select>
+            
+            <select class="filter-select" id="sortFilter">
+                <option value="newest">Newest First</option>
+                <option value="oldest">Oldest First</option>
+                <option value="title">Title A-Z</option>
+                <option value="category">By Category</option>
+            </select>
+        </div>
+        
+        <!-- Your Personal Repository Section -->
+        <section class="library-section">
+            <h2 class="section-title"><i class="fas fa-bookmark"></i> Your Personal Repository</h2>
+            <p style="color: var(--nebula-teal); margin-bottom: 1.5rem;">Texts you've added from your own collection</p>
+            
+            <div class="resources-grid" id="personalResources">
+                <!-- Dynamic content will be added here -->
+            </div>
+        </section>
+        
         <!-- Ad Container 2 -->
         <div class="cosmic-ad-container">
             <div class="ad-label"><i class="fas fa-scroll"></i> Ancient Wisdom Archive</div>
@@ -295,58 +588,14 @@
                 <!-- Your AdSense ad unit here -->
             </div>
         </div>
-       
+        
         <!-- Curated Wisdom Archive Section -->
         <section class="library-section">
             <h2 class="section-title"><i class="fas fa-star"></i> Curated Wisdom Archive</h2>
             <p style="color: var(--nebula-teal); margin-bottom: 1.5rem;">Free resources from archives and public domains</p>
-           
+            
             <div class="resources-grid" id="curatedResources">
-                <!-- Pre-populated with some examples -->
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Mythology & Psychology</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">The Hero with a Thousand Faces</h3>
-                    <p class="resource-author">Joseph Campbell</p>
-                    <p class="resource-description">Seminal work on the monomyth or hero's journey, exploring the common pattern found in myths and stories worldwide. Campbell's analysis reveals how this universal narrative structure shapes human experience and spiritual development across cultures. Essential reading for understanding mythology, psychology, and storytelling.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/TheHeroWithAThousandFaces" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/TheHeroWithAThousandFaces/TheHeroWithAThousandFaces.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Mythology & Symbolism</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">The Power of Myth</h3>
-                    <p class="resource-author">Joseph Campbell with Bill Moyers</p>
-                    <p class="resource-description">Campbell's conversations with Bill Moyers exploring mythology's role in modern life. This accessible introduction to Campbell's ideas covers hero journeys, spiritual symbols, and mythic patterns that shape human consciousness. A perfect entry point to Campbell's work and its applications to contemporary existence.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/the-power-of-myth-joseph-campbell" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/the-power-of-myth-joseph-campbell/The%20Power%20of%20Myth%20-%20Joseph%20Campbell.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
+                <!-- Joseph Campbell Books -->
                 <div class="resource-card">
                     <div class="resource-header">
                         <span class="resource-category">Mythology</span>
@@ -356,417 +605,36 @@
                             </button>
                         </div>
                     </div>
-                    <h3 class="resource-title">The Masks of God</h3>
+                    <h3 class="resource-title">The Hero with a Thousand Faces</h3>
                     <p class="resource-author">Joseph Campbell</p>
-                    <p class="resource-description">Four-volume comparative study of world mythology tracing the development of religious consciousness from primitive origins to modern times. Campbell examines how myths shape and reflect human psychological and spiritual development across different cultures and historical periods.</p>
+                    <p class="resource-description">Seminal work on the monomyth or hero's journey, exploring the common pattern found in myths worldwide. Essential for understanding mythology, psychology, and storytelling.</p>
                     <div class="resource-links">
-                        <a href="https://archive.org/details/the-masks-of-god-vol-1-primitive-mythology-joseph-campbell" class="resource-link" target="_blank">
+                        <a href="https://archive.org/details/TheHeroWithAThousandFaces" class="resource-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/the-masks-of-god-vol-1-primitive-mythology-joseph-campbell/The%20Masks%20of%20God%20-%20Primitive%20Mythology.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
                         </a>
                     </div>
                 </div>
-               
+                
                 <div class="resource-card">
                     <div class="resource-header">
-                        <span class="resource-category">Literature</span>
+                        <span class="resource-category">Mythology</span>
                         <div class="resource-actions">
                             <button class="action-btn" onclick="cloneResource(this)">
                                 <i class="fas fa-copy"></i>
                             </button>
                         </div>
                     </div>
-                    <h3 class="resource-title">Ulysses</h3>
-                    <p class="resource-author">James Joyce</p>
-                    <p class="resource-description">Landmark modernist novel paralleling Homer's Odyssey in a single day in Dublin. Joyce's experimental stream-of-consciousness technique revolutionized 20th-century literature. This complex, multilayered work explores consciousness, identity, and modern life through its unforgettable characters.</p>
+                    <h3 class="resource-title">The Power of Myth</h3>
+                    <p class="resource-author">Joseph Campbell with Bill Moyers</p>
+                    <p class="resource-description">Campbell's conversations exploring mythology's role in modern life. An accessible introduction to his ideas about hero journeys, spiritual symbols, and mythic patterns.</p>
                     <div class="resource-links">
-                        <a href="https://archive.org/details/ulysses00joyc" class="resource-link" target="_blank">
+                        <a href="https://archive.org/details/the-power-of-myth-joseph-campbell" class="resource-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/ulysses00joyc/ulysses00joyc.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
                         </a>
                     </div>
                 </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Literature</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">Moby-Dick</h3>
-                    <p class="resource-author">Herman Melville</p>
-                    <p class="resource-description">American literary masterpiece about Captain Ahab's obsessive quest for the white whale. This epic novel explores themes of obsession, revenge, fate, and humanity's relationship with nature. Blending adventure, philosophy, and symbolism, it remains one of literature's greatest examinations of good, evil, and madness.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/mobydickorwhale01melvgoog" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/mobydickorwhale01melvgoog/mobydickorwhale01melvgoog.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Literature</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">War and Peace</h3>
-                    <p class="resource-author">Leo Tolstoy</p>
-                    <p class="resource-description">Monumental historical novel chronicling French invasion of Russia through the lives of five aristocratic families. Tolstoy's masterpiece explores war, history, free will, and the search for meaning in life. A profound examination of human nature, society, and the forces that shape history.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/warandpeace03tolsgoog" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/warandpeace03tolsgoog/warandpeace03tolsgoog.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Science</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">On the Origin of Species</h3>
-                    <p class="resource-author">Charles Darwin</p>
-                    <p class="resource-description">Foundational work of evolutionary biology presenting evidence for natural selection and common descent. Darwin's revolutionary theory transformed our understanding of life on Earth, explaining biodiversity through gradual evolutionary processes. This scientific masterpiece remains central to biological sciences.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/onoriginofspecie00darw" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/onoriginofspecie00darw/onoriginofspecie00darw.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Anthropology</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">The Golden Bough</h3>
-                    <p class="resource-author">James George Frazer</p>
-                    <p class="resource-description">Comprehensive study of mythology, religion, and magic across cultures. Frazer's comparative anthropology explores primitive beliefs, rituals, and the evolution of religious thought. This influential work examines sacred kingship, fertility rites, and the connections between ancient myths and modern religions.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/goldenboughstudy01fraz" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/goldenboughstudy01fraz/goldenboughstudy01fraz.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Philosophy & Psychology</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">The Varieties of Religious Experience</h3>
-                    <p class="resource-author">William James</p>
-                    <p class="resource-description">Groundbreaking study of religious experiences from psychological and philosophical perspectives. James examines mysticism, conversion, saintliness, and the healthy-minded versus sick soul. This classic work explores religion's personal, experiential dimensions rather than institutional aspects.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/varietiesreligi00jamegoog" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/varietiesreligi00jamegoog/varietiesreligi00jamegoog.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Science & Philosophy</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">The Tao of Physics</h3>
-                    <p class="resource-author">Fritjof Capra</p>
-                    <p class="resource-description">Exploration of parallels between modern physics and Eastern mysticism. Capra demonstrates how quantum mechanics and relativity theory echo ancient spiritual wisdom from Taoism, Buddhism, and Hinduism. This influential work bridges science and spirituality.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/TheTaoOfPhysics" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/TheTaoOfPhysics/The%20Tao%20of%20Physics.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Literature</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">The Brothers Karamazov</h3>
-                    <p class="resource-author">Fyodor Dostoevsky</p>
-                    <p class="resource-description">Dostoevsky's final and greatest novel exploring faith, doubt, free will, and morality through the dramatic story of three brothers. This philosophical masterpiece examines the existence of God, the problem of evil, and human psychology in profound, unforgettable ways.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/brotherskaramazo00dost" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/brotherskaramazo00dost/brotherskaramazo00dost.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Literature</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">Crime and Punishment</h3>
-                    <p class="resource-author">Fyodor Dostoevsky</p>
-                    <p class="resource-description">Psychological novel exploring morality, guilt, and redemption through impoverished student Raskolnikov's murder of a pawnbroker. Dostoevsky's penetrating examination of nihilism, rationalization, and spiritual suffering remains one of literature's greatest studies of conscience.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/crimepunishment00dost" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/crimepunishment00dost/crimepunishment00dost.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Literature</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">One Hundred Years of Solitude</h3>
-                    <p class="resource-author">Gabriel García Márquez</p>
-                    <p class="resource-description">Magical realist masterpiece chronicling the Buendía family across generations in mythical Macondo. This novel blends reality with fantasy, exploring time, memory, and Latin American history through rich, imaginative storytelling that revolutionized world literature.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/onehundredyearso00garc" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/onehundredyearso00garc/onehundredyearso00garc.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Science</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">Relativity: The Special and General Theory</h3>
-                    <p class="resource-author">Albert Einstein</p>
-                    <p class="resource-description">Einstein's own explanation of his revolutionary theories for lay readers. This accessible work introduces special and general relativity, space-time curvature, and the equivalence principle, transforming our understanding of the universe's fundamental structure.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/relativitythespe00eins" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/relativitythespe00eins/relativitythespe00eins.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Philosophy</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">The Myth of Sisyphus</h3>
-                    <p class="resource-author">Albert Camus</p>
-                    <p class="resource-description">Existentialist essay exploring the philosophy of the absurd and whether life is worth living without God or inherent meaning. Camus argues for embracing life's meaninglessness while rebelling against it through passionate living.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/the-myth-of-sisyphus-albert-camus" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/the-myth-of-sisyphus-albert-camus/The%20Myth%20of%20Sisyphus%20-%20Albert%20Camus.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Literature</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">The Divine Comedy</h3>
-                    <p class="resource-author">Dante Alighieri</p>
-                    <p class="resource-description">Epic poem chronicling Dante's journey through Hell, Purgatory, and Paradise. This medieval masterpiece combines theology, philosophy, and political commentary while exploring sin, redemption, and divine justice through sublime poetry.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/divinecomedy00dant" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/divinecomedy00dant/divinecomedy00dant.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Philosophy</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">Being and Time</h3>
-                    <p class="resource-author">Martin Heidegger</p>
-                    <p class="resource-description">Heidegger's groundbreaking work on existential phenomenology, exploring the meaning of Being through analysis of Dasein (human existence). This difficult but revolutionary text examines temporality, authenticity, and the nature of human existence.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/BeingAndTime" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/BeingAndTime/Being%20and%20Time%20-%20Martin%20Heidegger.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Science</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">A Brief History of Time</h3>
-                    <p class="resource-author">Stephen Hawking</p>
-                    <p class="resource-description">Bestselling exploration of cosmology explaining the universe's origin, black holes, and time's nature. Hawking makes complex concepts accessible while exploring profound questions about space, time, and reality's fundamental nature.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/ABriefHistoryOfTime_201802" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/ABriefHistoryOfTime_201802/A%20Brief%20History%20of%20Time%20-%20Stephen%20Hawking.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Science</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">The Selfish Gene</h3>
-                    <p class="resource-author">Richard Dawkins</p>
-                    <p class="resource-description">Revolutionary popular science book explaining evolution from the gene's perspective. Dawkins introduces concepts of genetic selfishness, memes, and extended phenotypes, transforming how we understand natural selection and biological behavior.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/the-selfish-gene-richard-dawkins" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/the-selfish-gene-richard-dawkins/The%20Selfish%20Gene%20-%20Richard%20Dawkins.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Literature</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">The Iliad</h3>
-                    <p class="resource-author">Homer</p>
-                    <p class="resource-description">Ancient Greek epic poem about the Trojan War, focusing on Achilles' wrath. This foundational Western work explores heroism, fate, honor, and mortality through its immortal characters and timeless themes of war and humanity.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/iliadhomer00home" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/iliadhomer00home/iliadhomer00home.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-               
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <span class="resource-category">Literature</span>
-                        <div class="resource-actions">
-                            <button class="action-btn" onclick="cloneResource(this)">
-                                <i class="fas fa-copy"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <h3 class="resource-title">The Odyssey</h3>
-                    <p class="resource-author">Homer</p>
-                    <p class="resource-description">Ancient Greek epic following Odysseus' ten-year journey home after the Trojan War. This timeless story of adventure, perseverance, and homecoming explores themes of cunning, hospitality, and the human struggle against gods and fate.</p>
-                    <div class="resource-links">
-                        <a href="https://archive.org/details/odyssey00home" class="resource-link" target="_blank">
-                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
-                        </a>
-                        <a href="https://archive.org/download/odyssey00home/odyssey00home.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
-                    </div>
-                </div>
-
-                <!-- All existing resource cards remain here (I've kept them in the code but won't repeat them in this display for brevity) -->
-                <!-- The Kybalion resource card -->
+                
+                <!-- Original Books (without PDF download buttons) -->
                 <div class="resource-card">
                     <div class="resource-header">
                         <span class="resource-category">Hermetic Philosophy</span>
@@ -778,18 +646,14 @@
                     </div>
                     <h3 class="resource-title">The Kybalion</h3>
                     <p class="resource-author">Three Initiates</p>
-                    <p class="resource-description">A study of the Hermetic philosophy of ancient Egypt and Greece. Presents seven Hermetic principles for understanding reality, including mentalism, correspondence, vibration, polarity, rhythm, cause and effect, and gender. This foundational text bridges ancient wisdom with modern esoteric thought, offering practical insights for personal transformation and universal comprehension.</p>
+                    <p class="resource-description">A study of the Hermetic philosophy of ancient Egypt and Greece. Presents seven Hermetic principles for understanding reality.</p>
                     <div class="resource-links">
                         <a href="https://archive.org/details/kybalionastudyh00unkngoog" class="resource-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Read on Archive.org
                         </a>
-                        <a href="https://archive.org/download/kybalionastudyh00unkngoog/kybalionastudyh00unkngoog.pdf" class="resource-link" target="_blank">
-                            <i class="fas fa-file-pdf"></i> Download PDF
-                        </a>
                     </div>
                 </div>
-               
-                <!-- The Thirty Axioms of Magick resource card -->
+                
                 <div class="resource-card">
                     <div class="resource-header">
                         <span class="resource-category">Occult & Esoteric</span>
@@ -801,15 +665,14 @@
                     </div>
                     <h3 class="resource-title">The Thirty Axioms of Magick</h3>
                     <p class="resource-author">Three Initiates</p>
-                    <p class="resource-description">Principles and axioms of magical practice and hermetic philosophy, expanding on esoteric traditions with detailed explanations of magical laws, energy manipulation, and spiritual development techniques for practitioners seeking deeper understanding of occult sciences.</p>
+                    <p class="resource-description">Principles and axioms of magical practice and hermetic philosophy.</p>
                     <div class="resource-links">
                         <a href="https://archive.org/details/the-thirty-xxx-axioms-of-magick-by-the-three-initiates" class="resource-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> View on Archive.org
                         </a>
                     </div>
                 </div>
-               
-                <!-- Tao Te Ching resource card -->
+                
                 <div class="resource-card">
                     <div class="resource-header">
                         <span class="resource-category">Ancient Wisdom</span>
@@ -821,107 +684,976 @@
                     </div>
                     <h3 class="resource-title">Tao Te Ching</h3>
                     <p class="resource-author">Lao Tzu</p>
-                    <p class="resource-description">Fundamental text of Taoism exploring the nature of reality, virtue, and wu wei (effortless action). This ancient Chinese classic provides profound insights into harmony with the universe, simplicity, and the balance of opposites, serving as a guide for ethical living and spiritual enlightenment across centuries.</p>
+                    <p class="resource-description">Fundamental text of Taoism exploring the nature of reality, virtue, and wu wei (effortless action).</p>
                     <div class="resource-links">
                         <a href="https://www.gutenberg.org/ebooks/216" class="resource-link" target="_blank">
                             <i class="fas fa-external-link-alt"></i> Project Gutenberg
                         </a>
-                        <a href="https://www.gutenberg.org/files/216/216-h/216-h.htm" class="resource-link" target="_blank">
-                            <i class="fas fa-file-alt"></i> Read Online
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Meditations</h3>
+                    <p class="resource-author">Marcus Aurelius</p>
+                    <p class="resource-description">Personal writings of Roman Emperor Marcus Aurelius outlining Stoic philosophy and principles for living virtuously.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/2680" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
                         </a>
                     </div>
                 </div>
-               
-                <!-- All other existing cards continue here... -->
-                <!-- [Rest of your existing resource cards - I've kept them all in the actual code] -->
                 
-                <!-- The Art of War (Sun Tzu) duplicate - removing one duplicate but keeping the best one -->
-                <!-- This is just a sample - in the actual code, I would keep all unique entries -->
-
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Science</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Feynman Lectures on Physics</h3>
+                    <p class="resource-author">Richard Feynman</p>
+                    <p class="resource-description">Comprehensive introduction to physics including quantum mechanics, delivered by Nobel laureate Richard Feynman.</p>
+                    <div class="resource-links">
+                        <a href="https://www.feynmanlectures.caltech.edu/" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read Online
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Personal Growth</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">As a Man Thinketh</h3>
+                    <p class="resource-author">James Allen</p>
+                    <p class="resource-description">Classic personal development book exploring the power of thought in shaping one's life and circumstances.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/4507" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Additional Books from Resources -->
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Literature</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Ulysses</h3>
+                    <p class="resource-author">James Joyce</p>
+                    <p class="resource-description">Landmark modernist novel paralleling Homer's Odyssey in a single day in Dublin. Revolutionary stream-of-consciousness technique.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/ulysses00joyc" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Literature</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Moby-Dick</h3>
+                    <p class="resource-author">Herman Melville</p>
+                    <p class="resource-description">American literary masterpiece about Captain Ahab's obsessive quest for the white whale. Explores obsession, revenge, fate, and humanity.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/mobydickorwhale01melvgoog" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Literature</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">War and Peace</h3>
+                    <p class="resource-author">Leo Tolstoy</p>
+                    <p class="resource-description">Monumental historical novel chronicling French invasion of Russia through the lives of five aristocratic families.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/warandpeace03tolsgoog" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Science</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">On the Origin of Species</h3>
+                    <p class="resource-author">Charles Darwin</p>
+                    <p class="resource-description">Foundational work of evolutionary biology presenting evidence for natural selection and common descent.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/onoriginofspecie00darw" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Anthropology</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Golden Bough</h3>
+                    <p class="resource-author">James George Frazer</p>
+                    <p class="resource-description">Comprehensive study of mythology, religion, and magic across cultures. Explores primitive beliefs and evolution of religious thought.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/goldenboughstudy01fraz" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy & Psychology</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Varieties of Religious Experience</h3>
+                    <p class="resource-author">William James</p>
+                    <p class="resource-description">Groundbreaking study of religious experiences from psychological and philosophical perspectives.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/varietiesreligi00jamegoog" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Science & Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Tao of Physics</h3>
+                    <p class="resource-author">Fritjof Capra</p>
+                    <p class="resource-description">Exploration of parallels between modern physics and Eastern mysticism.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/TheTaoOfPhysics" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Literature</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Brothers Karamazov</h3>
+                    <p class="resource-author">Fyodor Dostoevsky</p>
+                    <p class="resource-description">Dostoevsky's final and greatest novel exploring faith, doubt, free will, and morality through three brothers.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/brotherskaramazo00dost" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Literature</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Crime and Punishment</h3>
+                    <p class="resource-author">Fyodor Dostoevsky</p>
+                    <p class="resource-description">Psychological novel exploring morality, guilt, and redemption through student Raskolnikov's murder.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/crimepunishment00dost" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Literature</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">One Hundred Years of Solitude</h3>
+                    <p class="resource-author">Gabriel García Márquez</p>
+                    <p class="resource-description">Magical realist masterpiece chronicling the Buendía family across generations in mythical Macondo.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/onehundredyearso00garc" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Science</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Relativity: The Special and General Theory</h3>
+                    <p class="resource-author">Albert Einstein</p>
+                    <p class="resource-description">Einstein's own explanation of his revolutionary theories for lay readers.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/relativitythespe00eins" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Myth of Sisyphus</h3>
+                    <p class="resource-author">Albert Camus</p>
+                    <p class="resource-description">Existentialist essay exploring the philosophy of the absurd and whether life is worth living without inherent meaning.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/the-myth-of-sisyphus-albert-camus" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Science</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">A Brief History of Time</h3>
+                    <p class="resource-author">Stephen Hawking</p>
+                    <p class="resource-description">Bestselling exploration of cosmology explaining the universe's origin, black holes, and time's nature.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/ABriefHistoryOfTime_201802" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Science</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Selfish Gene</h3>
+                    <p class="resource-author">Richard Dawkins</p>
+                    <p class="resource-description">Revolutionary popular science book explaining evolution from the gene's perspective.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/the-selfish-gene-richard-dawkins" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Literature</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Iliad</h3>
+                    <p class="resource-author">Homer</p>
+                    <p class="resource-description">Ancient Greek epic poem about the Trojan War, focusing on Achilles' wrath.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/iliadhomer00home" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Literature</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Odyssey</h3>
+                    <p class="resource-author">Homer</p>
+                    <p class="resource-description">Ancient Greek epic following Odysseus' ten-year journey home after the Trojan War.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/odyssey00home" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Additional Free Books -->
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Psychology</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Man and His Symbols</h3>
+                    <p class="resource-author">Carl Jung</p>
+                    <p class="resource-description">Jung's final work explaining his theories of the unconscious, archetypes, and symbolism to a general audience.</p>
+                    <div class="resource-links">
+                        <a href="https://archive.org/details/ManAndHisSymbols" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Read on Archive.org
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Thus Spoke Zarathustra</h3>
+                    <p class="resource-author">Friedrich Nietzsche</p>
+                    <p class="resource-description">Philosophical novel presenting Nietzsche's ideas on the Übermensch, eternal recurrence, and the death of God.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/1998" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Beyond Good and Evil</h3>
+                    <p class="resource-author">Friedrich Nietzsche</p>
+                    <p class="resource-description">A critique of traditional morality and philosophy, exploring concepts of master-slave morality and will to power.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/4363" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Republic</h3>
+                    <p class="resource-author">Plato</p>
+                    <p class="resource-description">Foundational philosophical dialogue exploring justice, ideal society, and human nature through Socratic method.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/1497" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Ancient Wisdom</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Art of War</h3>
+                    <p class="resource-author">Sun Tzu</p>
+                    <p class="resource-description">Ancient Chinese military treatise offering strategic wisdom applicable to warfare, business, and personal conflicts.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/132" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">Nicomachean Ethics</h3>
+                    <p class="resource-author">Aristotle</p>
+                    <p class="resource-description">Aristotle's foundational text on ethics, exploring virtue, happiness, and the good life through the doctrine of the mean.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/8438" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Psychology</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The Interpretation of Dreams</h3>
+                    <p class="resource-author">Sigmund Freud</p>
+                    <p class="resource-description">Seminal work in psychoanalysis introducing Freud's theory of the unconscious and how dreams serve as wish fulfillment.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/66034" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <span class="resource-category">Philosophy</span>
+                        <div class="resource-actions">
+                            <button class="action-btn" onclick="cloneResource(this)">
+                                <i class="fas fa-copy"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <h3 class="resource-title">The World as Will and Representation</h3>
+                    <p class="resource-author">Arthur Schopenhauer</p>
+                    <p class="resource-description">Schopenhauer's magnum opus presenting reality as driven by a blind, insatiable will, with representation as the phenomenal world.</p>
+                    <div class="resource-links">
+                        <a href="https://www.gutenberg.org/ebooks/40097" class="resource-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Project Gutenberg
+                        </a>
+                    </div>
+                </div>
             </div>
-           
+            
             <div style="text-align: center; margin-top: 2.5rem;">
-                <button class="resource-link" onclick="addMoreResources()" style="background: rgba(157, 78, 221, 0.15); color: var(--consciousness-purple);">
+                <button class="btn btn-primary" onclick="addMoreResources()">
                     <i class="fas fa-plus"></i> Load More Resources
                 </button>
             </div>
         </section>
-       
+        
         <!-- Footer -->
         <footer class="library-footer">
-            <p>Quantum Odyssey Library v1.0 | Your personal wisdom repository</p>
+            <p>Quantum Odyssey Library v2.0 | Your personal wisdom repository</p>
             <p>All resources are presumed to be in public domain or freely accessible</p>
             <p style="margin-top: 1rem; font-size: 0.8rem;">
                 <i class="fas fa-info-circle"></i> Resources are stored in your browser's local storage
             </p>
             <p style="margin-top: 1rem; font-size: 0.8rem; opacity: 0.8;">
-                Disclaimer<br>Links to external websites are provided for convenience only. We are not responsible for the content, accuracy, or practices of any third-party sites linked from our website. The inclusion of any link does not imply endorsement by Quantum Odyssey Research Institute.
+                Disclaimer: Links to external websites are provided for convenience only. We are not responsible for the content, accuracy, or practices of any third-party sites linked from our website.
             </p>
         </footer>
     </div>
-
+    
+    <!-- JavaScript for Library Management -->
     <script>
-        // Function to clone a resource (for the copy button)
+        // Library Management System
+        const QuantumLibrary = {
+            resources: [],
+            
+            // Initialize library
+            init: function() {
+                this.loadResources();
+                this.setupEventListeners();
+                this.renderPersonalResources();
+                this.setupBackToTop();
+                
+                // Initialize AdSense
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            },
+            
+            // Load resources from localStorage
+            loadResources: function() {
+                const savedResources = localStorage.getItem('quantumLibraryResources');
+                if (savedResources) {
+                    this.resources = JSON.parse(savedResources);
+                }
+            },
+            
+            // Save resources to localStorage
+            saveResources: function() {
+                localStorage.setItem('quantumLibraryResources', JSON.stringify(this.resources));
+            },
+            
+            // Add a new resource
+            addResource: function(resource) {
+                resource.id = Date.now(); // Simple unique ID
+                resource.added = new Date().toISOString();
+                resource.type = 'personal';
+                
+                this.resources.push(resource);
+                this.saveResources();
+                this.renderPersonalResources();
+                
+                this.showNotification(`"${resource.title}" added to your library!`, 'success');
+            },
+            
+            // Remove a resource
+            removeResource: function(id) {
+                this.resources = this.resources.filter(r => r.id !== id);
+                this.saveResources();
+                this.renderPersonalResources();
+                
+                this.showNotification('Resource removed from library', 'info');
+            },
+            
+            // Clone a curated resource to personal library
+            cloneToPersonal: function(resource) {
+                const clonedResource = {
+                    ...resource,
+                    id: Date.now(),
+                    added: new Date().toISOString(),
+                    type: 'personal',
+                    cloned: true
+                };
+                
+                // Remove actions from cloned resource
+                delete clonedResource.actions;
+                
+                this.resources.push(clonedResource);
+                this.saveResources();
+                this.renderPersonalResources();
+                
+                this.showNotification(`"${resource.title}" added to your personal library!`, 'success');
+            },
+            
+            // Render personal resources
+            renderPersonalResources: function() {
+                const container = document.getElementById('personalResources');
+                if (!container) return;
+                
+                const personalResources = this.resources.filter(r => r.type === 'personal');
+                
+                if (personalResources.length === 0) {
+                    container.innerHTML = `
+                        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--nebula-teal);">
+                            <i class="fas fa-book" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                            <h3 style="color: var(--starlight-gold); margin-bottom: 1rem;">Your library is empty</h3>
+                            <p>Add your first resource using the form above!</p>
+                            <p style="margin-top: 1rem; font-size: 0.9rem;">
+                                Start by adding your Aristotle text once it's uploaded to GitHub
+                            </p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                container.innerHTML = personalResources.map(resource => `
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <span class="resource-category">${this.getCategoryLabel(resource.category)}</span>
+                            <div class="resource-actions">
+                                <button class="action-btn" onclick="QuantumLibrary.removeResource(${resource.id})" title="Remove">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <button class="action-btn" onclick="QuantumLibrary.editResource(${resource.id})" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="resource-title">${resource.title}</h3>
+                        ${resource.author ? `<p class="resource-author">${resource.author}</p>` : ''}
+                        ${resource.description ? `<p class="resource-description">${resource.description}</p>` : ''}
+                        <div class="resource-links">
+                            <a href="${resource.url}" class="resource-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> ${resource.linkText || 'Access Resource'}
+                            </a>
+                            ${resource.archiveUrl ? `
+                            <a href="${resource.archiveUrl}" class="resource-link" target="_blank">
+                                <i class="fas fa-archive"></i> Archive.org
+                            </a>
+                            ` : ''}
+                        </div>
+                        ${resource.cloned ? `<div style="margin-top: 1rem; font-size: 0.8rem; color: var(--nebula-teal);">
+                            <i class="fas fa-clone"></i> Cloned from curated archive
+                        </div>` : ''}
+                    </div>
+                `).join('');
+            },
+            
+            // Get category label
+            getCategoryLabel: function(category) {
+                const labels = {
+                    'ancient': 'Ancient Wisdom',
+                    'quantum': 'Quantum Physics',
+                    'philosophy': 'Philosophy',
+                    'hermetic': 'Hermetic Philosophy',
+                    'growth': 'Personal Growth',
+                    'occult': 'Occult & Esoteric',
+                    'science': 'Science',
+                    'mythology': 'Mythology',
+                    'literature': 'Literature',
+                    'psychology': 'Psychology',
+                    'other': 'Other'
+                };
+                return labels[category] || category;
+            },
+            
+            // Edit resource
+            editResource: function(id) {
+                const resource = this.resources.find(r => r.id === id);
+                if (resource) {
+                    // Populate form with resource data
+                    document.getElementById('resourceTitle').value = resource.title;
+                    document.getElementById('resourceAuthor').value = resource.author || '';
+                    document.getElementById('resourceDescription').value = resource.description || '';
+                    document.getElementById('resourceCategory').value = resource.category;
+                    document.getElementById('resourceUrl').value = resource.url;
+                    document.getElementById('archiveUrl').value = resource.archiveUrl || '';
+                    document.getElementById('linkText').value = resource.linkText || '';
+                    
+                    // Change form to edit mode
+                    const form = document.getElementById('addResourceForm');
+                    form.dataset.editingId = id;
+                    form.querySelector('button[type="submit"]').innerHTML = '<i class="fas fa-save"></i> Update Resource';
+                    
+                    this.showNotification(`Editing "${resource.title}"`, 'info');
+                }
+            },
+            
+            // Update resource
+            updateResource: function(id, updatedData) {
+                const index = this.resources.findIndex(r => r.id === id);
+                if (index !== -1) {
+                    this.resources[index] = { ...this.resources[index], ...updatedData };
+                    this.saveResources();
+                    this.renderPersonalResources();
+                    
+                    this.showNotification(`"${updatedData.title}" updated!`, 'success');
+                }
+            },
+            
+            // Setup event listeners
+            setupEventListeners: function() {
+                const form = document.getElementById('addResourceForm');
+                if (form) {
+                    form.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        
+                        const isEditing = form.dataset.editingId;
+                        
+                        const resourceData = {
+                            title: document.getElementById('resourceTitle').value,
+                            author: document.getElementById('resourceAuthor').value,
+                            description: document.getElementById('resourceDescription').value,
+                            category: document.getElementById('resourceCategory').value,
+                            url: document.getElementById('resourceUrl').value,
+                            archiveUrl: document.getElementById('archiveUrl').value || null,
+                            linkText: document.getElementById('linkText').value || null
+                        };
+                        
+                        if (isEditing) {
+                            this.updateResource(parseInt(isEditing), resourceData);
+                            delete form.dataset.editingId;
+                            form.querySelector('button[type="submit"]').innerHTML = '<i class="fas fa-save"></i> Add to Library';
+                        } else {
+                            this.addResource(resourceData);
+                        }
+                        
+                        form.reset();
+                    });
+                }
+                
+                // Search functionality
+                const searchInput = document.getElementById('searchInput');
+                if (searchInput) {
+                    searchInput.addEventListener('input', (e) => {
+                        this.filterResources();
+                    });
+                }
+                
+                // Category filter
+                const categoryFilter = document.getElementById('categoryFilter');
+                if (categoryFilter) {
+                    categoryFilter.addEventListener('change', () => {
+                        this.filterResources();
+                    });
+                }
+            },
+            
+            // Filter resources
+            filterResources: function() {
+                const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+                const category = document.getElementById('categoryFilter').value;
+                
+                const personalResources = this.resources.filter(r => r.type === 'personal');
+                const filteredResources = personalResources.filter(resource => {
+                    const matchesSearch = !searchTerm || 
+                        resource.title.toLowerCase().includes(searchTerm) ||
+                        (resource.author && resource.author.toLowerCase().includes(searchTerm)) ||
+                        (resource.description && resource.description.toLowerCase().includes(searchTerm));
+                    
+                    const matchesCategory = !category || resource.category === category;
+                    
+                    return matchesSearch && matchesCategory;
+                });
+                
+                this.renderFilteredResources(filteredResources);
+            },
+            
+            // Render filtered resources
+            renderFilteredResources: function(filteredResources) {
+                const container = document.getElementById('personalResources');
+                if (!container) return;
+                
+                if (filteredResources.length === 0) {
+                    container.innerHTML = `
+                        <div style="grid-column: 1 / -1; text-align: center; padding: 3rem; color: var(--nebula-teal);">
+                            <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                            <h3 style="color: var(--starlight-gold); margin-bottom: 1rem;">No resources found</h3>
+                            <p>Try different search terms or categories</p>
+                        </div>
+                    `;
+                    return;
+                }
+                
+                container.innerHTML = filteredResources.map(resource => `
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <span class="resource-category">${this.getCategoryLabel(resource.category)}</span>
+                            <div class="resource-actions">
+                                <button class="action-btn" onclick="QuantumLibrary.removeResource(${resource.id})" title="Remove">
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                <button class="action-btn" onclick="QuantumLibrary.editResource(${resource.id})" title="Edit">
+                                    <i class="fas fa-edit"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="resource-title">${resource.title}</h3>
+                        ${resource.author ? `<p class="resource-author">${resource.author}</p>` : ''}
+                        ${resource.description ? `<p class="resource-description">${resource.description}</p>` : ''}
+                        <div class="resource-links">
+                            <a href="${resource.url}" class="resource-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> ${resource.linkText || 'Access Resource'}
+                            </a>
+                            ${resource.archiveUrl ? `
+                            <a href="${resource.archiveUrl}" class="resource-link" target="_blank">
+                                <i class="fas fa-archive"></i> Archive.org
+                            </a>
+                            ` : ''}
+                        </div>
+                    </div>
+                `).join('');
+            },
+            
+            // Setup Back to Top button
+            setupBackToTop: function() {
+                const backToTopBtn = document.getElementById('backToTop');
+                
+                window.addEventListener('scroll', () => {
+                    if (window.pageYOffset > 300) {
+                        backToTopBtn.style.display = 'flex';
+                    } else {
+                        backToTopBtn.style.display = 'none';
+                    }
+                });
+                
+                backToTopBtn.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            },
+            
+            // Show notification
+            showNotification: function(message, type = 'info') {
+                // Create notification element
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    background: ${type === 'success' ? 'linear-gradient(135deg, #1A2036, #0A0F1E)' : 
+                                  type === 'error' ? 'linear-gradient(135deg, #361a1a, #1e0a0a)' : 
+                                  'linear-gradient(135deg, #1a2036, #0a0f1e)'};
+                    color: white;
+                    padding: 1rem 2rem;
+                    border-radius: 10px;
+                    border: 2px solid ${type === 'success' ? '#00F5FF' : type === 'error' ? '#FF6B6B' : '#FFD700'};
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                    z-index: 10000;
+                    animation: slideIn 0.5s ease;
+                `;
+                notification.innerHTML = `
+                    <i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-triangle' : 'info-circle'}" 
+                       style="margin-right: 0.5rem; color: ${type === 'success' ? '#00F5FF' : type === 'error' ? '#FF6B6B' : '#FFD700'};"></i> 
+                    ${message}
+                `;
+                
+                // Add animation styles if not present
+                if (!document.querySelector('#notification-styles')) {
+                    const style = document.createElement('style');
+                    style.id = 'notification-styles';
+                    style.textContent = `
+                        @keyframes slideIn {
+                            from { transform: translateX(100%); opacity: 0; }
+                            to { transform: translateX(0); opacity: 1; }
+                        }
+                        @keyframes slideOut {
+                            from { transform: translateX(0); opacity: 1; }
+                            to { transform: translateX(100%); opacity: 0; }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                }
+                
+                document.body.appendChild(notification);
+                
+                // Remove after 4 seconds
+                setTimeout(() => {
+                    notification.style.animation = 'slideOut 0.5s ease';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 500);
+                }, 4000);
+            }
+        };
+        
+        // Global functions for button clicks
         function cloneResource(button) {
             const card = button.closest('.resource-card');
-            const clone = card.cloneNode(true);
-            const grid = document.getElementById('curatedResources');
-            grid.appendChild(clone);
+            const title = card.querySelector('.resource-title').textContent;
+            const author = card.querySelector('.resource-author') ? card.querySelector('.resource-author').textContent : '';
+            const categoryElement = card.querySelector('.resource-category');
+            const categoryText = categoryElement ? categoryElement.textContent.toLowerCase() : 'other';
             
-            // Add a visual feedback
-            button.innerHTML = '<i class="fas fa-check"></i>';
-            button.style.background = 'var(--nebula-teal)';
-            button.style.color = 'var(--dark-matter)';
-            setTimeout(() => {
-                button.innerHTML = '<i class="fas fa-copy"></i>';
-                button.style.background = '';
-                button.style.color = '';
-            }, 1000);
+            // Map category text to category value
+            const categoryMap = {
+                'hermetic philosophy': 'hermetic',
+                'occult & esoteric': 'occult',
+                'ancient wisdom': 'ancient',
+                'philosophy': 'philosophy',
+                'science': 'science',
+                'personal growth': 'growth',
+                'mythology': 'mythology',
+                'literature': 'literature',
+                'psychology': 'psychology',
+                'philosophy & psychology': 'philosophy',
+                'science & philosophy': 'philosophy',
+                'anthropology': 'science'
+            };
+            
+            const category = categoryMap[categoryText.toLowerCase()] || 'other';
+            
+            const description = card.querySelector('.resource-description').textContent;
+            const links = card.querySelectorAll('.resource-link');
+            const url = links[0] ? links[0].href : '#';
+            const archiveUrl = links[1] ? links[1].href : null;
+            
+            const resource = {
+                title,
+                author,
+                category,
+                description,
+                url,
+                archiveUrl,
+                linkText: 'Access Resource'
+            };
+            
+            QuantumLibrary.cloneToPersonal(resource);
         }
         
-        // Function to add more resources (placeholder for future expansion)
+        function clearForm() {
+            document.getElementById('addResourceForm').reset();
+            delete document.getElementById('addResourceForm').dataset.editingId;
+            document.querySelector('#addResourceForm button[type="submit"]').innerHTML = '<i class="fas fa-save"></i> Add to Library';
+        }
+        
         function addMoreResources() {
-            alert('More resources will be loaded in future updates! You can suggest books via the Quantum Odyssey main page.');
+            QuantumLibrary.showNotification('More free resources can be found at archive.org and gutenberg.org', 'info');
         }
         
-        // Add some interactivity on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add subtle animation to cards
-            const cards = document.querySelectorAll('.resource-card');
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.05}s`;
-                card.classList.add('fade-in');
-            });
+        // Initialize library when page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            QuantumLibrary.init();
         });
     </script>
-    
-    <style>
-        /* Add fade-in animation */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .fade-in {
-            animation: fadeIn 0.6s ease forwards;
-        }
-        
-        /* Style for the load more button */
-        .btn-primary {
-            background: linear-gradient(45deg, var(--consciousness-purple), var(--nebula-teal));
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(157, 78, 221, 0.3);
-        }
-    </style>
 </body>
 </html>
