@@ -233,6 +233,39 @@
             padding: 0.5rem;
         }
         
+        /* ===== NEW GOOGLE ADSENSE BANNER STYLES (FROM FIRST SITE) ===== */
+        .google-ad-banner {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 6px;
+            padding: 0.8rem;
+            margin: 2rem auto;
+            text-align: center;
+            border: 1px solid rgba(0, 245, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60px;
+            transition: all 0.3s ease;
+        }
+        
+        .google-ad-banner:hover {
+            border-color: var(--nebula-teal);
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        .google-ad-label {
+            font-size: 0.75rem;
+            color: #95a5a6;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+            font-weight: 500;
+        }
+        
         /* ===== OPTIMIZED AD CONTAINERS ===== */
         .cosmic-ad-container {
             background: linear-gradient(135deg, rgba(10, 15, 30, 0.9), rgba(26, 32, 54, 0.9));
@@ -1412,6 +1445,11 @@
                 font-size: 0.85rem;
                 padding: 0.3rem 0.8rem;
             }
+            
+            .google-ad-banner {
+                padding: 0.6rem;
+                margin: 1.5rem auto;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1477,6 +1515,15 @@
                 font-size: 0.8rem;
                 letter-spacing: 2px;
             }
+            
+            .google-ad-banner {
+                margin: 1rem auto;
+                padding: 0.5rem;
+            }
+            
+            .google-ad-label {
+                font-size: 0.7rem;
+            }
         }
         
         @media (max-width: 480px) {
@@ -1520,13 +1567,23 @@
                 letter-spacing: 1.5px;
                 padding: 0.2rem 0.6rem;
             }
+            
+            .google-ad-banner {
+                padding: 0.4rem;
+            }
+            
+            .google-ad-label {
+                font-size: 0.65rem;
+                letter-spacing: 0.5px;
+            }
         }
         
         /* ===== PRINT STYLES ===== */
         @media print {
             .celestial-navigation,
             .back-to-portal,
-            .cosmic-ad-container {
+            .cosmic-ad-container,
+            .google-ad-banner {
                 display: none;
             }
             
@@ -1605,24 +1662,12 @@
         </div>
     </section>
 
-    <!-- AD BANNER 1: After Portal, Before Timeline -->
-    <div class="quantum-scroll-section" style="padding-top: 2rem;">
-        <div class="cosmic-ad-container">
-            <div class="ad-label"><i class="fas fa-star"></i> Advertisement</div>
-            <div class="ad-content">
-                <!-- AdSense Ad Unit 1 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block; text-align:center;"
-                     data-ad-layout="in-article"
-                     data-ad-format="fluid"
-                     data-ad-client="ca-pub-2958343227558642"
-                     data-ad-slot="YOUR_FIRST_AD_SLOT_ID"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </div>
+    <!-- FIRST GOOGLE AD BANNER (Ad-free) - Starts at second third of page -->
+    <div class="google-ad-banner" style="max-width: 1400px; margin: 2rem auto;">
+        <div class="google-ad-label">Community Message</div>
+        <p style="font-size: 0.9rem; color: var(--ancient-parchment); opacity: 0.8; margin: 0; padding: 0.3rem 1rem;">
+            This site is supported by readers like you. Consider sharing this knowledge with others.
+        </p>
     </div>
     
     <!-- Interactive Quantum Timeline -->
@@ -1678,23 +1723,19 @@
         </div>
     </section>
     
-    <!-- AD BANNER 2: After Timeline, Before Chapter 1 -->
-    <div class="quantum-scroll-section" style="padding-top: 2rem;">
-        <div class="cosmic-ad-container">
-            <div class="ad-label"><i class="fas fa-brain"></i> Consciousness Research</div>
-            <div class="ad-content">
-                <!-- AdSense Ad Unit 2 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-                <ins class="adsbygoogle"
-                     style="display:block"
-                     data-ad-format="autorelaxed"
-                     data-ad-client="ca-pub-2958343227558642"
-                     data-ad-slot="YOUR_SECOND_AD_SLOT_ID"></ins>
-                <script>
-                     (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        </div>
+    <!-- SECOND GOOGLE AD BANNER (AdSense) -->
+    <div class="google-ad-banner" style="max-width: 1400px; margin: 2rem auto;">
+        <div class="google-ad-label">Advertisement</div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block; width: 100%;"
+             data-ad-client="ca-pub-2958343227558642"
+             data-ad-slot="YOUR_SECOND_AD_SLOT_ID"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
     
     <!-- Chapter 1: Primordial Quantum Symphony -->
@@ -1774,6 +1815,21 @@
         </div>
     </section>
     
+    <!-- THIRD GOOGLE AD BANNER (AdSense) -->
+    <div class="google-ad-banner" style="max-width: 1400px; margin: 2rem auto;">
+        <div class="google-ad-label">Advertisement</div>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block; width: 100%;"
+             data-ad-client="ca-pub-2958343227558642"
+             data-ad-slot="YOUR_THIRD_AD_SLOT_ID"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+    
     <!-- Chapter 2: Quantum Evolutionary Arc -->
     <section id="evolution" class="quantum-scroll-section">
         <div class="cosmic-chapter">
@@ -1834,19 +1890,18 @@
         </div>
     </section>
     
-    <!-- AD BANNER 3: After Chapter 2, Before Chapter 3 -->
-    <div class="quantum-scroll-section" style="padding-top: 2rem;">
+    <!-- Ad Container 2: Consciousness Research -->
+    <div class="quantum-scroll-section">
         <div class="cosmic-ad-container">
-            <div class="ad-label"><i class="fas fa-crown"></i> Quantum Mastery</div>
+            <div class="ad-label"><i class="fas fa-brain"></i> Consciousness Research</div>
             <div class="ad-content">
-                <!-- AdSense Ad Unit 3 -->
+                <!-- AdSense Ad Unit 2 -->
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
                 <ins class="adsbygoogle"
                      style="display:block"
+                     data-ad-format="autorelaxed"
                      data-ad-client="ca-pub-2958343227558642"
-                     data-ad-slot="YOUR_THIRD_AD_SLOT_ID"
-                     data-ad-format="auto"
-                     data-full-width-responsive="true"></ins>
+                     data-ad-slot="YOUR_SECOND_AD_SLOT_ID"></ins>
                 <script>
                      (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
@@ -2026,6 +2081,26 @@
         </div>
     </section>
     
+    <!-- Ad Container 3: Practical Mastery -->
+    <div class="quantum-scroll-section">
+        <div class="cosmic-ad-container">
+            <div class="ad-label"><i class="fas fa-crown"></i> Quantum Mastery</div>
+            <div class="ad-content">
+                <!-- AdSense Ad Unit 3 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_THIRD_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+    
     <!-- Chapter 5: Quantum Mastery -->
     <section id="mastery" class="quantum-scroll-section">
         <div class="cosmic-chapter">
@@ -2150,6 +2225,26 @@
             </div>
         </div>
     </section>
+    
+    <!-- Ad Container 4: Ancient Wisdom -->
+    <div class="quantum-scroll-section">
+        <div class="cosmic-ad-container">
+            <div class="ad-label"><i class="fas fa-scroll"></i> Ancient Wisdom</div>
+            <div class="ad-content">
+                <!-- AdSense Ad Unit 4 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_FOURTH_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
     
     <!-- Grand Infinite Library Portal -->
     <section id="library" class="quantum-scroll-section">
