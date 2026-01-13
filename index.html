@@ -233,6 +233,59 @@
             padding: 0.5rem;
         }
         
+        /* ===== ENHANCED AD CONTAINERS ===== */
+        .cosmic-ad-container {
+            background: linear-gradient(135deg, rgba(10, 15, 30, 0.9), rgba(26, 32, 54, 0.9));
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin: 3rem auto;
+            text-align: center;
+            border: 1px solid rgba(0, 245, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            max-width: 900px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 120px;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .cosmic-ad-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.2);
+            border-color: var(--nebula-teal);
+        }
+        
+        .ad-label {
+            font-size: 1.1rem;
+            color: var(--starlight-gold);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 0.8rem;
+            opacity: 0.9;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+            padding: 0.5rem 1.5rem;
+            background: rgba(0, 245, 255, 0.1);
+            border-radius: 25px;
+            border: 1px solid rgba(0, 245, 255, 0.2);
+        }
+        
+        .ad-label i {
+            font-size: 1.2rem;
+            color: var(--nebula-teal);
+        }
+        
+        .ad-content {
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+        
         /* ===== GRAND COSMIC PORTAL ===== */
         .grand-cosmic-portal {
             min-height: calc(100vh - var(--header-height));
@@ -831,7 +884,7 @@
             font-size: 0.9rem;
         }
         
-        /* ===== INTERACTIVE QUANTUM CALCULATOR ===== */
+        /* ===== FIXED QUANTUM CALCULATOR ===== */
         .quantum-calculator {
             background: rgba(10, 15, 30, 0.9);
             border-radius: 18px;
@@ -894,28 +947,7 @@
             color: var(--nebula-teal);
             display: none;
             text-align: left;
-        }
-        
-        /* ===== COSMIC AD CONTAINERS ===== */
-        .cosmic-ad-container {
-            background: rgba(10, 15, 30, 0.9);
-            border-radius: 15px;
-            padding: 2.5rem;
-            margin: 6rem auto;
-            text-align: center;
-            border: 2px solid rgba(255, 215, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-            max-width: 1100px;
-        }
-        
-        .ad-label {
-            font-size: 0.85rem;
-            color: var(--nebula-teal);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 1.5rem;
-            opacity: 0.8;
+            animation: fadeIn 0.5s ease;
         }
         
         /* ===== GRAND INFINITE LIBRARY ===== */
@@ -1365,6 +1397,12 @@
             min-width: 40px;
         }
         
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
         /* ===== RESPONSIVE DESIGN ENHANCEMENTS ===== */
         @media (max-width: 1400px) {
             .quantum-scroll-section {
@@ -1460,6 +1498,16 @@
             .quantum-insight {
                 padding: 2rem;
             }
+            
+            .cosmic-ad-container {
+                padding: 1.2rem 1.5rem;
+                min-height: 100px;
+            }
+            
+            .ad-label {
+                font-size: 1rem;
+                padding: 0.4rem 1.2rem;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1520,6 +1568,10 @@
             .stat-number {
                 font-size: 1.9rem;
             }
+            
+            .cosmic-ad-container {
+                margin: 2.5rem auto;
+            }
         }
         
         @media (max-width: 480px) {
@@ -1552,6 +1604,16 @@
             .portal-button {
                 padding: 1rem 2.5rem;
                 font-size: 1.1rem;
+            }
+            
+            .cosmic-ad-container {
+                padding: 1rem 1.2rem;
+            }
+            
+            .ad-label {
+                font-size: 0.9rem;
+                letter-spacing: 2px;
+                padding: 0.3rem 1rem;
             }
         }
         
@@ -1694,18 +1756,20 @@
     <!-- Ad Container 1: Quantum Enlightenment -->
     <div class="quantum-scroll-section">
         <div class="cosmic-ad-container">
-            <div class="ad-label">Quantum Enlightenment</div>
-            <!-- AdSense Ad Unit 1 -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block; text-align:center;"
-                 data-ad-layout="in-article"
-                 data-ad-format="fluid"
-                 data-ad-client="ca-pub-2958343227558642"
-                 data-ad-slot="YOUR_FIRST_AD_SLOT_ID"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div class="ad-label"><i class="fas fa-lightbulb"></i> Quantum Enlightenment</div>
+            <div class="ad-content">
+                <!-- AdSense Ad Unit 1 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_FIRST_AD_SLOT_ID"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
     </div>
     
@@ -1784,12 +1848,12 @@
                 <p>The convergence of ancient wisdom and quantum physics suggests a profound truth: reality emerges from a state of infinite potential through a process of differentiation. Whether expressed as divine emanation or quantum fluctuation, the fundamental insight remains—existence arises from a unified field of possibilities. This understanding bridges the mystical experience of non-duality with the scientific observation of quantum entanglement, revealing consciousness itself as both the observer and the observed in this cosmic dance. The universe appears to be a self-observing system, with human consciousness serving as its means of self-reflection.</p>
             </div>
             
-            <!-- Interactive Quantum Calculator -->
+            <!-- Fixed Interactive Quantum Calculator -->
             <div class="quantum-calculator">
                 <h3 class="calculator-title"><i class="fas fa-calculator"></i> Quantum Probability Calculator</h3>
                 <p>Enter your intention to calculate its quantum manifestation probability:</p>
                 <input type="text" class="calculator-input" placeholder="Enter your desired reality state..." id="quantum-input">
-                <button class="calculator-button" onclick="calculateQuantumProbability()">Calculate Quantum Probability</button>
+                <button class="calculator-button" id="calculate-button">Calculate Quantum Probability</button>
                 <div class="calculator-result" id="quantum-result">
                     <!-- Result will appear here -->
                 </div>
@@ -1817,7 +1881,7 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <strong>Quantum Coherence in Biological Systems:</strong> Cutting-edge research reveals quantum effects in photosynthesis, bird navigation, and enzyme catalysis. These biological systems appear to harness quantum superposition and entanglement for enhanced efficiency—a biological quantum advantage that challenges classical Darwinian explanations.
-                        <span class="step-completion" onclick="toggleCompletion(this)">Mark Complete</span>
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
                     </div>
                 </div>
                 
@@ -1825,7 +1889,7 @@
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <strong>Consciousness-Driven Evolution:</strong> The observer effect in quantum mechanics suggests consciousness may play an active role in evolutionary outcomes. This aligns with Henri Bergson's élan vital and Sri Aurobindo's concept of "Supermind" guiding evolution toward higher complexity and awareness.
-                        <span class="step-completion" onclick="toggleCompletion(this)">Mark Complete</span>
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
                     </div>
                 </div>
                 
@@ -1833,7 +1897,7 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <strong>The Noosphere Emergence:</strong> As Teilhard de Chardin predicted, human consciousness creates a thinking layer around the planet—the noosphere. This collective consciousness now evolves through quantum information networks, potentially accelerating our transition to a new evolutionary stage of planetary consciousness.
-                        <span class="step-completion" onclick="toggleCompletion(this)">Mark Complete</span>
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
                     </div>
                 </div>
             </div>
@@ -1860,17 +1924,19 @@
     <!-- Ad Container 2: Consciousness Research -->
     <div class="quantum-scroll-section">
         <div class="cosmic-ad-container">
-            <div class="ad-label">Consciousness Research</div>
-            <!-- AdSense Ad Unit 2 -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-format="autorelaxed"
-                 data-ad-client="ca-pub-2958343227558642"
-                 data-ad-slot="YOUR_SECOND_AD_SLOT_ID"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div class="ad-label"><i class="fas fa-brain"></i> Consciousness Research</div>
+            <div class="ad-content">
+                <!-- AdSense Ad Unit 2 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-format="autorelaxed"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_SECOND_AD_SLOT_ID"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
     </div>
     
@@ -1888,7 +1954,7 @@
             <p>Consciousness remains science's greatest mystery—the "hard problem" as David Chalmers famously termed it. While materialist approaches struggle to explain subjective experience, quantum theories of consciousness offer a promising bridge between objective measurement and subjective reality. The brain may not merely compute consciousness—it may transduce it from the quantum realm.</p>
             
             <div class="interpretation-comparison">
-                <div class="interpretation-card" onclick="selectInterpretation(this)">
+                <div class="interpretation-card" onclick="QuantumOdyssey.selectInterpretation(this)">
                     <div class="interpretation-select"></div>
                     <div class="interpretation-header">
                         <div class="interpretation-icon">⚛️</div>
@@ -1906,7 +1972,7 @@
                     </div>
                 </div>
                 
-                <div class="interpretation-card" onclick="selectInterpretation(this)">
+                <div class="interpretation-card" onclick="QuantumOdyssey.selectInterpretation(this)">
                     <div class="interpretation-select"></div>
                     <div class="interpretation-header">
                         <div class="interpretation-icon">🎯</div>
@@ -1932,7 +1998,7 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <strong>Observer State Training:</strong> Sit in meditation and practice shifting your awareness from being the content of consciousness to being the observer of consciousness. Notice how this shift changes your relationship to thoughts and sensations. Practice 10 minutes daily.
-                        <span class="step-completion" onclick="toggleCompletion(this)">Mark Complete</span>
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
                     </div>
                 </div>
                 
@@ -1940,7 +2006,7 @@
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <strong>Quantum Coherence Breathing:</strong> Practice rhythmic breathing (4-7-8 pattern: inhale 4, hold 7, exhale 8) while visualizing quantum coherence spreading through your neural networks. This enhances microtubule resonance potential and gamma wave synchronization.
-                        <span class="step-completion" onclick="toggleCompletion(this)">Mark Complete</span>
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
                     </div>
                 </div>
                 
@@ -1948,7 +2014,7 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <strong>Non-Local Awareness Meditation:</strong> Sit in stillness and expand your awareness beyond your physical body. Visualize connecting with the quantum field itself—the substrate of all reality. Practice this for 20 minutes daily to develop non-local consciousness.
-                        <span class="step-completion" onclick="toggleCompletion(this)">Mark Complete</span>
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
                     </div>
                 </div>
             </div>
@@ -1969,7 +2035,7 @@
             <p>The interpretation of quantum mechanics represents the ultimate frontier where physics meets philosophy. The debate between the Many-Worlds Interpretation (MWI) and the Copenhagen interpretation is not merely about mathematics—it's about the nature of reality itself, consciousness, and our place in the cosmos.</p>
             
             <div class="interpretation-comparison">
-                <div class="interpretation-card selected" onclick="selectInterpretation(this)">
+                <div class="interpretation-card selected" onclick="QuantumOdyssey.selectInterpretation(this)">
                     <div class="interpretation-select"></div>
                     <div class="interpretation-header">
                         <div class="interpretation-icon">🌳</div>
@@ -1984,7 +2050,7 @@
                     </ul>
                 </div>
                 
-                <div class="interpretation-card" onclick="selectInterpretation(this)">
+                <div class="interpretation-card" onclick="QuantumOdyssey.selectInterpretation(this)">
                     <div class="interpretation-select"></div>
                     <div class="interpretation-header">
                         <div class="interpretation-icon">🎭</div>
@@ -2049,18 +2115,20 @@
     <!-- Ad Container 3: Practical Mastery -->
     <div class="quantum-scroll-section">
         <div class="cosmic-ad-container">
-            <div class="ad-label">Quantum Mastery</div>
-            <!-- AdSense Ad Unit 3 -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-2958343227558642"
-                 data-ad-slot="YOUR_THIRD_AD_SLOT_ID"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div class="ad-label"><i class="fas fa-crown"></i> Quantum Mastery</div>
+            <div class="ad-content">
+                <!-- AdSense Ad Unit 3 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_THIRD_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
     </div>
     
@@ -2142,7 +2210,7 @@
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <strong>Coherent Breathing (5 AM):</strong> Practice resonant breathing at 5-6 breaths per minute to entrain heart-brain coherence. This enhances quantum coherence in cellular processes and mitochondrial function.
-                        <span class="step-completion" onclick="toggleCompletion(this)">Mark Complete</span>
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
                     </div>
                 </div>
                 
@@ -2150,7 +2218,7 @@
                     <div class="step-number">2</div>
                     <div class="step-content">
                         <strong>Quantum Nutrition Fasting:</strong> Implement time-restricted eating (16:8) with quantum hydration—structured water with intentional coherence patterns to enhance cellular quantum coherence.
-                        <span class="step-completion" onclick="toggleCompletion(this)">Mark Complete</span>
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
                     </div>
                 </div>
                 
@@ -2158,7 +2226,7 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <strong>Microtubule Resonance Training:</strong> Daily meditation focusing on microtubule networks, visualizing quantum coherence spreading through cellular structures and maintaining telomere integrity.
-                        <span class="step-completion" onclick="toggleCompletion(this)">Mark Complete</span>
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
                     </div>
                 </div>
                 
@@ -2166,7 +2234,7 @@
                     <div class="step-number">4</div>
                     <div class="step-content">
                         <strong>Telomere Intention Practice:</strong> Use focused intention and visualization to influence telomere length through quantum observer effects and epigenetic modulation.
-                        <span class="step-completion" onclick="toggleCompletion(this)">Mark Complete</span>
+                        <span class="step-completion" onclick="QuantumOdyssey.toggleCompletion(this)">Mark Complete</span>
                     </div>
                 </div>
                 
@@ -2192,18 +2260,20 @@
     <!-- Ad Container 4: Ancient Wisdom -->
     <div class="quantum-scroll-section">
         <div class="cosmic-ad-container">
-            <div class="ad-label">Ancient Wisdom</div>
-            <!-- AdSense Ad Unit 4 -->
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
-            <ins class="adsbygoogle"
-                 style="display:block"
-                 data-ad-client="ca-pub-2958343227558642"
-                 data-ad-slot="YOUR_FOURTH_AD_SLOT_ID"
-                 data-ad-format="auto"
-                 data-full-width-responsive="true"></ins>
-            <script>
-                 (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
+            <div class="ad-label"><i class="fas fa-scroll"></i> Ancient Wisdom</div>
+            <div class="ad-content">
+                <!-- AdSense Ad Unit 4 -->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-2958343227558642"
+                     data-ad-slot="YOUR_FOURTH_AD_SLOT_ID"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
         </div>
     </div>
     
@@ -2322,23 +2392,17 @@
     
     <!-- Enhanced Quantum JavaScript -->
     <script>
-        // ===== QUANTUM COSMOS SIMULATION =====
-        class QuantumCosmos {
-            constructor() {
-                this.container = document.getElementById('quantum-cosmos');
-                this.particles = [];
-                this.particleCount = window.innerWidth < 768 ? 80 : 150;
-                
-                this.init();
-                this.animate();
-                this.setupResize();
-            }
+        // ===== QUANTUM ODYSSEY MAIN OBJECT =====
+        const QuantumOdyssey = {
             
-            init() {
-                // Create particles.js configuration
+            // ===== QUANTUM COSMOS SIMULATION =====
+            initQuantumCosmos: function() {
                 particlesJS("quantum-cosmos", {
                     particles: {
-                        number: { value: this.particleCount, density: { enable: true, value_area: 800 } },
+                        number: { 
+                            value: window.innerWidth < 768 ? 80 : 150, 
+                            density: { enable: true, value_area: 800 } 
+                        },
                         color: { 
                             value: ["#00F5FF", "#FFD700", "#9D4EDD"],
                         },
@@ -2387,104 +2451,72 @@
                     },
                     retina_detect: true
                 });
-            }
+            },
             
-            animate() {
-                // Animation is handled by particles.js
-            }
-            
-            setupResize() {
-                window.addEventListener('resize', () => {
-                    // Particles.js handles resize internally
-                });
-            }
-        }
-        
-        // ===== INTERACTIVE NAVIGATION =====
-        class CosmicNavigation {
-            constructor() {
-                this.nav = document.querySelector('.celestial-navigation');
-                this.navStars = document.querySelectorAll('.nav-star');
-                this.sections = document.querySelectorAll('.cosmic-chapter, .grand-cosmic-portal, .quantum-timeline');
-                this.backToTop = document.querySelector('.back-to-portal');
-                this.scrollProgress = document.querySelector('.scroll-progress');
-                this.mobileMenuToggle = document.getElementById('mobileMenuToggle');
-                this.navCompass = document.getElementById('navCompass');
+            // ===== INTERACTIVE NAVIGATION =====
+            initNavigation: function() {
+                const nav = document.querySelector('.celestial-navigation');
+                const navStars = document.querySelectorAll('.nav-star');
+                const sections = document.querySelectorAll('.cosmic-chapter, .grand-cosmic-portal, .quantum-timeline');
+                const backToTop = document.querySelector('.back-to-portal');
+                const scrollProgress = document.querySelector('.scroll-progress');
+                const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+                const navCompass = document.getElementById('navCompass');
                 
-                this.init();
-            }
-            
-            init() {
-                this.setupScrollListener();
-                this.setupNavClick();
-                this.setupBackToTop();
-                this.setupInsightToggles();
-                this.setupMobileMenu();
-            }
-            
-            setupScrollListener() {
+                // Scroll listener
                 let ticking = false;
                 window.addEventListener('scroll', () => {
                     if (!ticking) {
                         requestAnimationFrame(() => {
-                            this.updateHeaderState();
-                            this.updateActiveSection();
-                            this.updateBackToTop();
-                            this.updateScrollProgress();
+                            // Update header state
+                            if (window.scrollY > 50) {
+                                nav.classList.add('scrolled');
+                            } else {
+                                nav.classList.remove('scrolled');
+                            }
+                            
+                            // Update active section
+                            let current = '';
+                            const scrollPosition = window.scrollY + 150;
+                            
+                            sections.forEach(section => {
+                                const sectionTop = section.offsetTop;
+                                const sectionHeight = section.clientHeight;
+                                
+                                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                                    current = section.getAttribute('id') || 'portal';
+                                }
+                            });
+                            
+                            navStars.forEach(star => {
+                                star.classList.remove('active');
+                                if (star.getAttribute('href') === `#${current}` || 
+                                    (current === 'portal' && star.getAttribute('href') === '#portal')) {
+                                    star.classList.add('active');
+                                }
+                            });
+                            
+                            // Update back to top button
+                            if (window.scrollY > 600) {
+                                backToTop.classList.add('visible');
+                            } else {
+                                backToTop.classList.remove('visible');
+                            }
+                            
+                            // Update scroll progress
+                            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                            const scrolled = (winScroll / height) * 100;
+                            scrollProgress.style.width = scrolled + '%';
+                            
                             ticking = false;
                         });
                         ticking = true;
                     }
                 });
-            }
-            
-            updateHeaderState() {
-                if (window.scrollY > 50) {
-                    this.nav.classList.add('scrolled');
-                } else {
-                    this.nav.classList.remove('scrolled');
-                }
-            }
-            
-            updateActiveSection() {
-                let current = '';
-                const scrollPosition = window.scrollY + 150;
                 
-                this.sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                        current = section.getAttribute('id') || 'portal';
-                    }
-                });
-                
-                this.navStars.forEach(star => {
-                    star.classList.remove('active');
-                    if (star.getAttribute('href') === `#${current}` || 
-                        (current === 'portal' && star.getAttribute('href') === '#portal')) {
-                        star.classList.add('active');
-                    }
-                });
-            }
-            
-            updateBackToTop() {
-                if (window.scrollY > 600) {
-                    this.backToTop.classList.add('visible');
-                } else {
-                    this.backToTop.classList.remove('visible');
-                }
-            }
-            
-            updateScrollProgress() {
-                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                this.scrollProgress.style.width = scrolled + '%';
-            }
-            
-            setupNavClick() {
-                this.navStars.forEach(star => {
+                // Navigation click handlers
+                navStars.forEach(star => {
                     star.addEventListener('click', (e) => {
                         e.preventDefault();
                         const targetId = star.getAttribute('href');
@@ -2501,66 +2533,149 @@
                         }
                         
                         // Close mobile menu if open
-                        if (this.navCompass.classList.contains('mobile-active')) {
-                            this.navCompass.classList.remove('mobile-active');
+                        if (navCompass.classList.contains('mobile-active')) {
+                            navCompass.classList.remove('mobile-active');
                         }
                     });
                 });
-            }
-            
-            setupBackToTop() {
-                this.backToTop.addEventListener('click', (e) => {
+                
+                // Back to top handler
+                backToTop.addEventListener('click', (e) => {
                     e.preventDefault();
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
-            }
-            
-            setupInsightToggles() {
-                document.querySelectorAll('.insight-toggle').forEach(toggle => {
-                    toggle.addEventListener('click', function() {
-                        const insight = this.closest('.quantum-insight');
-                        const content = insight.querySelector('.insight-content');
-                        
-                        content.classList.toggle('expanded');
-                        this.textContent = content.classList.contains('expanded') ? '−' : '+';
-                    });
-                });
-            }
-            
-            setupMobileMenu() {
-                this.mobileMenuToggle.addEventListener('click', () => {
-                    this.navCompass.classList.toggle('mobile-active');
+                
+                // Mobile menu handler
+                mobileMenuToggle.addEventListener('click', () => {
+                    navCompass.classList.toggle('mobile-active');
                 });
                 
                 // Close menu when clicking outside
                 document.addEventListener('click', (e) => {
-                    if (!this.nav.contains(e.target) && this.navCompass.classList.contains('mobile-active')) {
-                        this.navCompass.classList.remove('mobile-active');
+                    if (!nav.contains(e.target) && navCompass.classList.contains('mobile-active')) {
+                        navCompass.classList.remove('mobile-active');
                     }
                 });
-            }
-        }
-        
-        // ===== DYNAMIC LIBRARY COUNTER =====
-        class DynamicLibraryCounter {
-            constructor() {
-                this.counters = document.querySelectorAll('.dynamic-counter');
-                this.librarySection = document.getElementById('library');
-                this.hasAnimated = false;
+            },
+            
+            // ===== QUANTUM CALCULATOR - FIXED =====
+            initQuantumCalculator: function() {
+                const calculateButton = document.getElementById('calculate-button');
+                const quantumInput = document.getElementById('quantum-input');
+                const quantumResult = document.getElementById('quantum-result');
                 
-                this.init();
-            }
+                if (!calculateButton || !quantumInput || !quantumResult) {
+                    console.error("Quantum calculator elements not found!");
+                    return;
+                }
+                
+                calculateButton.addEventListener('click', () => {
+                    const input = quantumInput.value.trim();
+                    
+                    if (!input) {
+                        quantumResult.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Please enter your intention first.';
+                        quantumResult.style.display = 'block';
+                        return;
+                    }
+                    
+                    // Calculate "quantum probability" based on input characteristics
+                    const wordCount = input.split(' ').length;
+                    const hasPositiveWords = /(love|peace|joy|abundance|health|wealth|success|happiness|prosperity|growth)/i.test(input);
+                    const isSpecific = /(I|my|me|specific|exact|precise|definite|clear)/i.test(input);
+                    const hasEmotion = /(feel|desire|want|wish|hope|dream)/i.test(input);
+                    
+                    let probability = 65; // Base probability
+                    
+                    if (wordCount >= 3) probability += 5;
+                    if (wordCount >= 5) probability += 10;
+                    if (wordCount >= 7) probability += 5;
+                    if (hasPositiveWords) probability += 15;
+                    if (isSpecific) probability += 10;
+                    if (hasEmotion) probability += 5;
+                    
+                    // Ensure probability is between 0-100%
+                    probability = Math.min(100, Math.max(0, probability));
+                    
+                    // Generate quantum result
+                    const intensity = probability >= 85 ? 'extremely high' : 
+                                     probability >= 70 ? 'high' : 
+                                     probability >= 55 ? 'moderate' : 
+                                     'low';
+                    
+                    const messages = [
+                        `Your intention <strong>"${input.substring(0, 40)}${input.length > 40 ? '...' : ''}"</strong> has a <strong>${probability}%</strong> quantum manifestation probability.`,
+                        `Based on quantum coherence analysis, your intention shows <strong>${intensity}</strong> alignment with the quantum field.`,
+                        `Quantum suggestion: ${probability >= 80 ? 'Maintain focused attention and emotional resonance with your intention.' : 
+                                            probability >= 60 ? 'Increase clarity and add emotional intensity to your intention.' : 
+                                            'Refine your intention with greater specificity and emotional connection.'}`
+                    ];
+                    
+                    // Create progress bar
+                    const progressBar = `<div style="margin-top: 1rem; background: rgba(0,0,0,0.3); border-radius: 10px; overflow: hidden;">
+                        <div style="width: ${probability}%; height: 20px; background: linear-gradient(90deg, var(--nebula-teal), var(--starlight-gold)); transition: width 1.5s ease;"></div>
+                    </div>`;
+                    
+                    quantumResult.innerHTML = `
+                        <h4><i class="fas fa-chart-line"></i> Quantum Manifestation Analysis</h4>
+                        <p>${messages[0]}</p>
+                        <p>${messages[1]}</p>
+                        <p><strong>${messages[2]}</strong></p>
+                        ${progressBar}
+                        <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;"><i class="fas fa-info-circle"></i> Based on quantum coherence principles of clarity, emotion, and specificity.</p>
+                    `;
+                    quantumResult.style.display = 'block';
+                    
+                    // Add slight animation
+                    quantumResult.style.animation = 'none';
+                    setTimeout(() => {
+                        quantumResult.style.animation = 'fadeIn 0.5s ease';
+                    }, 10);
+                });
+                
+                // Also allow Enter key to calculate
+                quantumInput.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        calculateButton.click();
+                    }
+                });
+            },
             
-            init() {
-                this.setupIntersectionObserver();
-            }
+            // ===== INTERACTIVE FUNCTIONS =====
+            selectInterpretation: function(card) {
+                document.querySelectorAll('.interpretation-card').forEach(c => {
+                    c.classList.remove('selected');
+                });
+                card.classList.add('selected');
+            },
             
-            setupIntersectionObserver() {
+            toggleCompletion: function(element) {
+                element.classList.toggle('completed');
+                element.textContent = element.classList.contains('completed') ? '✓ Completed' : 'Mark Complete';
+                
+                // Update progress
+                const totalSteps = document.querySelectorAll('.step-completion').length;
+                const completedSteps = document.querySelectorAll('.step-completion.completed').length;
+                const progress = Math.round((completedSteps / totalSteps) * 100);
+                
+                // Optional: Show progress notification
+                if (progress === 100) {
+                    QuantumOdyssey.showNotification('🎉 Quantum Mastery Achieved! All steps completed.');
+                }
+            },
+            
+            // ===== DYNAMIC LIBRARY COUNTER =====
+            initLibraryCounter: function() {
+                const counters = document.querySelectorAll('.dynamic-counter');
+                const librarySection = document.getElementById('library');
+                let hasAnimated = false;
+                
+                if (!counters.length || !librarySection) return;
+                
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
-                        if (entry.isIntersecting && !this.hasAnimated) {
-                            this.animateCounters();
-                            this.hasAnimated = true;
+                        if (entry.isIntersecting && !hasAnimated) {
+                            QuantumOdyssey.animateCounters();
+                            hasAnimated = true;
                         }
                     });
                 }, {
@@ -2568,13 +2683,11 @@
                     rootMargin: '0px 0px -100px 0px'
                 });
                 
-                if (this.librarySection) {
-                    observer.observe(this.librarySection);
-                }
-            }
+                observer.observe(librarySection);
+            },
             
-            animateCounters() {
-                this.counters.forEach(counter => {
+            animateCounters: function() {
+                document.querySelectorAll('.dynamic-counter').forEach(counter => {
                     const target = parseInt(counter.getAttribute('data-target'));
                     const duration = 2000; // 2 seconds
                     const step = target / (duration / 16); // 60fps
@@ -2589,119 +2702,112 @@
                         counter.textContent = Math.floor(current);
                     }, 16);
                 });
-            }
-        }
-        
-        // ===== INTERACTIVE FUNCTIONS =====
-        function selectInterpretation(card) {
-            document.querySelectorAll('.interpretation-card').forEach(c => {
-                c.classList.remove('selected');
-            });
-            card.classList.add('selected');
-        }
-        
-        function toggleCompletion(element) {
-            element.classList.toggle('completed');
-            element.textContent = element.classList.contains('completed') ? '✓ Completed' : 'Mark Complete';
+            },
             
-            // Update progress
-            const totalSteps = document.querySelectorAll('.step-completion').length;
-            const completedSteps = document.querySelectorAll('.step-completion.completed').length;
-            const progress = Math.round((completedSteps / totalSteps) * 100);
-            
-            // Optional: Show progress notification
-            if (progress === 100) {
-                showNotification('🎉 Quantum Mastery Achieved! All steps completed.');
-            }
-        }
-        
-        function calculateQuantumProbability() {
-            const input = document.getElementById('quantum-input').value;
-            const resultElement = document.getElementById('quantum-result');
-            
-            if (!input.trim()) {
-                resultElement.innerHTML = '<i class="fas fa-exclamation-triangle"></i> Please enter your intention first.';
-                resultElement.style.display = 'block';
-                return;
-            }
-            
-            // Calculate "quantum probability" based on input characteristics
-            const wordCount = input.split(' ').length;
-            const hasPositiveWords = /(love|peace|joy|abundance|health|wealth|success)/i.test(input);
-            const isSpecific = /(I|my|me|specific|exact|precise)/i.test(input);
-            
-            let probability = 70; // Base probability
-            
-            if (wordCount >= 5) probability += 10;
-            if (hasPositiveWords) probability += 15;
-            if (isSpecific) probability += 5;
-            
-            // Ensure probability is between 0-100%
-            probability = Math.min(100, Math.max(0, probability));
-            
-            // Generate quantum result
-            const messages = [
-                `Your intention "${input.substring(0, 30)}${input.length > 30 ? '...' : ''}" has a ${probability}% quantum manifestation probability.`,
-                `Based on quantum coherence analysis, your intention is ${probability >= 80 ? 'highly' : probability >= 60 ? 'moderately' : 'weakly'} aligned with the quantum field.`,
-                `Quantum suggestion: ${probability >= 80 ? 'Maintain focus and emotional alignment.' : 'Increase clarity and emotional resonance with your intention.'}`
-            ];
-            
-            resultElement.innerHTML = `
-                <h4><i class="fas fa-chart-line"></i> Quantum Manifestation Analysis</h4>
-                <p>${messages[0]}</p>
-                <p>${messages[1]}</p>
-                <p><strong>${messages[2]}</strong></p>
-                <div style="margin-top: 1rem; background: rgba(0,0,0,0.3); border-radius: 10px; overflow: hidden;">
-                    <div style="width: ${probability}%; height: 20px; background: linear-gradient(90deg, var(--nebula-teal), var(--starlight-gold)); transition: width 2s;"></div>
-                </div>
-                <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;"><i class="fas fa-info-circle"></i> This is a symbolic calculation based on quantum manifestation principles.</p>
-            `;
-            resultElement.style.display = 'block';
-        }
-        
-        function showNotification(message) {
-            // Create notification element
-            const notification = document.createElement('div');
-            notification.style.cssText = `
-                position: fixed;
-                top: 100px;
-                right: 20px;
-                background: linear-gradient(135deg, var(--quantum-field), var(--consciousness-purple));
-                color: white;
-                padding: 1rem 2rem;
-                border-radius: 10px;
-                border: 2px solid var(--cosmic-border);
-                box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-                z-index: 10000;
-                animation: slideIn 0.5s ease;
-            `;
-            notification.innerHTML = `<i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i> ${message}`;
-            
-            document.body.appendChild(notification);
-            
-            // Remove after 5 seconds
-            setTimeout(() => {
-                notification.style.animation = 'slideOut 0.5s ease';
+            // ===== NOTIFICATION SYSTEM =====
+            showNotification: function(message) {
+                // Create notification element
+                const notification = document.createElement('div');
+                notification.style.cssText = `
+                    position: fixed;
+                    top: 100px;
+                    right: 20px;
+                    background: linear-gradient(135deg, var(--quantum-field), var(--consciousness-purple));
+                    color: white;
+                    padding: 1rem 2rem;
+                    border-radius: 10px;
+                    border: 2px solid var(--cosmic-border);
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+                    z-index: 10000;
+                    animation: slideIn 0.5s ease;
+                `;
+                notification.innerHTML = `<i class="fas fa-check-circle" style="margin-right: 0.5rem;"></i> ${message}`;
+                
+                document.body.appendChild(notification);
+                
+                // Remove after 5 seconds
                 setTimeout(() => {
-                    document.body.removeChild(notification);
-                }, 500);
-            }, 5000);
-        }
-        
-        // ===== QUANTUM ANIMATIONS =====
-        class QuantumAnimations {
-            constructor() {
-                this.chapters = document.querySelectorAll('.cosmic-chapter');
-                this.timelineEvents = document.querySelectorAll('.timeline-event');
-                this.init();
-            }
+                    notification.style.animation = 'slideOut 0.5s ease';
+                    setTimeout(() => {
+                        if (notification.parentNode) {
+                            document.body.removeChild(notification);
+                        }
+                    }, 500);
+                }, 5000);
+            },
             
-            init() {
-                this.setupChapterAnimations();
-                this.setupStaggeredAnimations();
-            }
+            // ===== INSIGHT TOGGLES =====
+            initInsightToggles: function() {
+                document.querySelectorAll('.insight-toggle').forEach(toggle => {
+                    toggle.addEventListener('click', function() {
+                        const insight = this.closest('.quantum-insight');
+                        const content = insight.querySelector('.insight-content');
+                        
+                        content.classList.toggle('expanded');
+                        this.textContent = content.classList.contains('expanded') ? '−' : '+';
+                    });
+                });
+            },
             
-            setupChapterAnimations() {
+            // ===== LIBRARY PORTAL =====
+            initLibraryPortal: function() {
+                const portalButton = document.getElementById('libraryPortalButton');
+                if (!portalButton) return;
+                
+                portalButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    QuantumOdyssey.showNotification('🚀 Preparing quantum portal to the Infinite Library...');
+                    
+                    // Create a portal opening effect
+                    const portalEffect = document.createElement('div');
+                    portalEffect.style.cssText = `
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: radial-gradient(circle at center, rgba(0,245,255,0.8) 0%, transparent 70%);
+                        z-index: 10002;
+                        animation: portalOpen 1.5s ease forwards;
+                        pointer-events: none;
+                    `;
+                    
+                    // Add CSS for portal animation
+                    const style = document.createElement('style');
+                    style.textContent = `
+                        @keyframes portalOpen {
+                            0% { opacity: 0; transform: scale(0.1); }
+                            50% { opacity: 1; transform: scale(1); }
+                            100% { opacity: 0; transform: scale(1.5); }
+                        }
+                        @keyframes slideIn {
+                            from { transform: translateX(100%); opacity: 0; }
+                            to { transform: translateX(0); opacity: 1; }
+                        }
+                        @keyframes slideOut {
+                            from { transform: translateX(0); opacity: 1; }
+                            to { transform: translateX(100%); opacity: 0; }
+                        }
+                    `;
+                    document.head.appendChild(style);
+                    
+                    document.body.appendChild(portalEffect);
+                    
+                    // Simulate loading library
+                    setTimeout(() => {
+                        QuantumOdyssey.showNotification('📚 Infinite Library portal established. Content loading in quantum superposition...');
+                        portalEffect.remove();
+                    }, 1500);
+                });
+            },
+            
+            // ===== QUANTUM ANIMATIONS =====
+            initAnimations: function() {
+                const chapters = document.querySelectorAll('.cosmic-chapter');
+                const timelineEvents = document.querySelectorAll('.timeline-event');
+                const manualSteps = document.querySelectorAll('.manual-step');
+                
+                // Chapter animations
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
@@ -2714,17 +2820,15 @@
                     rootMargin: '0px 0px -100px 0px'
                 });
                 
-                this.chapters.forEach(chapter => {
+                chapters.forEach(chapter => {
                     chapter.style.opacity = '0';
                     chapter.style.transform = 'translateY(50px)';
                     chapter.style.transition = 'opacity 1s ease, transform 1s ease';
                     observer.observe(chapter);
                 });
-            }
-            
-            setupStaggeredAnimations() {
-                // Animate timeline events
-                this.timelineEvents.forEach((event, index) => {
+                
+                // Timeline events animation
+                timelineEvents.forEach((event, index) => {
                     event.style.opacity = '0';
                     event.style.transform = 'translateX(' + (event.classList.contains('left') ? '-40px' : '40px') + ')';
                     
@@ -2735,8 +2839,7 @@
                     }, 300 + index * 150);
                 });
                 
-                // Animate manual steps
-                const manualSteps = document.querySelectorAll('.manual-step');
+                // Manual steps animation
                 manualSteps.forEach((step, index) => {
                     step.style.opacity = '0';
                     step.style.transform = 'translateX(-15px)';
@@ -2747,124 +2850,78 @@
                         step.style.transform = 'translateX(0)';
                     }, 400 + index * 80);
                 });
+            },
+            
+            // ===== QUANTUM EASTER EGG =====
+            initEasterEgg: function() {
+                let konamiCode = '';
+                const konamiSequence = '38384040373937396665'; // Arrow keys + Enter
+                
+                document.addEventListener('keydown', (e) => {
+                    konamiCode += e.keyCode;
+                    if (konamiCode.length > 20) {
+                        konamiCode = konamiCode.substring(konamiCode.length - 20);
+                    }
+                    
+                    if (konamiCode.includes(konamiSequence)) {
+                        QuantumOdyssey.showNotification('🎮 Quantum Easter Egg Activated! You have unlocked hidden insight.');
+                        konamiCode = '';
+                        
+                        // Show hidden quantum insight
+                        const hiddenInsight = document.createElement('div');
+                        hiddenInsight.innerHTML = `
+                            <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
+                                background: rgba(10, 15, 30, 0.95); padding: 2.5rem; border-radius: 18px;
+                                border: 3px solid var(--starlight-gold); z-index: 10001; max-width: 550px;
+                                box-shadow: 0 0 40px rgba(255, 215, 0, 0.4); text-align: center;">
+                                <h3 style="color: var(--starlight-gold); margin-bottom: 1rem;">🧠 Hidden Quantum Insight</h3>
+                                <p>The observer doesn't just observe reality—the observer <em>chooses</em> which reality to observe from the quantum multiverse. Your consciousness is the selection mechanism.</p>
+                                <button onclick="this.parentElement.remove()" style="margin-top: 1.5rem; padding: 0.7rem 1.8rem;
+                                    background: var(--nebula-teal); color: var(--dark-matter); border: none;
+                                    border-radius: 25px; cursor: pointer; font-weight: bold; font-size: 0.95rem;">
+                                    Close Insight
+                                </button>
+                            </div>
+                        `;
+                        document.body.appendChild(hiddenInsight);
+                    }
+                });
+            },
+            
+            // ===== INITIALIZE EVERYTHING =====
+            init: function() {
+                // Initialize all systems
+                this.initQuantumCosmos();
+                this.initNavigation();
+                this.initQuantumCalculator(); // This is now fixed!
+                this.initLibraryCounter();
+                this.initInsightToggles();
+                this.initLibraryPortal();
+                this.initAnimations();
+                this.initEasterEgg();
+                
+                // Initialize AdSense
+                (adsbygoogle = window.adsbygoogle || []).push({});
+                
+                // Quantum Console Message
+                console.log('%c⚛️ QUANTUM ODYSSEY ⚛️', 'font-size: 24px; font-weight: bold; color: #00F5FF; text-shadow: 0 0 10px #00F5FF');
+                console.log('%c"Consciousness is the universe experiencing itself."', 'font-size: 14px; font-style: italic; color: #FFD700;');
+                console.log('%cA unified synthesis of ancient wisdom and quantum physics', 'color: #9D4EDD;');
+                console.log('%cOriginal work by SirFree33 | Quantum Odyssey Research Institute', 'color: #00F5FF;');
+                console.log('%cContact: hyping.mrt@tutamail.com', 'color: #FFD700;');
+                
+                // Fade in the entire page
+                document.body.style.opacity = '0';
+                document.body.style.transition = 'opacity 1s ease';
+                setTimeout(() => {
+                    document.body.style.opacity = '1';
+                }, 300);
             }
-        }
-        
-        // ===== LIBRARY PORTAL INTERACTION =====
-        document.getElementById('libraryPortalButton').addEventListener('click', function(e) {
-            e.preventDefault();
-            showNotification('🚀 Preparing quantum portal to the Infinite Library...');
-            
-            // Create a portal opening effect
-            const portalEffect = document.createElement('div');
-            portalEffect.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: radial-gradient(circle at center, rgba(0,245,255,0.8) 0%, transparent 70%);
-                z-index: 10002;
-                animation: portalOpen 1.5s ease forwards;
-                pointer-events: none;
-            `;
-            
-            // Add CSS for portal animation
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes portalOpen {
-                    0% { opacity: 0; transform: scale(0.1); }
-                    50% { opacity: 1; transform: scale(1); }
-                    100% { opacity: 0; transform: scale(1.5); }
-                }
-            `;
-            document.head.appendChild(style);
-            
-            document.body.appendChild(portalEffect);
-            
-            // Simulate loading library
-            setTimeout(() => {
-                showNotification('📚 Infinite Library portal established. Content loading in quantum superposition...');
-                portalEffect.remove();
-            }, 1500);
-        });
+        };
         
         // ===== INITIALIZE QUANTUM UNIVERSE =====
         document.addEventListener('DOMContentLoaded', () => {
-            // Initialize quantum systems
-            const quantumCosmos = new QuantumCosmos();
-            const cosmicNavigation = new CosmicNavigation();
-            const quantumAnimations = new QuantumAnimations();
-            const dynamicLibraryCounter = new DynamicLibraryCounter();
-            
-            // Quantum Console Message
-            console.log('%c⚛️ QUANTUM ODYSSEY ⚛️', 'font-size: 24px; font-weight: bold; color: #00F5FF; text-shadow: 0 0 10px #00F5FF');
-            console.log('%c"Consciousness is the universe experiencing itself."', 'font-size: 14px; font-style: italic; color: #FFD700;');
-            console.log('%cA unified synthesis of ancient wisdom and quantum physics', 'color: #9D4EDD;');
-            console.log('%cOriginal work by SirFree33 | Quantum Odyssey Research Institute', 'color: #00F5FF;');
-            console.log('%cContact: hyping.mrt@tutamail.com', 'color: #FFD700;');
-            
-            // Initialize AdSense
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            
-            // Add CSS for notifications
-            const style = document.createElement('style');
-            style.textContent = `
-                @keyframes slideIn {
-                    from { transform: translateX(100%); opacity: 0; }
-                    to { transform: translateX(0); opacity: 1; }
-                }
-                @keyframes slideOut {
-                    from { transform: translateX(0); opacity: 1; }
-                    to { transform: translateX(100%); opacity: 0; }
-                }
-                @keyframes fadeIn {
-                    from { opacity: 0; }
-                    to { opacity: 1; }
-                }
-            `;
-            document.head.appendChild(style);
-            
-            // Quantum Easter Egg
-            let konamiCode = '';
-            const konamiSequence = '38384040373937396665'; // Arrow keys + Enter
-            
-            document.addEventListener('keydown', (e) => {
-                konamiCode += e.keyCode;
-                if (konamiCode.length > 20) {
-                    konamiCode = konamiCode.substring(konamiCode.length - 20);
-                }
-                
-                if (konamiCode.includes(konamiSequence)) {
-                    showNotification('🎮 Quantum Easter Egg Activated! You have unlocked hidden insight.');
-                    konamiCode = '';
-                    
-                    // Show hidden quantum insight
-                    const hiddenInsight = document.createElement('div');
-                    hiddenInsight.innerHTML = `
-                        <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-                            background: rgba(10, 15, 30, 0.95); padding: 2.5rem; border-radius: 18px;
-                            border: 3px solid var(--starlight-gold); z-index: 10001; max-width: 550px;
-                            box-shadow: 0 0 40px rgba(255, 215, 0, 0.4); text-align: center;">
-                            <h3 style="color: var(--starlight-gold); margin-bottom: 1rem;">🧠 Hidden Quantum Insight</h3>
-                            <p>The observer doesn't just observe reality—the observer <em>chooses</em> which reality to observe from the quantum multiverse. Your consciousness is the selection mechanism.</p>
-                            <button onclick="this.parentElement.remove()" style="margin-top: 1.5rem; padding: 0.7rem 1.8rem;
-                                background: var(--nebula-teal); color: var(--dark-matter); border: none;
-                                border-radius: 25px; cursor: pointer; font-weight: bold; font-size: 0.95rem;">
-                                Close Insight
-                            </button>
-                        </div>
-                    `;
-                    document.body.appendChild(hiddenInsight);
-                }
-            });
-            
-            // Fade in the entire page
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 1s ease';
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 300);
+            QuantumOdyssey.init();
         });
     </script>
 </body>
