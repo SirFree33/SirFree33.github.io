@@ -939,41 +939,46 @@
             font-family: 'Cormorant Garamond', serif;
         }
         
-        .library-stats {
-            display: flex;
-            justify-content: center;
-            gap: 2.5rem;
+        .library-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
             margin: 2.5rem 0;
-            flex-wrap: wrap;
         }
         
-        .stat-item {
-            padding: 1.2rem 2rem;
+        .feature-item {
+            padding: 1.5rem;
             background: rgba(0, 245, 255, 0.08);
             border-radius: 12px;
             border: 1px solid var(--cosmic-border);
-            min-width: 160px;
+            text-align: left;
             transition: all 0.3s ease;
         }
         
-        .stat-item:hover {
+        .feature-item:hover {
             transform: translateY(-5px);
             background: rgba(0, 245, 255, 0.12);
             box-shadow: 0 8px 25px rgba(0, 245, 255, 0.15);
         }
         
-        .stat-number {
-            font-size: 2.2rem;
+        .feature-title {
+            font-size: 1.2rem;
             color: var(--starlight-gold);
-            font-weight: 700;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
         }
         
-        .stat-label {
-            font-size: 0.95rem;
+        .feature-title i {
             color: var(--nebula-teal);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-top: 0.4rem;
+        }
+        
+        .feature-desc {
+            font-size: 0.95rem;
+            color: var(--ancient-parchment);
+            opacity: 0.9;
+            line-height: 1.6;
         }
         
         .portal-button {
@@ -1292,12 +1297,6 @@
             box-shadow: 0 12px 35px rgba(0, 245, 255, 0.5);
         }
         
-        /* ===== DYNAMIC LIBRARY COUNTER ===== */
-        .dynamic-counter {
-            display: inline-block;
-            min-width: 40px;
-        }
-        
         /* ===== ANIMATIONS ===== */
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -1396,6 +1395,10 @@
                 font-size: 3.2rem;
             }
             
+            .library-features {
+                grid-template-columns: 1fr;
+            }
+            
             .quantum-insight {
                 padding: 2rem;
             }
@@ -1457,17 +1460,12 @@
                 left: 0 !important;
             }
             
-            .library-stats {
-                gap: 1.5rem;
+            .library-features {
+                gap: 1rem;
             }
             
-            .stat-item {
-                min-width: 140px;
-                padding: 1rem 1.5rem;
-            }
-            
-            .stat-number {
-                font-size: 1.9rem;
+            .feature-item {
+                padding: 1.2rem;
             }
             
             .cosmic-ad-container {
@@ -1624,37 +1622,37 @@
                 <div class="timeline-event left" style="top: 8%;">
                     <div class="event-year">1500 BCE</div>
                     <div class="event-title">Rig Veda's Nasadiya Sukta</div>
-                    <p>"There was neither non-existence nor existence then..." - Ancient intuition of quantum superposition.</p>
+                    <p>"There was neither non-existence nor existence then..." - Ancient intuition of quantum superposition and potentiality, describing the universe before manifestation.</p>
                 </div>
                 
                 <div class="timeline-event right" style="top: 22%;">
                     <div class="event-year">500 BCE</div>
                     <div class="event-title">Lao Tzu's Tao Te Ching</div>
-                    <p>"The Tao that can be spoken is not the eternal Tao" - Complementarity principle in ancient form.</p>
+                    <p>"The Tao that can be spoken is not the eternal Tao" - Complementarity principle in ancient form, acknowledging the limitations of language in describing ultimate reality.</p>
                 </div>
                 
                 <div class="timeline-event left" style="top: 36%;">
                     <div class="event-year">1900 CE</div>
                     <div class="event-title">Quantum Mechanics Born</div>
-                    <p>Planck, Einstein, Bohr lay foundation for quantum theory, unknowingly echoing ancient insights.</p>
+                    <p>Planck, Einstein, Bohr lay foundation for quantum theory, unknowingly echoing ancient insights about the probabilistic nature of reality.</p>
                 </div>
                 
                 <div class="timeline-event right" style="top: 50%;">
                     <div class="event-year">1927 CE</div>
                     <div class="event-title">Copenhagen Interpretation</div>
-                    <p>Bohr and Heisenberg formalize the observer effect and complementarity principle.</p>
+                    <p>Bohr and Heisenberg formalize the observer effect and complementarity principle, establishing consciousness as integral to quantum reality.</p>
                 </div>
                 
                 <div class="timeline-event left" style="top: 64%;">
                     <div class="event-year">1957 CE</div>
                     <div class="event-title">Many-Worlds Interpretation</div>
-                    <p>Hugh Everett proposes parallel universes, mirroring Hindu concept of infinite Līlā.</p>
+                    <p>Hugh Everett proposes parallel universes, mirroring Hindu concept of infinite Līlā and Buddhist realms of existence.</p>
                 </div>
                 
                 <div class="timeline-event right" style="top: 78%;">
                     <div class="event-year">2024 CE</div>
                     <div class="event-title">Quantum Odyssey Synthesis</div>
-                    <p>This work unifies ancient wisdom traditions with modern quantum understanding.</p>
+                    <p>This work unifies ancient wisdom traditions with modern quantum understanding, creating a comprehensive map of consciousness evolution.</p>
                 </div>
             </div>
         </div>
@@ -2184,22 +2182,25 @@
                 research—all interconnected through quantum hyperlinks of meaning and insight.
             </p>
             
-            <div class="library-stats">
-                <div class="stat-item">
-                    <div class="stat-number"><span class="dynamic-counter" data-target="247">0</span>+</div>
-                    <div class="stat-label">Ancient Texts</div>
+            <div class="library-features">
+                <div class="feature-item">
+                    <div class="feature-title"><i class="fas fa-scroll"></i> Ancient Wisdom</div>
+                    <p class="feature-desc">Complete texts from Eastern and Western traditions, including the Vedas, Tao Te Ching, Plato's dialogues, and Kabbalistic works.</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number"><span class="dynamic-counter" data-target="156">0</span>+</div>
-                    <div class="stat-label">Scientific Papers</div>
+                
+                <div class="feature-item">
+                    <div class="feature-title"><i class="fas fa-microscope"></i> Scientific Papers</div>
+                    <p class="feature-desc">Peer-reviewed research on quantum mechanics, consciousness studies, quantum biology, and cutting-edge physics.</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number"><span class="dynamic-counter" data-target="89">0</span>+</div>
-                    <div class="stat-label">Philosophical Works</div>
+                
+                <div class="feature-item">
+                    <div class="feature-title"><i class="fas fa-brain"></i> Philosophy & Psychology</div>
+                    <p class="feature-desc">Works on consciousness, mysticism, epistemology, and the nature of reality from ancient to contemporary thinkers.</p>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-number"><span class="dynamic-counter" data-target="42">0</span>+</div>
-                    <div class="stat-label">Practical Manuals</div>
+                
+                <div class="feature-item">
+                    <div class="feature-title"><i class="fas fa-crown"></i> Practical Mastery</div>
+                    <p class="feature-desc">Manuals on meditation, quantum coherence practices, consciousness development, and personal transformation.</p>
                 </div>
             </div>
             
@@ -2208,7 +2209,7 @@
                 — Jorge Luis Borges, "The Library of Babel"
             </p>
             
-            <a href="#" class="portal-button" id="libraryPortalButton">Enter Quantum Library</a>
+            <a href="https://sirfree33.github.io/library.html" target="_blank" class="portal-button">Enter Quantum Library</a>
             
             <p style="color: var(--ancient-parchment); margin-top: 2.5rem; font-size: 0.95rem; opacity: 0.7;">
                 <i class="fas fa-info-circle" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i>
@@ -2477,47 +2478,6 @@
                 }
             },
             
-            // ===== DYNAMIC LIBRARY COUNTER =====
-            initLibraryCounter: function() {
-                const counters = document.querySelectorAll('.dynamic-counter');
-                const librarySection = document.getElementById('library');
-                let hasAnimated = false;
-                
-                if (!counters.length || !librarySection) return;
-                
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting && !hasAnimated) {
-                            QuantumOdyssey.animateCounters();
-                            hasAnimated = true;
-                        }
-                    });
-                }, {
-                    threshold: 0.3,
-                    rootMargin: '0px 0px -100px 0px'
-                });
-                
-                observer.observe(librarySection);
-            },
-            
-            animateCounters: function() {
-                document.querySelectorAll('.dynamic-counter').forEach(counter => {
-                    const target = parseInt(counter.getAttribute('data-target'));
-                    const duration = 2000; // 2 seconds
-                    const step = target / (duration / 16); // 60fps
-                    let current = 0;
-                    
-                    const timer = setInterval(() => {
-                        current += step;
-                        if (current >= target) {
-                            current = target;
-                            clearInterval(timer);
-                        }
-                        counter.textContent = Math.floor(current);
-                    }, 16);
-                });
-            },
-            
             // ===== NOTIFICATION SYSTEM =====
             showNotification: function(message) {
                 // Create notification element
@@ -2560,58 +2520,6 @@
                         content.classList.toggle('expanded');
                         this.textContent = content.classList.contains('expanded') ? '−' : '+';
                     });
-                });
-            },
-            
-            // ===== LIBRARY PORTAL =====
-            initLibraryPortal: function() {
-                const portalButton = document.getElementById('libraryPortalButton');
-                if (!portalButton) return;
-                
-                portalButton.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    QuantumOdyssey.showNotification('🚀 Preparing quantum portal to the Infinite Library...');
-                    
-                    // Create a portal opening effect
-                    const portalEffect = document.createElement('div');
-                    portalEffect.style.cssText = `
-                        position: fixed;
-                        top: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background: radial-gradient(circle at center, rgba(0,245,255,0.8) 0%, transparent 70%);
-                        z-index: 10002;
-                        animation: portalOpen 1.5s ease forwards;
-                        pointer-events: none;
-                    `;
-                    
-                    // Add CSS for portal animation
-                    const style = document.createElement('style');
-                    style.textContent = `
-                        @keyframes portalOpen {
-                            0% { opacity: 0; transform: scale(0.1); }
-                            50% { opacity: 1; transform: scale(1); }
-                            100% { opacity: 0; transform: scale(1.5); }
-                        }
-                        @keyframes slideIn {
-                            from { transform: translateX(100%); opacity: 0; }
-                            to { transform: translateX(0); opacity: 1; }
-                        }
-                        @keyframes slideOut {
-                            from { transform: translateX(0); opacity: 1; }
-                            to { transform: translateX(100%); opacity: 0; }
-                        }
-                    `;
-                    document.head.appendChild(style);
-                    
-                    document.body.appendChild(portalEffect);
-                    
-                    // Simulate loading library
-                    setTimeout(() => {
-                        QuantumOdyssey.showNotification('📚 Infinite Library portal established. Content loading in quantum superposition...');
-                        portalEffect.remove();
-                    }, 1500);
                 });
             },
             
@@ -2707,9 +2615,7 @@
                 // Initialize all systems
                 this.initQuantumCosmos();
                 this.initNavigation();
-                this.initLibraryCounter();
                 this.initInsightToggles();
-                this.initLibraryPortal();
                 this.initAnimations();
                 this.initEasterEgg();
                 
