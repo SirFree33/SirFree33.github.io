@@ -7,24 +7,29 @@
     <meta name="keywords" content="quantum physics, consciousness, many-worlds interpretation, Copenhagen interpretation, ancient wisdom, evolution, transcendence, universe, existence, philosophy, mysticism, science, meditation, mastery">
     <meta name="author" content="SirFree33 | Quantum Odyssey Research Institute">
     
-    <!-- Google AdSense -->
+    <!-- Preconnect for critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    
+    <!-- Google AdSense (deferred to not block rendering) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
     
     <title>Quantum Odyssey: The Unified Theory of Existence | Ancient Wisdom Meets Quantum Science</title>
     
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&family=Playfair+Display:wght@400;500;600&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Optimized Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400&family=Playfair+Display:wght@400;500;600&family=Philosopher:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     
-    <!-- Font Awesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Font Awesome with loading optimization -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" media="print" onload="this.media='all'">
     
-    <!-- Particle.js for quantum background -->
-    <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Particle.js deferred -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" defer></script>
     
     <style>
-        /* ===== QUANTUM COSMOS VARIABLES ===== */
+        /* ===== CRITICAL CSS (Above-the-fold) ===== */
         :root {
             --quantum-abyss: #000510;
             --starlight-gold: #FFD700;
@@ -38,20 +43,17 @@
             --gold-glow: rgba(255, 215, 0, 0.2);
             --purple-glow: rgba(157, 78, 221, 0.2);
             --cosmic-border: rgba(0, 245, 255, 0.4);
-            --quantum-gradient: linear-gradient(135deg, var(--quantum-abyss) 0%, var(--dark-matter) 50%, var(--quantum-field) 100%);
-            --cosmic-radial: radial-gradient(circle at 50% 50%, var(--quantum-field), transparent 70%);
             --header-height: 80px;
         }
         
-        /* ===== COSMIC RESET & BASE ===== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            scroll-behavior: smooth;
         }
         
         html {
+            scroll-behavior: smooth;
             scroll-padding-top: var(--header-height);
         }
         
@@ -59,7 +61,7 @@
             font-family: 'Inter', sans-serif;
             line-height: 1.9;
             color: var(--ancient-parchment);
-            background: var(--quantum-gradient);
+            background: linear-gradient(135deg, var(--quantum-abyss) 0%, var(--dark-matter) 50%, var(--quantum-field) 100%);
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
@@ -67,43 +69,7 @@
             padding-top: var(--header-height);
         }
         
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: 
-                var(--cosmic-radial),
-                radial-gradient(circle at 20% 30%, rgba(0, 245, 255, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 40% 80%, rgba(157, 78, 221, 0.08) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: -3;
-            animation: cosmicDrift 120s linear infinite;
-        }
-        
-        @keyframes cosmicDrift {
-            0% { transform: translate(0, 0) rotate(0deg); }
-            33% { transform: translate(2%, 1%) rotate(0.5deg); }
-            66% { transform: translate(-1%, 2%) rotate(-0.5deg); }
-            100% { transform: translate(0, 0) rotate(0deg); }
-        }
-        
-        /* ===== QUANTUM COSMIC CANVAS ===== */
-        #quantum-cosmos {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -2;
-            opacity: 0.7;
-        }
-        
-        /* ===== ELEGANT CELESTIAL NAVIGATION ===== */
+        /* Essential navigation styles */
         .celestial-navigation {
             position: fixed;
             top: 0;
@@ -120,12 +86,6 @@
             align-items: center;
         }
         
-        .celestial-navigation.scrolled {
-            height: 70px;
-            background: rgba(10, 15, 30, 0.98);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
-        }
-        
         .navigation-container {
             max-width: 1600px;
             width: 100%;
@@ -134,12 +94,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-        
-        .quantum-signature {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
         }
         
         .quantum-logo {
@@ -155,8 +109,87 @@
             transition: all 0.3s ease;
         }
         
+        /* Critical content visibility */
+        .grand-cosmic-portal {
+            min-height: calc(100vh - var(--header-height));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 6rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cosmic-manifesto {
+            font-family: 'Philosopher', serif;
+            font-size: 5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(45deg, var(--nebula-teal), var(--starlight-gold), var(--consciousness-purple));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 
+                0 0 40px rgba(0, 245, 255, 0.4),
+                0 0 80px rgba(157, 78, 221, 0.2);
+            line-height: 1.1;
+        }
+        
+        /* ===== DEFERRED STYLES (Below-the-fold) ===== */
+        @media screen and (min-width: 768px) {
+            body::before {
+                content: '';
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: 
+                    radial-gradient(circle at 50% 50%, var(--quantum-field), transparent 70%),
+                    radial-gradient(circle at 20% 30%, rgba(0, 245, 255, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 40% 80%, rgba(157, 78, 221, 0.08) 0%, transparent 50%);
+                pointer-events: none;
+                z-index: -3;
+                animation: cosmicDrift 120s linear infinite;
+            }
+        }
+        
+        @keyframes cosmicDrift {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(2%, 1%) rotate(0.5deg); }
+            66% { transform: translate(-1%, 2%) rotate(-0.5deg); }
+            100% { transform: translate(0, 0) rotate(0deg); }
+        }
+        
+        /* Quantum Cosmos Canvas */
+        #quantum-cosmos {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -2;
+            opacity: 0.7;
+        }
+        
+        /* Enhanced navigation */
+        .celestial-navigation.scrolled {
+            height: 70px;
+            background: rgba(10, 15, 30, 0.98);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.7);
+        }
+        
         .celestial-navigation.scrolled .quantum-logo {
             font-size: 1.9rem;
+        }
+        
+        .quantum-signature {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
         
         .logo-subtitle {
@@ -233,7 +266,7 @@
             padding: 0.5rem;
         }
         
-        /* ===== NEW GOOGLE ADSENSE BANNER STYLES ===== */
+        /* Google Ad Banners */
         .google-ad-banner {
             width: 100%;
             background: rgba(255, 255, 255, 0.03);
@@ -266,7 +299,7 @@
             font-weight: 500;
         }
         
-        /* ===== OPTIMIZED AD CONTAINERS ===== */
+        /* Ad Containers */
         .cosmic-ad-container {
             background: linear-gradient(135deg, rgba(10, 15, 30, 0.9), rgba(26, 32, 54, 0.9));
             border-radius: 10px;
@@ -319,39 +352,12 @@
             margin-top: 0.3rem;
         }
         
-        /* ===== GRAND COSMIC PORTAL ===== */
-        .grand-cosmic-portal {
-            min-height: calc(100vh - var(--header-height));
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 6rem 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-        
+        /* Portal Content */
         .portal-content {
             max-width: 1100px;
             position: relative;
             z-index: 2;
             margin-top: 2rem;
-        }
-        
-        .cosmic-manifesto {
-            font-family: 'Philosopher', serif;
-            font-size: 5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            background: linear-gradient(45deg, var(--nebula-teal), var(--starlight-gold), var(--consciousness-purple));
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 
-                0 0 40px rgba(0, 245, 255, 0.4),
-                0 0 80px rgba(157, 78, 221, 0.2);
-            animation: cosmicBreathing 10s ease-in-out infinite;
-            line-height: 1.1;
         }
         
         @keyframes cosmicBreathing {
@@ -367,6 +373,10 @@
                     0 0 100px rgba(255, 215, 0, 0.3);
                 transform: scale(1.02);
             }
+        }
+        
+        .cosmic-manifesto {
+            animation: cosmicBreathing 10s ease-in-out infinite;
         }
         
         .portal-subtitle {
@@ -424,7 +434,7 @@
             60% { transform: translateY(-4px); }
         }
         
-        /* ===== PERFECTED NON-OVERLAPPING QUANTUM TIMELINE ===== */
+        /* Quantum Timeline */
         .quantum-timeline {
             max-width: 1400px;
             margin: 0 auto;
@@ -449,7 +459,7 @@
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
-            z-index: 10; /* Ensure text is above the line */
+            z-index: 10;
         }
         
         .timeline-item.visible {
@@ -477,7 +487,7 @@
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
             transition: all 0.5s ease;
             cursor: pointer;
-            z-index: 12; /* Above the timeline line */
+            z-index: 12;
             position: relative;
         }
         
@@ -494,7 +504,7 @@
             flex: 0 0 150px;
             text-align: center;
             position: relative;
-            z-index: 13; /* Above everything */
+            z-index: 13;
         }
         
         .year-circle {
@@ -558,20 +568,6 @@
             z-index: 2;
         }
         
-        /* Enhanced text readability with subtle glow */
-        .timeline-content p::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            z-index: 1;
-            pointer-events: none;
-        }
-        
         .timeline-connector {
             position: absolute;
             left: 50%;
@@ -585,7 +581,7 @@
                 var(--consciousness-purple) 95%, 
                 transparent 100%);
             transform: translateX(-50%);
-            z-index: 5; /* Behind the text */
+            z-index: 5;
         }
         
         .timeline-dot {
@@ -601,7 +597,7 @@
             border: 2px solid var(--ancient-parchment);
         }
         
-        /* ===== ENHANCED QUANTUM SCROLL SECTIONS ===== */
+        /* Quantum Scroll Sections */
         .quantum-scroll-section {
             max-width: 1400px;
             margin: 0 auto;
@@ -629,19 +625,6 @@
             box-shadow: 
                 0 25px 60px rgba(0, 0, 0, 0.5),
                 inset 0 1px 0 rgba(255, 255, 255, 0.15);
-        }
-        
-        .cosmic-chapter::before {
-            content: '';
-            position: absolute;
-            top: -100%;
-            left: -100%;
-            width: 300%;
-            height: 300%;
-            background: radial-gradient(circle, var(--quantum-glow) 0%, transparent 70%);
-            animation: quantumOrbit 60s linear infinite;
-            opacity: 0.1;
-            z-index: 1;
         }
         
         @keyframes quantumOrbit {
@@ -710,7 +693,7 @@
             font-family: 'Cormorant Garamond', serif;
         }
         
-        /* ===== INTERACTIVE QUANTUM INSIGHTS ===== */
+        /* Interactive Quantum Insights */
         .quantum-insight {
             margin: 2.5rem 0;
             padding: 2.5rem;
@@ -780,7 +763,7 @@
             max-height: 2000px;
         }
         
-        /* ===== INTERACTIVE ANCIENT WISDOM TABLES ===== */
+        /* Ancient Wisdom Tables */
         .ancient-table-container {
             overflow-x: auto;
             margin: 4rem 0;
@@ -861,7 +844,7 @@
             box-shadow: 0 4px 10px rgba(0, 245, 255, 0.15);
         }
         
-        /* ===== INTERACTIVE MASTERY MANUALS ===== */
+        /* Mastery Manuals */
         .mastery-manual {
             background: linear-gradient(135deg, 
                 rgba(26, 32, 54, 0.95),
@@ -949,7 +932,7 @@
             border-color: #4CAF50;
         }
         
-        /* ===== INTERACTIVE QUANTUM INTERPRETATION COMPARISON ===== */
+        /* Quantum Interpretation Comparison */
         .interpretation-comparison {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
@@ -1042,7 +1025,7 @@
             font-size: 0.9rem;
         }
         
-        /* ===== GRAND INFINITE LIBRARY ===== */
+        /* Grand Infinite Library */
         .grand-infinite-library {
             background: linear-gradient(135deg, 
                 rgba(26, 32, 54, 0.95),
@@ -1058,17 +1041,6 @@
             position: relative;
             overflow: hidden;
             max-width: 1100px;
-        }
-        
-        .library-glow {
-            position: absolute;
-            top: -150%;
-            left: -150%;
-            width: 400%;
-            height: 400%;
-            background: radial-gradient(circle, rgba(255,215,0,0.12) 0%, transparent 70%);
-            animation: librarySpin 80s linear infinite;
-            z-index: 1;
         }
         
         @keyframes librarySpin {
@@ -1171,7 +1143,7 @@
             box-shadow: 0 20px 50px rgba(255, 215, 0, 0.4);
         }
         
-        /* ===== ENHANCED QUANTUM FOOTER WITH SUPPORT SECTION ===== */
+        /* Quantum Footer */
         .quantum-footer {
             background: rgba(10, 15, 30, 0.95);
             padding: 5rem 2rem 3rem;
@@ -1249,7 +1221,7 @@
             text-shadow: 0 0 10px rgba(0, 245, 255, 0.5);
         }
         
-        /* ===== SUPPORT PROJECT SECTION ===== */
+        /* Support Project Section */
         .support-project {
             background: linear-gradient(135deg, 
                 rgba(157, 78, 221, 0.08),
@@ -1382,7 +1354,7 @@
             font-size: 1rem;
         }
         
-        /* ===== SCROLL PROGRESS ENHANCEMENT ===== */
+        /* Scroll Progress */
         .scroll-progress {
             position: fixed;
             top: var(--header-height);
@@ -1395,7 +1367,7 @@
             box-shadow: 0 0 15px rgba(0, 245, 255, 0.4);
         }
         
-        /* ===== BACK TO PORTAL BUTTON ===== */
+        /* Back to Portal Button */
         .back-to-portal {
             position: fixed;
             bottom: 2.5rem;
@@ -1428,6 +1400,58 @@
             color: var(--dark-matter);
             transform: translateY(-8px) rotate(360deg);
             box-shadow: 0 12px 35px rgba(0, 245, 255, 0.5);
+        }
+        
+        /* Quantum Citation and Code */
+        .quantum-citation {
+            background: rgba(0, 245, 255, 0.08);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--starlight-gold);
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--ancient-parchment);
+        }
+        
+        .citation-source {
+            display: block;
+            margin-top: 0.5rem;
+            font-weight: 600;
+            color: var(--nebula-teal);
+        }
+        
+        .quantum-code {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 2rem;
+            border-radius: 10px;
+            border: 1px solid var(--nebula-teal);
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--starlight-gold);
+            margin: 2rem 0;
+            overflow-x: auto;
+        }
+        
+        .code-language {
+            color: var(--nebula-teal);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .quantum-highlight {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05), rgba(0, 245, 255, 0.05));
+            padding: 2.5rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            margin: 3rem 0;
+        }
+        
+        .highlight-title {
+            font-size: 1.5rem;
+            color: var(--starlight-gold);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
         }
         
         /* ===== RESPONSIVE DESIGN ===== */
@@ -1669,7 +1693,7 @@
                     <div class="logo-subtitle">The Unified Theory of Existence</div>
                 </div>
             </div>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
             </button>
             <div class="cosmic-compass" id="navCompass">
@@ -1858,7 +1882,6 @@
     <!-- SECOND GOOGLE AD BANNER (AdSense) -->
     <div class="google-ad-banner" style="max-width: 1400px; margin: 2rem auto;">
         <div class="google-ad-label">Advertisement</div>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
         <ins class="adsbygoogle"
              style="display:block; width: 100%;"
              data-ad-client="ca-pub-2958343227558642"
@@ -1954,7 +1977,6 @@
     <!-- THIRD GOOGLE AD BANNER (AdSense) -->
     <div class="google-ad-banner" style="max-width: 1400px; margin: 2rem auto;">
         <div class="google-ad-label">Advertisement</div>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
         <ins class="adsbygoogle"
              style="display:block; width: 100%;"
              data-ad-client="ca-pub-2958343227558642"
@@ -2031,8 +2053,6 @@
         <div class="cosmic-ad-container">
             <div class="ad-label"><i class="fas fa-brain"></i> Consciousness Research</div>
             <div class="ad-content">
-                <!-- AdSense Ad Unit 2 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-format="autorelaxed"
@@ -2223,8 +2243,6 @@
         <div class="cosmic-ad-container">
             <div class="ad-label"><i class="fas fa-crown"></i> Quantum Mastery</div>
             <div class="ad-content">
-                <!-- AdSense Ad Unit 3 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-client="ca-pub-2958343227558642"
@@ -2371,8 +2389,6 @@
         <div class="cosmic-ad-container">
             <div class="ad-label"><i class="fas fa-scroll"></i> Ancient Wisdom</div>
             <div class="ad-content">
-                <!-- AdSense Ad Unit 4 -->
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2958343227558642" crossorigin="anonymous"></script>
                 <ins class="adsbygoogle"
                      style="display:block"
                      data-ad-client="ca-pub-2958343227558642"
@@ -2415,4 +2431,322 @@
                 
                 <div class="feature-item">
                     <div class="feature-title"><i class="fas fa-crown"></i> Practical Mastery</div>
-                    <p class="feature-desc">Manuals
+                    <p class="feature-desc">Manuals on quantum-inspired personal development, strategic thinking, and consciousness expansion techniques.</p>
+                </div>
+            </div>
+            
+            <a href="#" class="portal-button">Enter the Library Portal</a>
+            
+            <div style="margin-top: 4rem;">
+                <p style="color: var(--ancient-parchment); opacity: 0.8; font-size: 0.95rem;">
+                    <i class="fas fa-info-circle" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i>
+                    The library is constantly expanding. Submit your suggestions for inclusion via the contact form below.
+                </p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Back to Portal Button -->
+    <a href="#portal" class="back-to-portal" id="backToPortal" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+    
+    <!-- Enhanced Quantum Footer with Support Section -->
+    <footer class="quantum-footer">
+        <div class="footer-content">
+            <p class="cosmic-epigraph">
+                "We are not human beings having a spiritual experience. We are spiritual beings having a human experience." 
+                <span style="display: block; margin-top: 1rem; font-size: 1.2rem;">— Pierre Teilhard de Chardin</span>
+            </p>
+            
+            <div class="quantum-divider"></div>
+            
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="column-title">About This Work</h3>
+                    <div class="contact-info">
+                        <p>The Quantum Odyssey represents 15+ years of research synthesizing ancient wisdom traditions with modern quantum physics. This living document is continually updated as new insights emerge.</p>
+                        <a href="mailto:quantumodyssey@research.institute" class="contact-email">
+                            <i class="fas fa-envelope"></i> quantumodyssey@research.institute
+                        </a>
+                    </div>
+                    
+                    <div class="support-project">
+                        <h4 class="support-title"><i class="fas fa-heart"></i> Support This Project</h4>
+                        <p class="support-text">If this work has expanded your understanding of reality, consider supporting ongoing research and content creation.</p>
+                        <a href="https://ko-fi.com/sirfree33" class="ko-fi-button" target="_blank" rel="noopener noreferrer">
+                            <i class="fas fa-coffee"></i> Support on Ko-fi
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="column-title">Quantum Resources</h3>
+                    <div class="footer-links">
+                        <a href="https://plato.stanford.edu/entries/qt-issues/" class="footer-link" target="_blank" rel="noopener noreferrer">Stanford Quantum Philosophy</a>
+                        <a href="https://arxiv.org/list/quant-ph/recent" class="footer-link" target="_blank" rel="noopener noreferrer">Quantum Physics arXiv</a>
+                        <a href="https://www.sacred-texts.com/" class="footer-link" target="_blank" rel="noopener noreferrer">Sacred Texts Archive</a>
+                        <a href="https://www.consciousness.arizona.edu/" class="footer-link" target="_blank" rel="noopener noreferrer">Center for Consciousness Studies</a>
+                        <a href="https://www.gutenberg.org/" class="footer-link" target="_blank" rel="noopener noreferrer">Project Gutenberg</a>
+                        <a href="https://www.ncbi.nlm.nih.gov/pmc/" class="footer-link" target="_blank" rel="noopener noreferrer">PubMed Central</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="column-title">Connect & Explore</h3>
+                    <div class="footer-links">
+                        <a href="#portal" class="footer-link">Quantum Portal</a>
+                        <a href="#primordial" class="footer-link">Primordial Symphony</a>
+                        <a href="#evolution" class="footer-link">Evolutionary Arc</a>
+                        <a href="#consciousness" class="footer-link">Quantum Consciousness</a>
+                        <a href="#interpretations" class="footer-link">Interpretations</a>
+                        <a href="#mastery" class="footer-link">Practical Mastery</a>
+                        <a href="#library" class="footer-link">Infinite Library</a>
+                    </div>
+                    
+                    <div class="disclaimer-box">
+                        <h4 class="disclaimer-title">Academic Disclaimer</h4>
+                        <p class="disclaimer-text">This work represents a philosophical synthesis and theoretical framework. While grounded in scientific and historical sources, it includes speculative connections intended to provoke thought and exploration.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="quantum-divider"></div>
+            
+            <div class="cosmic-copyright">
+                <p>© 2024 Quantum Odyssey Research Institute. All content is provided for educational and philosophical exploration.</p>
+                <p>Created with <span style="color: var(--nebula-teal);">♥</span> by <span class="copyright-by">SirFree33</span> | Version 2.1.4 | Last Updated: March 2024</p>
+                <p style="margin-top: 1rem; font-size: 0.85rem; opacity: 0.6;">This work is licensed under a <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" style="color: var(--nebula-teal); text-decoration: none;" target="_blank" rel="noopener noreferrer">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Initialize global QuantumOdyssey object
+        window.QuantumOdyssey = window.QuantumOdyssey || {};
+        
+        // Performance-optimized DOM ready handler
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize components with requestAnimationFrame for better performance
+            requestAnimationFrame(function() {
+                QuantumOdyssey.initNavigation();
+                QuantumOdyssey.initScrollEffects();
+                QuantumOdyssey.initTimeline();
+                QuantumOdyssey.initInteractiveElements();
+                QuantumOdyssey.initParticles();
+            });
+        });
+        
+        QuantumOdyssey.initNavigation = function() {
+            const mobileToggle = document.getElementById('mobileMenuToggle');
+            const navCompass = document.getElementById('navCompass');
+            
+            if (mobileToggle) {
+                mobileToggle.addEventListener('click', function() {
+                    navCompass.classList.toggle('mobile-active');
+                });
+            }
+            
+            // Close mobile menu when clicking a nav link
+            document.querySelectorAll('.nav-star').forEach(link => {
+                link.addEventListener('click', function() {
+                    navCompass.classList.remove('mobile-active');
+                });
+            });
+            
+            // Navbar scroll effect
+            const navbar = document.querySelector('.celestial-navigation');
+            window.addEventListener('scroll', QuantumOdyssey.debounce(function() {
+                if (window.pageYOffset > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            }, 10));
+        };
+        
+        QuantumOdyssey.initScrollEffects = function() {
+            // Scroll progress bar
+            const scrollProgress = document.querySelector('.scroll-progress');
+            window.addEventListener('scroll', QuantumOdyssey.debounce(function() {
+                const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (window.pageYOffset / windowHeight) * 100;
+                if (scrollProgress) {
+                    scrollProgress.style.width = scrolled + '%';
+                }
+            }, 10));
+            
+            // Back to top button
+            const backButton = document.getElementById('backToPortal');
+            window.addEventListener('scroll', QuantumOdyssey.debounce(function() {
+                if (window.pageYOffset > 300) {
+                    backButton.classList.add('visible');
+                } else {
+                    backButton.classList.remove('visible');
+                }
+            }, 10));
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        e.preventDefault();
+                        const headerOffset = 80;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+                        
+                        window.scrollTo({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        };
+        
+        QuantumOdyssey.initTimeline = function() {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            
+            timelineItems.forEach(item => observer.observe(item));
+        };
+        
+        QuantumOdyssey.initInteractiveElements = function() {
+            // Quantum insight toggles
+            document.querySelectorAll('.insight-toggle').forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    const insight = this.closest('.quantum-insight');
+                    const content = insight.querySelector('.insight-content');
+                    content.classList.toggle('expanded');
+                    this.textContent = content.classList.contains('expanded') ? '−' : '+';
+                });
+            });
+            
+            // Interpretation cards
+            QuantumOdyssey.selectInterpretation = function(card) {
+                document.querySelectorAll('.interpretation-card').forEach(c => {
+                    c.classList.remove('selected');
+                });
+                card.classList.add('selected');
+            };
+            
+            // Step completion toggles
+            QuantumOdyssey.toggleCompletion = function(element) {
+                element.classList.toggle('completed');
+                element.textContent = element.classList.contains('completed') ? 
+                    'Completed ✓' : 'Mark Complete';
+            };
+            
+            // Table links optimization
+            document.querySelectorAll('.table-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    // Let default behavior handle external links
+                    // No need to prevent default since target="_blank" is already set
+                });
+            });
+        };
+        
+        QuantumOdyssey.initParticles = function() {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('quantum-cosmos', {
+                    particles: {
+                        number: { value: 50, density: { enable: true, value_area: 800 } },
+                        color: { value: ["#00F5FF", "#FFD700", "#9D4EDD"] },
+                        shape: { type: "circle" },
+                        opacity: { value: 0.3, random: true },
+                        size: { value: 3, random: true },
+                        line_linked: {
+                            enable: true,
+                            distance: 150,
+                            color: "#00F5FF",
+                            opacity: 0.1,
+                            width: 1
+                        },
+                        move: {
+                            enable: true,
+                            speed: 1,
+                            direction: "none",
+                            random: true,
+                            straight: false,
+                            out_mode: "out",
+                            bounce: false
+                        }
+                    },
+                    interactivity: {
+                        detect_on: "canvas",
+                        events: {
+                            onhover: { enable: true, mode: "repulse" },
+                            onclick: { enable: true, mode: "push" }
+                        }
+                    },
+                    retina_detect: true
+                });
+            }
+        };
+        
+        // Performance optimization utilities
+        QuantumOdyssey.debounce = function(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
+        };
+        
+        QuantumOdyssey.throttle = function(func, limit) {
+            let inThrottle;
+            return function() {
+                const args = arguments;
+                const context = this;
+                if (!inThrottle) {
+                    func.apply(context, args);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        };
+        
+        // Initialize AdSense after page load
+        window.addEventListener('load', function() {
+            if (typeof adsbygoogle !== 'undefined') {
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            }
+        });
+        
+        // Optimize animations for performance
+        QuantumOdyssey.reduceMotion = function() {
+            const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+            if (prefersReducedMotion.matches) {
+                document.querySelectorAll('*').forEach(el => {
+                    el.style.animationPlayState = 'paused';
+                });
+            }
+        };
+        
+        // Call reduce motion check
+        window.matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change', QuantumOdyssey.reduceMotion);
+        QuantumOdyssey.reduceMotion();
+    </script>
+</body>
+</html>
