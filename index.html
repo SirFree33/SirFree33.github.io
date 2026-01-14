@@ -103,7 +103,7 @@
             opacity: 0.7;
         }
         
-        /* ===== ELEGANT CELESTIAL NAVIGATION (SMALLER HEADER) ===== */
+        /* ===== ELEGANT CELESTIAL NAVIGATION ===== */
         .celestial-navigation {
             position: fixed;
             top: 0;
@@ -231,216 +231,6 @@
             font-size: 1.5rem;
             cursor: pointer;
             padding: 0.5rem;
-        }
-        
-        /* ===== FIXED TIMELINE LAYOUT ===== */
-        .quantum-timeline {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 5rem 2rem;
-            position: relative;
-        }
-        
-        .timeline-container {
-            position: relative;
-            min-height: 1200px; /* Increased height to prevent overlap */
-            margin: 3rem 0;
-        }
-        
-        .timeline-line {
-            position: absolute;
-            left: 50%;
-            top: 0;
-            bottom: 0;
-            width: 4px;
-            background: linear-gradient(to bottom, 
-                transparent 0%, 
-                var(--nebula-teal) 5%, 
-                var(--starlight-gold) 50%, 
-                var(--consciousness-purple) 95%, 
-                transparent 100%);
-            transform: translateX(-50%);
-            z-index: 1;
-        }
-        
-        .timeline-event {
-            position: absolute;
-            width: 380px;
-            padding: 1.8rem;
-            background: rgba(10, 15, 30, 0.9);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            border: 1px solid var(--cosmic-border);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-            transition: all 0.5s ease;
-            cursor: pointer;
-            z-index: 2;
-            overflow: visible; /* Ensure text is visible */
-        }
-        
-        /* ADJUSTED TIMELINE POSITIONS - No overlapping */
-        .timeline-event.left:nth-child(1) { top: 5%; }
-        .timeline-event.right:nth-child(2) { top: 20%; }
-        .timeline-event.left:nth-child(3) { top: 35%; }
-        .timeline-event.right:nth-child(4) { top: 50%; }
-        .timeline-event.left:nth-child(5) { top: 65%; }
-        .timeline-event.right:nth-child(6) { top: 80%; }
-        
-        .timeline-event.left {
-            left: calc(50% - 430px);
-        }
-        
-        .timeline-event.right {
-            left: calc(50% + 50px);
-        }
-        
-        .timeline-event:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.25);
-            border-color: var(--starlight-gold);
-            background: rgba(10, 15, 30, 0.95);
-        }
-        
-        .event-year {
-            font-size: 1.1rem;
-            color: var(--starlight-gold);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-        
-        .event-year::before {
-            content: '';
-            width: 12px;
-            height: 12px;
-            background: var(--nebula-teal);
-            border-radius: 50%;
-            box-shadow: 0 0 10px var(--quantum-glow);
-        }
-        
-        .event-title {
-            font-size: 1.3rem;
-            color: var(--nebula-teal);
-            margin-bottom: 0.8rem;
-            font-family: 'Cormorant Garamond', serif;
-            font-weight: 600;
-        }
-        
-        .timeline-event p {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: var(--ancient-parchment);
-            opacity: 0.9;
-        }
-        
-        /* ===== ENHANCED QUANTUM SCROLL SECTIONS ===== */
-        .quantum-scroll-section {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 6rem 2rem;
-            position: relative;
-        }
-        
-        .cosmic-chapter {
-            background: rgba(10, 15, 30, 0.85);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            padding: 4rem;
-            margin-bottom: 5rem;
-            border: 1px solid var(--cosmic-border);
-            box-shadow: 
-                0 15px 40px rgba(0, 0, 0, 0.4),
-                inset 0 1px 0 rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: visible; /* Changed from hidden to visible */
-            transition: transform 0.6s ease, box-shadow 0.6s ease;
-        }
-        
-        .cosmic-chapter:hover {
-            transform: translateY(-6px);
-            box-shadow: 
-                0 25px 60px rgba(0, 0, 0, 0.5),
-                inset 0 1px 0 rgba(255, 255, 255, 0.15);
-        }
-        
-        .cosmic-chapter::before {
-            content: '';
-            position: absolute;
-            top: -100%;
-            left: -100%;
-            width: 300%;
-            height: 300%;
-            background: radial-gradient(circle, var(--quantum-glow) 0%, transparent 70%);
-            animation: quantumOrbit 60s linear infinite;
-            opacity: 0.1;
-        }
-        
-        @keyframes quantumOrbit {
-            0% { transform: rotate(0deg) scale(1); }
-            50% { transform: rotate(180deg) scale(1.1); }
-            100% { transform: rotate(360deg) scale(1); }
-        }
-        
-        .chapter-header {
-            display: flex;
-            align-items: flex-start;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            position: relative;
-            z-index: 2;
-        }
-        
-        .quantum-sigil {
-            font-size: 3.5rem;
-            min-width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--quantum-field), var(--dark-matter));
-            border: 2px solid var(--nebula-teal);
-            box-shadow: 
-                0 0 30px var(--quantum-glow),
-                inset 0 0 20px rgba(0, 245, 255, 0.1);
-            flex-shrink: 0;
-            animation: sigilPulse 6s infinite;
-        }
-        
-        @keyframes sigilPulse {
-            0%, 100% { 
-                box-shadow: 
-                    0 0 30px var(--quantum-glow),
-                    inset 0 0 20px rgba(0, 245, 255, 0.1);
-            }
-            50% { 
-                box-shadow: 
-                    0 0 40px var(--gold-glow),
-                    inset 0 0 25px rgba(255, 215, 0, 0.15);
-            }
-        }
-        
-        .chapter-title {
-            font-family: 'Philosopher', serif;
-            font-size: 3.2rem;
-            font-weight: 700;
-            color: var(--starlight-gold);
-            line-height: 1.2;
-            text-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
-            margin-bottom: 0.8rem;
-        }
-        
-        .chapter-subtitle {
-            font-size: 1.3rem;
-            color: var(--nebula-teal);
-            font-weight: 400;
-            letter-spacing: 1.2px;
-            opacity: 0.9;
-            border-left: 2px solid var(--nebula-teal);
-            padding-left: 1.2rem;
-            font-family: 'Cormorant Garamond', serif;
         }
         
         /* ===== NEW GOOGLE ADSENSE BANNER STYLES ===== */
@@ -600,6 +390,282 @@
             background: linear-gradient(90deg, transparent, var(--nebula-teal), var(--starlight-gold), var(--nebula-teal), transparent);
             margin: 3rem auto;
             border-radius: 2px;
+        }
+        
+        .cosmic-invitation {
+            position: absolute;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--nebula-teal);
+            font-size: 0.9rem;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            animation: quantumPulse 4s infinite;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        @keyframes quantumPulse {
+            0%, 100% { opacity: 0.4; transform: translateX(-50%) translateY(0); }
+            50% { opacity: 1; transform: translateX(-50%) translateY(-8px); }
+        }
+        
+        .invitation-arrow {
+            font-size: 1.5rem;
+            animation: arrowBounce 2s infinite;
+        }
+        
+        @keyframes arrowBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-8px); }
+            60% { transform: translateY(-4px); }
+        }
+        
+        /* ===== FIXED NON-OVERLAPPING QUANTUM TIMELINE ===== */
+        .quantum-timeline {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+            position: relative;
+        }
+        
+        .timeline-container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+            margin: 3rem 0;
+        }
+        
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            width: 100%;
+            position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .timeline-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+        
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            flex: 1;
+            padding: 2rem;
+            background: rgba(10, 15, 30, 0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid var(--cosmic-border);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            transition: all 0.5s ease;
+            cursor: pointer;
+            z-index: 2;
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 245, 255, 0.25);
+            border-color: var(--starlight-gold);
+            background: rgba(10, 15, 30, 0.95);
+        }
+        
+        .timeline-year {
+            flex: 0 0 150px;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+        }
+        
+        .year-circle {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--quantum-field), var(--dark-matter));
+            border: 3px solid var(--nebula-teal);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            box-shadow: 
+                0 0 30px var(--quantum-glow),
+                inset 0 0 20px rgba(0, 245, 255, 0.1);
+            position: relative;
+        }
+        
+        .year-number {
+            font-size: 1.8rem;
+            color: var(--starlight-gold);
+            font-weight: 700;
+            font-family: 'Philosopher', serif;
+        }
+        
+        .year-era {
+            font-size: 0.8rem;
+            color: var(--nebula-teal);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-top: 0.3rem;
+        }
+        
+        .event-title {
+            font-size: 1.5rem;
+            color: var(--nebula-teal);
+            margin-bottom: 1rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+        }
+        
+        .timeline-content p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--ancient-parchment);
+        }
+        
+        .timeline-connector {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, transparent, var(--nebula-teal), var(--starlight-gold), var(--consciousness-purple), transparent);
+            transform: translateX(-50%);
+            z-index: 1;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            width: 16px;
+            height: 16px;
+            background: var(--starlight-gold);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+        }
+        
+        /* ===== ENHANCED QUANTUM SCROLL SECTIONS ===== */
+        .quantum-scroll-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem;
+            position: relative;
+        }
+        
+        .cosmic-chapter {
+            background: rgba(10, 15, 30, 0.85);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 4rem;
+            margin-bottom: 5rem;
+            border: 1px solid var(--cosmic-border);
+            box-shadow: 
+                0 15px 40px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: visible;
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+        }
+        
+        .cosmic-chapter:hover {
+            transform: translateY(-6px);
+            box-shadow: 
+                0 25px 60px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+        }
+        
+        .cosmic-chapter::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, var(--quantum-glow) 0%, transparent 70%);
+            animation: quantumOrbit 60s linear infinite;
+            opacity: 0.1;
+        }
+        
+        @keyframes quantumOrbit {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(1.1); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        
+        .chapter-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .quantum-sigil {
+            font-size: 3.5rem;
+            min-width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--quantum-field), var(--dark-matter));
+            border: 2px solid var(--nebula-teal);
+            box-shadow: 
+                0 0 30px var(--quantum-glow),
+                inset 0 0 20px rgba(0, 245, 255, 0.1);
+            flex-shrink: 0;
+            animation: sigilPulse 6s infinite;
+        }
+        
+        @keyframes sigilPulse {
+            0%, 100% { 
+                box-shadow: 
+                    0 0 30px var(--quantum-glow),
+                    inset 0 0 20px rgba(0, 245, 255, 0.1);
+            }
+            50% { 
+                box-shadow: 
+                    0 0 40px var(--gold-glow),
+                    inset 0 0 25px rgba(255, 215, 0, 0.15);
+            }
+        }
+        
+        .chapter-title {
+            font-family: 'Philosopher', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--starlight-gold);
+            line-height: 1.2;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+            margin-bottom: 0.8rem;
+        }
+        
+        .chapter-subtitle {
+            font-size: 1.3rem;
+            color: var(--nebula-teal);
+            font-weight: 400;
+            letter-spacing: 1.2px;
+            opacity: 0.9;
+            border-left: 2px solid var(--nebula-teal);
+            padding-left: 1.2rem;
+            font-family: 'Cormorant Garamond', serif;
         }
         
         /* ===== INTERACTIVE QUANTUM INSIGHTS ===== */
@@ -1250,100 +1316,6 @@
             font-size: 1rem;
         }
         
-        /* ===== QUANTUM TYPOGRAPHY ENHANCEMENTS ===== */
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Philosopher', serif;
-            font-weight: 600;
-            line-height: 1.3;
-            margin-bottom: 1.2rem;
-        }
-        
-        p {
-            margin-bottom: 1.8rem;
-            color: var(--ancient-parchment);
-            font-size: 1.1rem;
-            line-height: 1.9;
-        }
-        
-        strong {
-            color: var(--starlight-gold);
-            font-weight: 700;
-        }
-        
-        em {
-            color: var(--nebula-teal);
-            font-style: italic;
-        }
-        
-        /* ===== QUANTUM HIGHLIGHTS ===== */
-        .quantum-highlight {
-            background: linear-gradient(90deg, 
-                rgba(0, 245, 255, 0.12), 
-                rgba(255, 215, 0, 0.12), 
-                rgba(0, 245, 255, 0.12));
-            padding: 2.5rem;
-            border-radius: 12px;
-            margin: 3.5rem 0;
-            border-left: 5px solid var(--nebula-teal);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .highlight-title {
-            font-size: 1.9rem;
-            color: var(--starlight-gold);
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 1.2rem;
-        }
-        
-        /* ===== QUANTUM CITATIONS ===== */
-        .quantum-citation {
-            background: rgba(26, 32, 54, 0.7);
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            font-style: italic;
-            color: var(--ancient-parchment);
-            border-left: 4px solid rgba(255, 215, 0, 0.5);
-            position: relative;
-        }
-        
-        .citation-source {
-            display: block;
-            text-align: right;
-            font-style: normal;
-            color: var(--nebula-teal);
-            font-size: 0.95rem;
-            margin-top: 1.2rem;
-        }
-        
-        /* ===== QUANTUM CODE BLOCKS ===== */
-        .quantum-code {
-            font-family: 'JetBrains Mono', monospace;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 1.8rem;
-            border-radius: 8px;
-            margin: 1.8rem 0;
-            border-left: 4px solid var(--nebula-teal);
-            color: var(--ancient-parchment);
-            font-size: 0.95rem;
-            overflow-x: auto;
-            position: relative;
-        }
-        
-        .code-language {
-            position: absolute;
-            top: 0.8rem;
-            right: 0.8rem;
-            background: var(--quantum-field);
-            padding: 0.25rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.85rem;
-            color: var(--nebula-teal);
-        }
-        
         /* ===== SCROLL PROGRESS ENHANCEMENT ===== */
         .scroll-progress {
             position: fixed;
@@ -1392,17 +1364,7 @@
             box-shadow: 0 12px 35px rgba(0, 245, 255, 0.5);
         }
         
-        /* ===== RESPONSIVE DESIGN ENHANCEMENTS ===== */
-        @media (max-width: 1400px) {
-            .quantum-scroll-section {
-                padding: 5rem 2rem;
-            }
-            
-            .cosmic-chapter {
-                padding: 3.5rem;
-            }
-        }
-        
+        /* ===== RESPONSIVE DESIGN ===== */
         @media (max-width: 1200px) {
             .navigation-container {
                 padding: 0 1.5rem;
@@ -1506,6 +1468,21 @@
                 padding: 0.6rem;
                 margin: 1.5rem auto;
             }
+            
+            /* Timeline adjustments for tablet */
+            .timeline-item {
+                flex-direction: column !important;
+                gap: 2rem;
+            }
+            
+            .timeline-year {
+                flex: 0 0 auto;
+            }
+            
+            .timeline-connector,
+            .timeline-dot {
+                display: none;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1535,34 +1512,6 @@
             
             .footer-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .timeline-container {
-                height: auto;
-                display: flex;
-                flex-direction: column;
-                gap: 2.5rem;
-                min-height: auto;
-            }
-            
-            .timeline-line {
-                display: none;
-            }
-            
-            .timeline-event {
-                position: relative;
-                width: 100%;
-                left: 0 !important;
-                top: auto !important;
-                margin-bottom: 1.5rem;
-            }
-            
-            .library-features {
-                gap: 1rem;
-            }
-            
-            .feature-item {
-                padding: 1.2rem;
             }
             
             .cosmic-ad-container {
@@ -1634,22 +1583,6 @@
             .google-ad-label {
                 font-size: 0.65rem;
                 letter-spacing: 0.5px;
-            }
-        }
-        
-        /* ===== PRINT STYLES ===== */
-        @media print {
-            .celestial-navigation,
-            .back-to-portal,
-            .cosmic-ad-container,
-            .google-ad-banner {
-                display: none;
-            }
-            
-            body {
-                color: #000;
-                background: #fff;
-                padding-top: 0;
             }
         }
     </style>
@@ -1729,7 +1662,7 @@
         </p>
     </div>
     
-    <!-- Interactive Quantum Timeline - FIXED OVERLAPPING -->
+    <!-- FIXED NON-OVERLAPPING QUANTUM TIMELINE -->
     <section class="quantum-timeline">
         <div class="cosmic-chapter">
             <div class="chapter-header">
@@ -1741,43 +1674,97 @@
             </div>
             
             <div class="timeline-container">
-                <div class="timeline-line"></div>
+                <!-- Vertical connector line -->
+                <div class="timeline-connector"></div>
                 
-                <!-- Adjusted positions with proper spacing -->
-                <div class="timeline-event left">
-                    <div class="event-year">1500 BCE</div>
-                    <div class="event-title">Rig Veda's Nasadiya Sukta</div>
-                    <p>"There was neither non-existence nor existence then..." - Ancient intuition of quantum superposition and potentiality, describing the universe before manifestation.</p>
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <div class="year-circle">
+                            <div class="year-number">1500 BCE</div>
+                            <div class="year-era">Ancient</div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="event-title">Rig Veda's Nasadiya Sukta</h3>
+                        <p>"There was neither non-existence nor existence then..." - Ancient intuition of quantum superposition and potentiality, describing the universe before manifestation. This profound insight predates modern quantum physics by millennia.</p>
+                    </div>
+                    <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
                 
-                <div class="timeline-event right">
-                    <div class="event-year">500 BCE</div>
-                    <div class="event-title">Lao Tzu's Tao Te Ching</div>
-                    <p>"The Tao that can be spoken is not the eternal Tao" - Complementarity principle in ancient form, acknowledging the limitations of language in describing ultimate reality.</p>
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <div class="year-circle">
+                            <div class="year-number">500 BCE</div>
+                            <div class="year-era">Ancient</div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="event-title">Lao Tzu's Tao Te Ching</h3>
+                        <p>"The Tao that can be spoken is not the eternal Tao" - Complementarity principle in ancient form, acknowledging the limitations of language in describing ultimate reality. The concept of Wu Wei (non-action) mirrors quantum non-interference.</p>
+                    </div>
+                    <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
                 
-                <div class="timeline-event left">
-                    <div class="event-year">1900 CE</div>
-                    <div class="event-title">Quantum Mechanics Born</div>
-                    <p>Planck, Einstein, Bohr lay foundation for quantum theory, unknowingly echoing ancient insights about the probabilistic nature of reality.</p>
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <div class="year-circle">
+                            <div class="year-number">1900 CE</div>
+                            <div class="year-era">Modern</div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="event-title">Quantum Mechanics Born</h3>
+                        <p>Planck, Einstein, Bohr lay foundation for quantum theory, unknowingly echoing ancient insights about the probabilistic nature of reality. Planck's constant establishes the quantum of action, revealing the discrete nature of energy.</p>
+                    </div>
+                    <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
                 
-                <div class="timeline-event right">
-                    <div class="event-year">1927 CE</div>
-                    <div class="event-title">Copenhagen Interpretation</div>
-                    <p>Bohr and Heisenberg formalize the observer effect and complementarity principle, establishing consciousness as integral to quantum reality.</p>
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <div class="year-circle">
+                            <div class="year-number">1927 CE</div>
+                            <div class="year-era">Modern</div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="event-title">Copenhagen Interpretation</h3>
+                        <p>Bohr and Heisenberg formalize the observer effect and complementarity principle, establishing consciousness as integral to quantum reality. The act of measurement collapses the wave function from possibilities to actuality.</p>
+                    </div>
+                    <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
                 
-                <div class="timeline-event left">
-                    <div class="event-year">1957 CE</div>
-                    <div class="event-title">Many-Worlds Interpretation</div>
-                    <p>Hugh Everett proposes parallel universes, mirroring Hindu concept of infinite Līlā and Buddhist realms of existence.</p>
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <div class="year-circle">
+                            <div class="year-number">1957 CE</div>
+                            <div class="year-era">Modern</div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="event-title">Many-Worlds Interpretation</h3>
+                        <p>Hugh Everett proposes parallel universes, mirroring Hindu concept of infinite Līlā and Buddhist realms of existence. All quantum possibilities are realized in branching universes, eliminating wave function collapse.</p>
+                    </div>
+                    <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
                 
-                <div class="timeline-event right">
-                    <div class="event-year">2024 CE</div>
-                    <div class="event-title">Quantum Odyssey Synthesis</div>
-                    <p>This work unifies ancient wisdom traditions with modern quantum understanding, creating a comprehensive map of consciousness evolution.</p>
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <div class="year-circle">
+                            <div class="year-number">2024 CE</div>
+                            <div class="year-era">Present</div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="event-title">Quantum Odyssey Synthesis</h3>
+                        <p>This work unifies ancient wisdom traditions with modern quantum understanding, creating a comprehensive map of consciousness evolution. Bridges Vedanta, Taoism, Kabbalah with quantum physics and consciousness studies.</p>
+                    </div>
+                    <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
             </div>
         </div>
@@ -2610,6 +2597,26 @@
                 });
             },
             
+            // ===== TIMELINE ANIMATIONS =====
+            initTimelineAnimations: function() {
+                const timelineItems = document.querySelectorAll('.timeline-item');
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                        }
+                    });
+                }, {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                });
+                
+                timelineItems.forEach(item => {
+                    observer.observe(item);
+                });
+            },
+            
             // ===== INTERACTIVE FUNCTIONS =====
             selectInterpretation: function(card) {
                 document.querySelectorAll('.interpretation-card').forEach(c => {
@@ -2678,102 +2685,13 @@
                 });
             },
             
-            // ===== QUANTUM ANIMATIONS =====
-            initAnimations: function() {
-                const chapters = document.querySelectorAll('.cosmic-chapter');
-                const timelineEvents = document.querySelectorAll('.timeline-event');
-                const manualSteps = document.querySelectorAll('.manual-step');
-                
-                // Chapter animations
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            entry.target.style.opacity = '1';
-                            entry.target.style.transform = 'translateY(0)';
-                        }
-                    });
-                }, {
-                    threshold: 0.1,
-                    rootMargin: '0px 0px -100px 0px'
-                });
-                
-                chapters.forEach(chapter => {
-                    chapter.style.opacity = '0';
-                    chapter.style.transform = 'translateY(50px)';
-                    chapter.style.transition = 'opacity 1s ease, transform 1s ease';
-                    observer.observe(chapter);
-                });
-                
-                // Timeline events animation
-                timelineEvents.forEach((event, index) => {
-                    event.style.opacity = '0';
-                    const isLeft = event.classList.contains('left');
-                    event.style.transform = `translateX(${isLeft ? '-40px' : '40px'})`;
-                    
-                    setTimeout(() => {
-                        event.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-                        event.style.opacity = '1';
-                        event.style.transform = 'translateX(0)';
-                    }, 300 + index * 150);
-                });
-                
-                // Manual steps animation
-                manualSteps.forEach((step, index) => {
-                    step.style.opacity = '0';
-                    step.style.transform = 'translateX(-15px)';
-                    
-                    setTimeout(() => {
-                        step.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-                        step.style.opacity = '1';
-                        step.style.transform = 'translateX(0)';
-                    }, 400 + index * 80);
-                });
-            },
-            
-            // ===== QUANTUM EASTER EGG =====
-            initEasterEgg: function() {
-                let konamiCode = '';
-                const konamiSequence = '38384040373937396665'; // Arrow keys + Enter
-                
-                document.addEventListener('keydown', (e) => {
-                    konamiCode += e.keyCode;
-                    if (konamiCode.length > 20) {
-                        konamiCode = konamiCode.substring(konamiCode.length - 20);
-                    }
-                    
-                    if (konamiCode.includes(konamiSequence)) {
-                        QuantumOdyssey.showNotification('🎮 Quantum Easter Egg Activated! You have unlocked hidden insight.');
-                        konamiCode = '';
-                        
-                        // Show hidden quantum insight
-                        const hiddenInsight = document.createElement('div');
-                        hiddenInsight.innerHTML = `
-                            <div style="position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);
-                                background: rgba(10, 15, 30, 0.95); padding: 2.5rem; border-radius: 18px;
-                                border: 3px solid var(--starlight-gold); z-index: 10001; max-width: 550px;
-                                box-shadow: 0 0 40px rgba(255, 215, 0, 0.4); text-align: center;">
-                                <h3 style="color: var(--starlight-gold); margin-bottom: 1rem;">🧠 Hidden Quantum Insight</h3>
-                                <p>The observer doesn't just observe reality—the observer <em>chooses</em> which reality to observe from the quantum multiverse. Your consciousness is the selection mechanism.</p>
-                                <button onclick="this.parentElement.remove()" style="margin-top: 1.5rem; padding: 0.7rem 1.8rem;
-                                    background: var(--nebula-teal); color: var(--dark-matter); border: none;
-                                    border-radius: 25px; cursor: pointer; font-weight: bold; font-size: 0.95rem;">
-                                    Close Insight
-                                </button>
-                            </div>
-                        `;
-                        document.body.appendChild(hiddenInsight);
-                    }
-                });
-            },
-            
             // ===== INITIALIZE EVERYTHING =====
             init: function() {
                 // Initialize all systems
                 this.initQuantumCosmos();
                 this.initNavigation();
+                this.initTimelineAnimations();
                 this.initInsightToggles();
-                this.initAnimations();
-                this.initEasterEgg();
                 
                 // Initialize AdSense
                 (adsbygoogle = window.adsbygoogle || []).push({});
