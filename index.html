@@ -424,7 +424,7 @@
             60% { transform: translateY(-4px); }
         }
         
-        /* ===== FIXED NON-OVERLAPPING QUANTUM TIMELINE ===== */
+        /* ===== PERFECTED NON-OVERLAPPING QUANTUM TIMELINE ===== */
         .quantum-timeline {
             max-width: 1400px;
             margin: 0 auto;
@@ -449,6 +449,7 @@
             opacity: 0;
             transform: translateY(30px);
             transition: all 0.8s ease;
+            z-index: 10; /* Ensure text is above the line */
         }
         
         .timeline-item.visible {
@@ -467,28 +468,33 @@
         .timeline-content {
             flex: 1;
             padding: 2rem;
-            background: rgba(10, 15, 30, 0.85);
-            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, 
+                rgba(10, 15, 30, 0.95), 
+                rgba(26, 32, 54, 0.95));
+            backdrop-filter: blur(15px);
             border-radius: 15px;
             border: 1px solid var(--cosmic-border);
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
             transition: all 0.5s ease;
             cursor: pointer;
-            z-index: 2;
+            z-index: 12; /* Above the timeline line */
+            position: relative;
         }
         
         .timeline-content:hover {
             transform: translateY(-8px);
             box-shadow: 0 15px 40px rgba(0, 245, 255, 0.25);
             border-color: var(--starlight-gold);
-            background: rgba(10, 15, 30, 0.95);
+            background: linear-gradient(135deg, 
+                rgba(10, 15, 30, 0.98), 
+                rgba(26, 32, 54, 0.98));
         }
         
         .timeline-year {
             flex: 0 0 150px;
             text-align: center;
             position: relative;
-            z-index: 3;
+            z-index: 13; /* Above everything */
         }
         
         .year-circle {
@@ -506,6 +512,14 @@
                 0 0 30px var(--quantum-glow),
                 inset 0 0 20px rgba(0, 245, 255, 0.1);
             position: relative;
+            transition: all 0.5s ease;
+        }
+        
+        .year-circle:hover {
+            transform: scale(1.05);
+            box-shadow: 
+                0 0 40px rgba(0, 245, 255, 0.6),
+                inset 0 0 25px rgba(0, 245, 255, 0.2);
         }
         
         .year-number {
@@ -513,6 +527,7 @@
             color: var(--starlight-gold);
             font-weight: 700;
             font-family: 'Philosopher', serif;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
         }
         
         .year-era {
@@ -529,12 +544,32 @@
             margin-bottom: 1rem;
             font-family: 'Cormorant Garamond', serif;
             font-weight: 600;
+            border-bottom: 2px solid rgba(0, 245, 255, 0.3);
+            padding-bottom: 0.5rem;
+            text-shadow: 0 0 15px rgba(0, 245, 255, 0.2);
         }
         
         .timeline-content p {
             font-size: 1.05rem;
             line-height: 1.7;
             color: var(--ancient-parchment);
+            text-shadow: 0 0 5px rgba(245, 233, 212, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+        
+        /* Enhanced text readability with subtle glow */
+        .timeline-content p::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            z-index: 1;
+            pointer-events: none;
         }
         
         .timeline-connector {
@@ -543,9 +578,14 @@
             top: 0;
             bottom: 0;
             width: 4px;
-            background: linear-gradient(to bottom, transparent, var(--nebula-teal), var(--starlight-gold), var(--consciousness-purple), transparent);
+            background: linear-gradient(to bottom, 
+                transparent 0%, 
+                var(--nebula-teal) 5%, 
+                var(--starlight-gold) 50%, 
+                var(--consciousness-purple) 95%, 
+                transparent 100%);
             transform: translateX(-50%);
-            z-index: 1;
+            z-index: 5; /* Behind the text */
         }
         
         .timeline-dot {
@@ -556,8 +596,9 @@
             background: var(--starlight-gold);
             border-radius: 50%;
             transform: translateX(-50%);
-            z-index: 2;
-            box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+            z-index: 6;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.8);
+            border: 2px solid var(--ancient-parchment);
         }
         
         /* ===== ENHANCED QUANTUM SCROLL SECTIONS ===== */
@@ -600,6 +641,7 @@
             background: radial-gradient(circle, var(--quantum-glow) 0%, transparent 70%);
             animation: quantumOrbit 60s linear infinite;
             opacity: 0.1;
+            z-index: 1;
         }
         
         @keyframes quantumOrbit {
@@ -730,6 +772,8 @@
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.8s ease;
+            position: relative;
+            z-index: 2;
         }
         
         .insight-content.expanded {
@@ -744,13 +788,14 @@
             border: 2px solid var(--cosmic-border);
             box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
             position: relative;
+            background: rgba(10, 15, 30, 0.95);
         }
         
         .ancient-table {
             width: 100%;
             border-collapse: separate;
             border-spacing: 0;
-            background: rgba(10, 15, 30, 0.95);
+            background: transparent;
         }
         
         .ancient-table thead {
@@ -781,10 +826,13 @@
             border-bottom: 1px solid rgba(0, 245, 255, 0.1);
             color: var(--ancient-parchment);
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
         }
         
         .ancient-table tr {
             transition: all 0.3s ease;
+            position: relative;
         }
         
         .ancient-table tr:hover {
@@ -803,6 +851,8 @@
             text-decoration: none;
             font-size: 0.95rem;
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 3;
         }
         
         .table-link:hover {
@@ -868,6 +918,8 @@
         .step-content {
             font-size: 1.1rem;
             line-height: 1.8;
+            position: relative;
+            z-index: 2;
         }
         
         .step-completion {
@@ -881,6 +933,8 @@
             cursor: pointer;
             transition: all 0.3s ease;
             border: 1px solid transparent;
+            position: relative;
+            z-index: 3;
         }
         
         .step-completion:hover {
@@ -957,6 +1011,8 @@
             margin-bottom: 1.8rem;
             line-height: 1.8;
             font-size: 1.05rem;
+            position: relative;
+            z-index: 2;
         }
         
         .interpretation-select {
@@ -971,6 +1027,7 @@
             align-items: center;
             justify-content: center;
             transition: all 0.3s ease;
+            z-index: 3;
         }
         
         .interpretation-card.selected .interpretation-select {
@@ -1011,6 +1068,7 @@
             height: 400%;
             background: radial-gradient(circle, rgba(255,215,0,0.12) 0%, transparent 70%);
             animation: librarySpin 80s linear infinite;
+            z-index: 1;
         }
         
         @keyframes librarySpin {
@@ -1045,6 +1103,8 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1.5rem;
             margin: 2.5rem 0;
+            position: relative;
+            z-index: 2;
         }
         
         .feature-item {
@@ -1054,6 +1114,8 @@
             border: 1px solid var(--cosmic-border);
             text-align: left;
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 3;
         }
         
         .feature-item:hover {
@@ -1069,6 +1131,8 @@
             display: flex;
             align-items: center;
             gap: 0.8rem;
+            position: relative;
+            z-index: 4;
         }
         
         .feature-title i {
@@ -1080,6 +1144,8 @@
             color: var(--ancient-parchment);
             opacity: 0.9;
             line-height: 1.6;
+            position: relative;
+            z-index: 4;
         }
         
         .portal-button {
@@ -1635,7 +1701,7 @@
             </p>
             <div class="portal-stats" style="display: flex; justify-content: center; gap: 2.5rem; margin-top: 3.5rem; flex-wrap: wrap;">
                 <div style="text-align: center;">
-                    <div style="font-size: 2.2rem; color: var(--starlight-gold); font-weight: 700;">15+</div>
+                    <div style="font-size: 2.2rem; color: var(--starlight-gold); font-weight: 700;">16+</div>
                     <div style="color: var(--nebula-teal); font-size: 0.9rem; letter-spacing: 1.5px;">Wisdom Traditions</div>
                 </div>
                 <div style="text-align: center;">
@@ -1645,6 +1711,10 @@
                 <div style="text-align: center;">
                     <div style="font-size: 2.2rem; color: var(--starlight-gold); font-weight: 700;">7</div>
                     <div style="color: var(--nebula-teal); font-size: 0.9rem; letter-spacing: 1.5px;">Dimensions Explored</div>
+                </div>
+                <div style="text-align: center;">
+                    <div style="font-size: 2.2rem; color: var(--starlight-gold); font-weight: 700;">5000+</div>
+                    <div style="color: var(--nebula-teal); font-size: 0.9rem; letter-spacing: 1.5px;">Years of Wisdom</div>
                 </div>
             </div>
         </div>
@@ -1662,7 +1732,7 @@
         </p>
     </div>
     
-    <!-- FIXED NON-OVERLAPPING QUANTUM TIMELINE -->
+    <!-- PERFECTED NON-OVERLAPPING QUANTUM TIMELINE WITH ENHANCED READABILITY -->
     <section class="quantum-timeline">
         <div class="cosmic-chapter">
             <div class="chapter-header">
@@ -1674,40 +1744,55 @@
             </div>
             
             <div class="timeline-container">
-                <!-- Vertical connector line -->
+                <!-- Vertical connector line (BEHIND text) -->
                 <div class="timeline-connector"></div>
                 
-                <!-- Timeline Item 1 -->
+                <!-- Timeline Item 1: Epic of Gilgamesh (2100 BCE) -->
+                <div class="timeline-item">
+                    <div class="timeline-year">
+                        <div class="year-circle">
+                            <div class="year-number">2100 BCE</div>
+                            <div class="year-era">Mesopotamia</div>
+                        </div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="event-title">Epic of Gilgamesh</h3>
+                        <p>The world's oldest known epic poem explores mortality, immortality, and the search for eternal life. Gilgamesh's journey through the "waters of death" to find the secret of immortality mirrors the quantum quest to understand consciousness beyond physical death. The story contains early insights into the human condition, mortality, and the search for transcendence that prefigures quantum immortality concepts.</p>
+                    </div>
+                    <div class="timeline-dot" style="top: 60px;"></div>
+                </div>
+                
+                <!-- Timeline Item 2: Rig Veda (1500 BCE) -->
                 <div class="timeline-item">
                     <div class="timeline-year">
                         <div class="year-circle">
                             <div class="year-number">1500 BCE</div>
-                            <div class="year-era">Ancient</div>
+                            <div class="year-era">Ancient India</div>
                         </div>
                     </div>
                     <div class="timeline-content">
                         <h3 class="event-title">Rig Veda's Nasadiya Sukta</h3>
-                        <p>"There was neither non-existence nor existence then..." - Ancient intuition of quantum superposition and potentiality, describing the universe before manifestation. This profound insight predates modern quantum physics by millennia.</p>
+                        <p>"There was neither non-existence nor existence then..." - Ancient intuition of quantum superposition and potentiality, describing the universe before manifestation. This profound insight predates modern quantum physics by millennia and describes the primordial state from which all existence emerges, remarkably similar to the quantum vacuum state.</p>
                     </div>
                     <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
                 
-                <!-- Timeline Item 2 -->
+                <!-- Timeline Item 3: Tao Te Ching (500 BCE) -->
                 <div class="timeline-item">
                     <div class="timeline-year">
                         <div class="year-circle">
                             <div class="year-number">500 BCE</div>
-                            <div class="year-era">Ancient</div>
+                            <div class="year-era">Ancient China</div>
                         </div>
                     </div>
                     <div class="timeline-content">
                         <h3 class="event-title">Lao Tzu's Tao Te Ching</h3>
-                        <p>"The Tao that can be spoken is not the eternal Tao" - Complementarity principle in ancient form, acknowledging the limitations of language in describing ultimate reality. The concept of Wu Wei (non-action) mirrors quantum non-interference.</p>
+                        <p>"The Tao that can be spoken is not the eternal Tao" - Complementarity principle in ancient form, acknowledging the limitations of language in describing ultimate reality. The concept of Wu Wei (non-action) mirrors quantum non-interference and the idea that reality emerges from an underlying unity that transcends dualistic thinking.</p>
                     </div>
                     <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
                 
-                <!-- Timeline Item 3 -->
+                <!-- Timeline Item 4: Quantum Mechanics (1900 CE) -->
                 <div class="timeline-item">
                     <div class="timeline-year">
                         <div class="year-circle">
@@ -1717,12 +1802,12 @@
                     </div>
                     <div class="timeline-content">
                         <h3 class="event-title">Quantum Mechanics Born</h3>
-                        <p>Planck, Einstein, Bohr lay foundation for quantum theory, unknowingly echoing ancient insights about the probabilistic nature of reality. Planck's constant establishes the quantum of action, revealing the discrete nature of energy.</p>
+                        <p>Planck, Einstein, Bohr lay foundation for quantum theory, unknowingly echoing ancient insights about the probabilistic nature of reality. Planck's constant establishes the quantum of action, revealing the discrete nature of energy and challenging classical deterministic views of the universe.</p>
                     </div>
                     <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
                 
-                <!-- Timeline Item 4 -->
+                <!-- Timeline Item 5: Copenhagen Interpretation (1927 CE) -->
                 <div class="timeline-item">
                     <div class="timeline-year">
                         <div class="year-circle">
@@ -1732,12 +1817,12 @@
                     </div>
                     <div class="timeline-content">
                         <h3 class="event-title">Copenhagen Interpretation</h3>
-                        <p>Bohr and Heisenberg formalize the observer effect and complementarity principle, establishing consciousness as integral to quantum reality. The act of measurement collapses the wave function from possibilities to actuality.</p>
+                        <p>Bohr and Heisenberg formalize the observer effect and complementarity principle, establishing consciousness as integral to quantum reality. The act of measurement collapses the wave function from possibilities to actuality, suggesting that consciousness plays a fundamental role in shaping reality itself.</p>
                     </div>
                     <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
                 
-                <!-- Timeline Item 5 -->
+                <!-- Timeline Item 6: Many-Worlds Interpretation (1957 CE) -->
                 <div class="timeline-item">
                     <div class="timeline-year">
                         <div class="year-circle">
@@ -1747,12 +1832,12 @@
                     </div>
                     <div class="timeline-content">
                         <h3 class="event-title">Many-Worlds Interpretation</h3>
-                        <p>Hugh Everett proposes parallel universes, mirroring Hindu concept of infinite Līlā and Buddhist realms of existence. All quantum possibilities are realized in branching universes, eliminating wave function collapse.</p>
+                        <p>Hugh Everett proposes parallel universes, mirroring Hindu concept of infinite Līlā and Buddhist realms of existence. All quantum possibilities are realized in branching universes, eliminating wave function collapse and suggesting an infinite multiverse where every possibility manifests somewhere.</p>
                     </div>
                     <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
                 
-                <!-- Timeline Item 6 -->
+                <!-- Timeline Item 7: Quantum Odyssey (2024 CE) -->
                 <div class="timeline-item">
                     <div class="timeline-year">
                         <div class="year-circle">
@@ -1762,7 +1847,7 @@
                     </div>
                     <div class="timeline-content">
                         <h3 class="event-title">Quantum Odyssey Synthesis</h3>
-                        <p>This work unifies ancient wisdom traditions with modern quantum understanding, creating a comprehensive map of consciousness evolution. Bridges Vedanta, Taoism, Kabbalah with quantum physics and consciousness studies.</p>
+                        <p>This work unifies ancient wisdom traditions with modern quantum understanding, creating a comprehensive map of consciousness evolution. Bridges Mesopotamian, Vedic, Taoist, and modern quantum insights into a coherent framework that explains consciousness, reality, and human potential through quantum principles.</p>
                     </div>
                     <div class="timeline-dot" style="top: 60px;"></div>
                 </div>
@@ -1785,25 +1870,29 @@
         </script>
     </div>
     
-    <!-- Chapter 1: Primordial Quantum Symphony -->
+    <!-- Chapter 1: Primordial Quantum Symphony (UPDATED WITH GILGAMESH) -->
     <section id="primordial" class="quantum-scroll-section">
         <div class="cosmic-chapter">
             <div class="chapter-header">
                 <div class="quantum-sigil">🌌</div>
                 <div>
                     <h2 class="chapter-title">The Primordial Quantum Symphony</h2>
-                    <p class="chapter-subtitle">From Mythical Chaos to Quantum Foam</p>
+                    <p class="chapter-subtitle">From Mesopotamian Myths to Quantum Foam</p>
                 </div>
             </div>
             
-            <p>Across civilizations and epochs, creation myths whisper the same truth: order emerges from chaos. The Sumerian Nammu's abyssal waters, the Egyptian Nun's primordial ocean, the Taoist Wuji from which Yin and Yang dance forth—all point to a fundamental reality: existence arises from infinite potential. Quantum cosmology now confirms this ancient wisdom: the universe itself emerged from a state of infinite potentiality—the quantum vacuum where virtual particles flicker in and out of existence, where spacetime itself is born from probabilistic foam.</p>
+            <p>The Epic of Gilgamesh (circa 2100 BCE) stands as humanity's oldest recorded exploration of mortality and transcendence, while simultaneously the Rig Veda contemplates existence emerging from non-existence. Across civilizations—Sumerian Nammu's abyssal waters, Egyptian Nun's primordial ocean, Taoist Wuji—all whisper the same truth: order emerges from chaos. Quantum cosmology now confirms this ancient wisdom: the universe itself emerged from infinite potentiality—the quantum vacuum where virtual particles flicker in and out of existence, where spacetime itself is born from probabilistic foam.</p>
             
             <div class="quantum-insight">
                 <div class="insight-toggle">+</div>
-                <h3 class="insight-title"><i class="fas fa-brain"></i> Quantum-Mythical Resonance</h3>
+                <h3 class="insight-title"><i class="fas fa-brain"></i> Quantum-Mythical Resonance: Gilgamesh to Rig Veda</h3>
                 <div class="insight-content">
-                    <p>The Rig Veda's Nasadiya Sukta contemplates: "There was neither non-existence nor existence then... That One breathed, windless, by its own impulse. Other than that, there was nothing beyond." This profound intuition of 3,500 years ago perfectly mirrors quantum superposition—the state where all possibilities coexist until observation collapses them into actuality. Similarly, the Buddhist concept of Śūnyatā (emptiness) finds its scientific echo in the quantum vacuum, not as nothingness, but as infinite potential from which all phenomena arise.</p>
-                    <p>Modern physics suggests that approximately 13.8 billion years ago, quantum fluctuations in the primordial singularity gave rise to cosmic inflation—the exponential expansion that birthed our observable universe. This scientific narrative beautifully parallels the Enuma Elish's depiction of order emerging from watery chaos through divine intelligence—a poetic parallel to the spontaneous symmetry breaking that generated the four fundamental forces and the cosmic structure we observe today.</p>
+                    <p><strong>The Epic of Gilgamesh</strong> (2100 BCE) explores humanity's oldest questions: mortality, immortality, and the nature of existence. Gilgamesh's quest for the "plant of immortality" after witnessing his friend Enkidu's death represents the human desire to transcend physical limitations—a theme that finds its quantum parallel in the concept of quantum immortality and consciousness continuity across multiple worlds.</p>
+                    
+                    <p><strong>The Rig Veda's Nasadiya Sukta</strong> (1500 BCE) contemplates: "There was neither non-existence nor existence then... That One breathed, windless, by its own impulse. Other than that, there was nothing beyond." This profound intuition of 3,500 years ago perfectly mirrors quantum superposition—the state where all possibilities coexist until observation collapses them into actuality.</p>
+                    
+                    <p><strong>Modern quantum cosmology</strong> suggests that approximately 13.8 billion years ago, quantum fluctuations in the primordial singularity gave rise to cosmic inflation. This scientific narrative beautifully parallels ancient creation myths: Gilgamesh's journey through the "waters of death" to find immortality echoes our scientific quest to understand consciousness beyond physical death; the Vedic description of existence emerging from non-existence mirrors quantum vacuum fluctuations.</p>
+                    
                     <div class="quantum-citation">
                         "The universe began not with a bang, but with a quantum fluctuation in the void. This is the modern scientific creation story, and it bears striking resemblance to ancient creation myths from cultures worldwide."
                         <span class="citation-source">— Lawrence Krauss, "A Universe from Nothing"</span>
@@ -1824,6 +1913,13 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <td><strong>Mesopotamian (Gilgamesh)</strong></td>
+                            <td>Primordial Waters of Chaos</td>
+                            <td>Divine separation of heaven and earth</td>
+                            <td>Quantum fluctuation symmetry breaking</td>
+                            <td><a href="https://www.sacred-texts.com/ane/eog/" class="table-link" target="_blank"><i class="fas fa-download"></i> Epic of Gilgamesh</a></td>
+                        </tr>
+                        <tr>
                             <td><strong>Vedanta Philosophy</strong></td>
                             <td>Brahman (Absolute Reality)</td>
                             <td>Līlā (Divine Play) through Māyā (Illusion)</td>
@@ -1833,22 +1929,15 @@
                         <tr>
                             <td><strong>Taoist Cosmology</strong></td>
                             <td>Wuji (Limitless Void)</td>
-                            <td>Spontaneous emergence of Taiji (Supreme Ultimate)</td>
-                            <td>Quantum vacuum fluctuation symmetry breaking</td>
+                            <td>Spontaneous emergence of Taiji</td>
+                            <td>Quantum vacuum fluctuation</td>
                             <td><a href="https://www.gutenberg.org/ebooks/216" class="table-link" target="_blank"><i class="fas fa-download"></i> Tao Te Ching</a></td>
-                        </tr>
-                        <tr>
-                            <td><strong>Kabbalistic Mysticism</strong></td>
-                            <td>Ein Sof (Without End)</td>
-                            <td>Tzimtzum (Divine Contraction) & Sefirot emanation</td>
-                            <td>Cosmic inflation and dimensional unfolding</td>
-                            <td><a href="https://www.sacred-texts.com/jud/zdm/" class="table-link" target="_blank"><i class="fas fa-download"></i> Zohar</a></td>
                         </tr>
                         <tr>
                             <td><strong>Quantum Cosmology</strong></td>
                             <td>Quantum vacuum/Singularity</td>
                             <td>Inflation from quantum fluctuation</td>
-                            <td>Spontaneous creation from zero-point energy</td>
+                            <td>Spontaneous creation</td>
                             <td><a href="https://arxiv.org/abs/quant-ph/0101003" class="table-link" target="_blank"><i class="fas fa-external-link-alt"></i> Research Paper</a></td>
                         </tr>
                     </tbody>
@@ -1856,8 +1945,8 @@
             </div>
             
             <div class="quantum-highlight">
-                <h3 class="highlight-title"><i class="fas fa-lightbulb"></i> Philosophical Synthesis</h3>
-                <p>The convergence of ancient wisdom and quantum physics suggests a profound truth: reality emerges from a state of infinite potential through a process of differentiation. Whether expressed as divine emanation or quantum fluctuation, the fundamental insight remains—existence arises from a unified field of possibilities. This understanding bridges the mystical experience of non-duality with the scientific observation of quantum entanglement, revealing consciousness itself as both the observer and the observed in this cosmic dance. The universe appears to be a self-observing system, with human consciousness serving as its means of self-reflection.</p>
+                <h3 class="highlight-title"><i class="fas fa-lightbulb"></i> Philosophical Synthesis: From Gilgamesh to Quantum Foam</h3>
+                <p>The convergence of Mesopotamian, Vedic, Taoist, and quantum insights reveals a profound truth: reality emerges from infinite potential through differentiation. Gilgamesh's quest for immortality mirrors our scientific exploration of consciousness beyond death; the Vedic description of existence from non-existence finds its echo in quantum vacuum fluctuations. Whether expressed as divine emanation (Gilgamesh), divine play (Vedanta), spontaneous emergence (Taoism), or quantum fluctuation, the fundamental insight remains—existence arises from a unified field of possibilities. This understanding bridges the mystical experience of non-duality with the scientific observation of quantum entanglement, revealing consciousness itself as both the observer and the observed in this cosmic dance.</p>
             </div>
         </div>
     </section>
@@ -1956,7 +2045,7 @@
         </div>
     </div>
     
-    <!-- Chapter 3: Quantum Consciousness -->
+    <!-- Chapter 3: Quantum Consciousness (UPDATED WITH WORKING LINK) -->
     <section id="consciousness" class="quantum-scroll-section">
         <div class="cosmic-chapter">
             <div class="chapter-header">
@@ -2002,7 +2091,8 @@
                         <li><i class="fas fa-check" style="color: var(--nebula-teal); margin-right: 0.5rem;"></i> Connects to Advaita Vedanta and idealism</li>
                     </ul>
                     <div class="quantum-citation" style="margin-top: 1.2rem; font-size: 0.9rem;">
-                        <a href="https://www.cambridge.org/core/journals/behavioral-and-brain-sciences/article/interface-theory-of-perception/6D7B1A6C5E0F8D9D8B1F3C3D5E6F7A8B" target="_blank"><i class="fas fa-external-link-alt"></i> View Theoretical Paper →</a>
+                        <!-- UPDATED WORKING LINK -->
+                        <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2015.00404/full" target="_blank"><i class="fas fa-external-link-alt"></i> View Theoretical Paper →</a>
                     </div>
                 </div>
             </div>
@@ -2300,14 +2390,14 @@
             <h2 class="library-title">The Infinite Library</h2>
             <p class="library-description">
                 Enter the quantum repository containing a growing collection of curated texts spanning 5,000 years of wisdom. 
-                From the Vedas to modern quantum physics papers, from Stoic philosophy to contemporary consciousness 
-                research—all interconnected through quantum hyperlinks of meaning and insight.
+                From the Epic of Gilgamesh to the Vedas, from Tao Te Ching to modern quantum physics papers—all interconnected 
+                through quantum hyperlinks of meaning and insight.
             </p>
             
             <div class="library-features">
                 <div class="feature-item">
                     <div class="feature-title"><i class="fas fa-scroll"></i> Ancient Wisdom</div>
-                    <p class="feature-desc">Complete texts from Eastern and Western traditions, including the Vedas, Tao Te Ching, Plato's dialogues, and Kabbalistic works.</p>
+                    <p class="feature-desc">Complete texts from Eastern and Western traditions, including the Epic of Gilgamesh, Vedas, Tao Te Ching, Plato's dialogues, and Kabbalistic works.</p>
                 </div>
                 
                 <div class="feature-item">
