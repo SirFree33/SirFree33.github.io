@@ -266,6 +266,59 @@
             padding: 0.5rem;
         }
         
+        /* Mobile Menu Styles */
+        @media (max-width: 1024px) {
+            .cosmic-compass {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .cosmic-compass.mobile-active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: var(--header-height);
+                left: 0;
+                width: 100%;
+                background: rgba(10, 15, 30, 0.98);
+                backdrop-filter: blur(20px);
+                padding: 1.5rem;
+                border-bottom: 1px solid var(--cosmic-border);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                z-index: 1000;
+            }
+            
+            .cosmic-compass.mobile-active .nav-star {
+                margin: 0.5rem 0;
+                padding: 1rem;
+                justify-content: center;
+                border-radius: 10px;
+                background: rgba(0, 245, 255, 0.05);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .celestial-navigation {
+                height: 70px;
+            }
+            
+            .navigation-container {
+                padding: 0 1rem;
+            }
+            
+            .quantum-logo {
+                font-size: 1.8rem;
+            }
+            
+            .logo-subtitle {
+                font-size: 0.7rem;
+                letter-spacing: 2px;
+            }
+        }
+        
         /* Google Ad Banners */
         .google-ad-banner {
             width: 100%;
@@ -1470,29 +1523,6 @@
         }
         
         @media (max-width: 1024px) {
-            .cosmic-compass {
-                display: none;
-            }
-            
-            .mobile-menu-toggle {
-                display: block;
-            }
-            
-            .cosmic-compass.mobile-active {
-                display: flex;
-                flex-direction: column;
-                position: absolute;
-                top: var(--header-height);
-                left: 0;
-                width: 100%;
-                background: rgba(10, 15, 30, 0.98);
-                backdrop-filter: blur(20px);
-                padding: 1.5rem;
-                border-bottom: 1px solid var(--cosmic-border);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-                z-index: 1000;
-            }
-            
             .cosmic-manifesto {
                 font-size: 3.8rem;
             }
@@ -1684,7 +1714,7 @@
     <!-- Scroll Progress -->
     <div class="scroll-progress"></div>
     
-    <!-- Enhanced Celestial Navigation -->
+    <!-- Enhanced Celestial Navigation WITH MOBILE MENU -->
     <nav class="celestial-navigation">
         <div class="navigation-container">
             <div class="quantum-signature">
@@ -2548,11 +2578,19 @@
                 });
             }
             
-            // Close mobile menu when clicking a nav link
+            // Close mobile menu when clicking a nav link (IMPORTANT - THIS WAS MISSING!)
             document.querySelectorAll('.nav-star').forEach(link => {
                 link.addEventListener('click', function() {
                     navCompass.classList.remove('mobile-active');
                 });
+            });
+            
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const isClickInsideNav = document.querySelector('.celestial-navigation').contains(event.target);
+                if (!isClickInsideNav && navCompass.classList.contains('mobile-active')) {
+                    navCompass.classList.remove('mobile-active');
+                }
             });
             
             // Navbar scroll effect
